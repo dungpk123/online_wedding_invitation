@@ -105,7 +105,9 @@
     if (isAnimating) return;
     if (bookModal) bookModal.classList.add("hidden");
     if (landing) landing.classList.remove("fade-out");
-    resetBookToClosed();
+    setTimeout(() => {
+      resetBookToClosed();
+    }, 400);
   }
 
   function openCoverFromRightToLeft() {
