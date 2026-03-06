@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiệp Cưới - Nguyễn Minh Tuấn &amp; Trần Thị Lan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Great+Vibes&family=Dancing+Script:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- LANDING PAGE -->
+<div id="landing">
+  <div class="landing-bg"></div>
+  <div class="landing-overlay"></div>
+  <div class="landing-content">
+    <div class="rose-divider top"></div>
+    <p class="subtitle-top">Trân trọng kính mời</p>
+    <h1 class="couple-name">Tuấn <span class="amp">&amp;</span> Lan</h1>
+    <p class="wedding-date">15 · 05 · 2026</p>
+    <div class="rose-divider">✦ ✦ ✦</div>
+    <p class="invitation-text">Chúng tôi trân trọng gửi đến bạn<br/>tấm thiệp cưới đặc biệt của chúng mình</p>
+    <button id="open-book-btn" class="open-btn" aria-label="Mở thiệp cưới" title="Mở thiệp cưới">
+      <i class="fas fa-book-open"></i> Mở Thiệp Cưới
+    </button>
+  </div>
+  <div class="petals-container" id="petals"></div>
+</div>
+
+<!-- BOOK MODAL -->
+<div id="book-modal" class="book-modal hidden">
+  <div class="modal-bg" id="modal-bg"></div>
+
+  <div class="book-wrapper">
+    <!-- Navigation arrows -->
+    <button class="nav-btn nav-prev" id="prev-btn" disabled aria-label="Trang trước" title="Trang trước">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="nav-btn nav-next" id="next-btn" aria-label="Trang sau" title="Trang sau">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Close button -->
+    <button class="close-btn" id="close-btn" aria-label="Đóng" title="Đóng thiệp">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Page counter -->
+    <div class="page-counter" id="page-counter">1 / 11</div>
+
+    <!-- The Book -->
+    <div class="book" id="book">
+
+      <!-- SPREAD 0: Page 1 (front cover left) + Page 2 (Lời Mở Đầu right) -->
+      <div class="spread" id="spread-0">
+        <!-- LEFT: Front Cover -->
+        <div class="page page-left cover-left">
+          <div class="page-inner">
+            <div class="cover-content">
+              <div class="cover-ornament top-ornament">✦ ✦ ✦</div>
+              <p class="cover-subtitle">Thiệp Cưới</p>
+              <div class="cover-roses"></div>
+              <h2 class="cover-names">Tuấn<br/><img class="cover-img" src="/img/nhancuoi.png" alt="Khoảnh khắc chuẩn bị ngày cưới" />
+<br/>Lan</h2>
+              <div class="cover-date-box">15 · 05 · 2026</div>
+              <div class="cover-ornament bottom-ornament">✦ ✦ ✦</div>
+            </div>
+          </div>
+        </div>
+        <!-- RIGHT: Page 1 – Lời Mở Đầu -->
+        <div class="page page-right" data-page="1">
+          <div class="page-inner">
+            <div class="page-header">
+              <div class="page-ornament"></div>
+              <h3 class="page-title">Lời Mở Đầu</h3>
+              <div class="title-line"></div>
+            </div>
+            <div class="page-body">
+              <p class="open-quote">"</p>
+              <p class="body-text italic">
+                Trong hành trình dài rộng của cuộc đời,<br/>
+                hai trái tim đã tìm thấy nhau<br/>
+                giữa muôn vàn ngẫu nhiên kỳ diệu.
+              </p>
+              <p class="body-text">
+                Hôm nay, chúng tôi – <strong>Nguyễn Minh Tuấn</strong> và <strong>Trần Thị Lan</strong> –
+                với tất cả niềm vui và hạnh phúc trong lòng, trân trọng gửi đến bạn
+                lời mời chân thành nhất đến chứng kiến ngày trọng đại của đời chúng tôi.
+              </p>
+              <p class="body-text">
+                Sự hiện diện của bạn sẽ là món quà vô giá,
+                là niềm vui nhân đôi trong ngày hôn lễ thiêng liêng này.
+              </p>
+              <p class="close-quote">"</p>
+              <div class="signature">— Tuấn &amp; Lan —</div>
+            </div>
+            <div class="page-number">1</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPREAD 1: Page 2 – Giới Thiệu | Page 3 – Chuyện Tình Yêu -->
+      <div class="spread hidden" id="spread-1">
+        <!-- LEFT: Page 2 – Giới Thiệu Cô Dâu & Chú Rể -->
+        <div class="page page-left" data-page="2">
+          <div class="page-inner">
+            <div class="page-header">
+              <div class="page-ornament"></div>
+              <h3 class="page-title">Giới Thiệu<br/>Cô Dâu &amp; Chú Rể</h3>
+              <div class="title-line"></div>
+            </div>
+            <div class="page-body two-columns">
+              <div class="profile-card">
+                <div class="avatar groom-avatar">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+                <h4 class="profile-name">Chú Rể</h4>
+                <p class="profile-fullname">Nguyễn Minh Tuấn</p>
+                <p class="profile-info"><i class="fas fa-birthday-cake"></i> 12/03/1995</p>
+                <p class="profile-info"><i class="fas fa-map-marker-alt"></i> Hà Nội</p>
+                <p class="profile-info"><i class="fas fa-briefcase"></i> Kỹ Sư Phần Mềm</p>
+                <p class="profile-desc">Chàng trai điềm tĩnh, đáng tin cậy, luôn mang lại cảm giác an toàn và ấm áp.</p>
+              </div>
+              <div class="profile-divider"><i class="fas fa-heart heart-icon"></i></div>
+              <div class="profile-card">
+                <div class="avatar bride-avatar">
+                  <i class="fas fa-user"></i>
+                </div>
+                <h4 class="profile-name">Cô Dâu</h4>
+                <p class="profile-fullname">Trần Thị Lan</p>
+                <p class="profile-info"><i class="fas fa-birthday-cake"></i> 08/07/1997</p>
+                <p class="profile-info"><i class="fas fa-map-marker-alt"></i> TP. Hồ Chí Minh</p>
+                <p class="profile-info"><i class="fas fa-briefcase"></i> Giáo Viên</p>
+                <p class="profile-desc">Cô gái dịu dàng, tràn đầy yêu thương, luôn thắp sáng mọi không gian bằng nụ cười.</p>
+              </div>
+            </div>
+            <div class="page-number">2</div>
+          </div>
+        </div>
+        <!-- RIGHT: Page 3 – Chuyện Tình Yêu -->
+        <div class="page page-right" data-page="3">
+          <div class="page-inner">
+            <div class="page-header">
+              <div class="page-ornament"></div>
+              <h3 class="page-title">Chuyện Tình Yêu<br/>Của Chúng Mình</h3>
+              <div class="title-line"></div>
+            </div>
+            <div class="page-body">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-star"></i></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">Tháng 3 · 2020</span>
+                    <p class="timeline-text">Lần đầu gặp nhau tại một buổi hội thảo tình nguyện. Ánh mắt giao nhau – và thế giới như dừng lại.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-heart"></i></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">Tháng 8 · 2020</span>
+                    <p class="timeline-text">Tuấn dũng cảm tỏ tình trong buổi chiều hoàng hôn tại Hồ Tây. Lan gật đầu với nụ cười rạng rỡ.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-map-marker-alt"></i></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">Tháng 1 · 2023</span>
+                    <p class="timeline-text">Chuyến du lịch Đà Lạt cùng nhau – những kỷ niệm ngọt ngào không thể quên.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"><i class="fas fa-ring"></i></div>
+                  <div class="timeline-content">
+                    <span class="timeline-date">Tháng 12 · 2025</span>
+                    <p class="timeline-text">Tuấn cầu hôn Lan tại Paris – thành phố của tình yêu. Một chương mới bắt đầu!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="page-number">3</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPREAD 2: Page 4 – Thời Gian & Địa Điểm | Page 5 – Lịch Trình -->
+      <div class="spread hidden" id="spread-2">
+        <!-- LEFT: Page 4 – Thời Gian & Địa Điểm -->
+        <div class="page page-left" data-page="4">
+          <div class="page-inner">
+            <div class="page-header">
+              <div class="page-ornament"></div>
+              <h3 class="page-title">Thời Gian &amp;<br/>Địa Điểm Tổ Chức</h3>
+              <div class="title-line"></div>
+            </div>
+            <div class="page-body">
+              <div class="event-card">
+                <div class="event-icon"><i class="fas fa-glass-cheers"></i></div>
+                <h4 class="event-name">Tiệc Đón Khách</h4>
+                <p class="event-detail"><i class="fas fa-clock"></i> 10:00 – 11:00 sáng</p>
+                <p class="event-detail"><i class="fas fa-calendar-alt"></i> Thứ Sáu, 15 tháng 05 năm 2026</p>
+                <p class="event-detail"><i class="fas fa-map-marker-alt"></i> Sảnh A – Khách Sạn Melia Hà Nội</p>
+              </div>
+              <div class="divider-ornament">✦ ✦ ✦</div>
+              <div class="event-card">
+                <div class="event-icon"><i class="fas fa-church"></i></div>
+                <h4 class="event-name">Lễ Thành Hôn</h4>
+                <p class="event-detail"><i class="fas fa-clock"></i> 11:00 – 12:00 trưa</p>
+                <p class="event-detail"><i class="fas fa-calendar-alt"></i> Thứ Sáu, 15 tháng 05 năm 2026</p>
+                <p class="event-detail"><i class="fas fa-map-marker-alt"></i> Sảnh Chính – Khách Sạn Melia Hà Nội</p>
+              </div>
+              <div class="divider-ornament">✦ ✦ ✦</div>
+              <div class="event-card">
+                <div class="event-icon"><i class="fas fa-utensils"></i></div>
+                <h4 class="event-name">Tiệc Mừng</h4>
+                <p class="event-detail"><i class="fas fa-clock"></i> 12:00 – 14:00 trưa</p>
+                <p class="event-detail"><i class="fas fa-map-marker-alt"></i> Nhà Hàng Tầng 5 – Khách Sạn Melia</p>
+              </div>
+            </div>
+            <div class="page-number">4</div>
+          </div>
+        </div>
+        <!-- RIGHT: Page 5 – Lịch Trình Buổi Lễ -->
+        <div class="page page-right" data-page="5">
+          <div class="page-inner">
+            <div class="page-header">
+              <div class="page-ornament"></div>
+              <h3 class="page-title">Lịch Trình<br/>Buổi Lễ</h3>
+              <div class="title-line"></div>
+            </div>
+            <div class="page-body">
+              <div class="schedule">
+                <div class="schedule-item">
+                  <div class="schedule-time">9:30</div>
+                  <div class="schedule-dot"></div>
+                  <div class="schedule-desc">Đón tiếp khách tại sảnh, chụp hình lưu niệm</div>
+                </div>
+                <div class="schedule-item">
+                  <div class="schedule-time">10:00</div>
+                  <div class="schedule-dot"></div>
+                  <div class="schedule-desc">Tiệc đón khách – Cocktail &amp; canape</div>
+                </div>
+                <div class="schedule-item">
+                  <div class="schedule-time">10:45</div>
+                  <div class="schedule-dot"></div>
+                  <div class="schedule-desc">Mời khách vào Sảnh Chính, ổn định chỗ ngồi</div>
+                </div>
+                <div class="schedule-item">
+                  <div class="schedule-time">11:00</div>
+                  <div class="schedule-dot highlight"></div>
+                  <div class="schedule-desc"><strong>Lễ Thành Hôn</strong> – Trao nhẫn &amp; lời thề nguyện</div>
+                </div>
+                <div class="schedule-item">
+                  <div class="schedule-time">11:30</div>
+                  <div class="schedule-dot"></div>
+                  <div class="schedule-desc">Cắt bánh cưới &amp; rót rượu mừng</div>
+                </div>
+                <div class="schedule-item">
+                  <div class="schedule-time">11:45</div>
+                  <div class="schedule-dot"></div>
+                  <div class="schedule-desc">Tân lang tân nương đi vòng chào bàn</div>
+                </div>
+                <div class="schedule-item">
+                  <div class="schedule-time">12:00</div>
+                  <div class="schedule-dot"></div>
+                  <div class="schedule-desc">Khai tiệc – Tiệc cưới chính thức bắt đầu</div>
+                </div>
+                <div class="schedule-item">
+                  <div class="schedule-time">13:30</div>
+                  <div class="schedule-dot"></div>
+                  <div class="schedule-desc">Văn nghệ, trò chơi &amp; tặng quà</div>
+                </div>
+                <div class="schedule-item">
+                  <div class="schedule-time">14:00</div>
+                  <div class="schedule-dot"></div>
+                  <div class="schedule-desc">Tiễn khách – Tặng quà lưu niệm</div>
+                </div>
+              </div>
+            </div>
+            <div class="page-number">5</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPREAD 3: Page 6 – Album Ảnh | Page 7 – Thiệp Mời Chính Thức -->
+      <div class="spread hidden" id="spread-3">
+        <!-- LEFT: Page 6 – Album Ảnh -->
+        <div class="page page-left" data-page="6">
+          <div class="page-inner">
+            <div class="page-header">
+              <div class="page-ornament"></div>
+              <h3 class="page-title">Album Ảnh<br/>Kỷ Niệm</h3>
+              <div class="title-line"></div>
+            </div>
+            <div class="page-body">
+              <div class="photo-grid">
+                <div class="photo-item photo-1">
+                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Gặp Lần Đầu</span></div>
+                </div>
+                <div class="photo-item photo-2">
+                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Ngày Hẹn Hò</span></div>
+                </div>
+                <div class="photo-item photo-3">
+                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Du Lịch Đà Lạt</span></div>
+                </div>
+                <div class="photo-item photo-4">
+                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Cầu Hôn Paris</span></div>
+                </div>
+                <div class="photo-item photo-5">
+                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Chụp Ảnh Cưới</span></div>
+                </div>
+                <div class="photo-item photo-6">
+                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Cùng Gia Đình</span></div>
+                </div>
+              </div>
+              <p class="photo-caption">Những khoảnh khắc đáng nhớ trên hành trình yêu thương của chúng mình ♡</p>
+            </div>
+            <div class="page-number">6</div>
+          </div>
+        </div>
+        <!-- RIGHT: Page 7 – Thiệp Mời Chính Thức -->
+        <div class="page page-right" data-page="7">
+          <div class="page-inner formal-invite">
+            <div class="formal-top-ornament">✦ ✦ ✦</div>
+            <p class="formal-label">Trân trọng kính mời</p>
+            <div class="formal-guest-line">
+              <div class="guest-name-line"></div>
+              <p class="formal-guest-hint">(Tên quý khách)</p>
+            </div>
+            <p class="formal-text">hiện diện trong lễ thành hôn của</p>
+            <div class="formal-couple">
+              <span class="formal-groom">Nguyễn Minh Tuấn</span>
+              <span class="formal-heart">❤</span>
+              <span class="formal-bride">Trần Thị Lan</span>
+            </div>
+            <div class="formal-date-box">
+              <div class="formal-day">Thứ Sáu</div>
+              <div class="formal-date-number">15</div>
+              <div class="formal-month-year">Tháng 05 · 2026</div>
+            </div>
+            <p class="formal-venue">
+              <i class="fas fa-map-marker-alt"></i>
+              Khách Sạn Melia Hà Nội<br/>
+              44B Lý Thường Kiệt, Hoàn Kiếm, Hà Nội
+            </p>
+            <div class="formal-bottom-ornament">✦ ✦ ✦</div>
+            <div class="page-number">7</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPREAD 4: Page 8 – RSVP | Page 9 – Gửi Lời Chúc -->
+      <div class="spread hidden" id="spread-4">
+        <!-- LEFT: Page 8 – RSVP -->
+        <div class="page page-left" data-page="8">
+          <div class="page-inner">
+            <div class="page-header">
+              <div class="page-ornament"></div>
+              <h3 class="page-title">Xác Nhận<br/>Tham Dự </h3>
+              <div class="title-line"></div>
+            </div>
+            <div class="page-body">
+              <p class="body-text">Vui lòng xác nhận tham dự trước ngày <strong>01/05/2026</strong> để chúng tôi chuẩn bị tốt nhất cho bạn.</p>
+              <form class="rsvp-form" id="rsvp-form">
+                <div class="form-group">
+                  <label><i class="fas fa-user"></i> Họ và Tên</label>
+                  <input type="text" placeholder="Nguyễn Văn A" required />
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-phone"></i> Số Điện Thoại</label>
+                  <input type="tel" placeholder="0912 345 678" />
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-users"></i> Số Người Tham Dự</label>
+                  <select title="Chọn số người tham dự">
+                    <option>1 người</option>
+                    <option>2 người</option>
+                    <option>3 người</option>
+                    <option>4 người trở lên</option>
+                  </select>
+                </div>
+                <div class="form-group attend-group">
+                  <label><i class="fas fa-check-circle"></i> Xác Nhận</label>
+                  <div class="radio-group">
+                    <label class="radio-label">
+                      <input type="radio" name="attend" value="yes" checked /> Tôi sẽ tham dự 
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="attend" value="no" /> Rất tiếc, không thể đến
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="rsvp-btn">
+                  <i class="fas fa-paper-plane"></i> Gửi Xác Nhận
+                </button>
+              </form>
+            </div>
+            <div class="page-number">8</div>
+          </div>
+        </div>
+        <!-- RIGHT: Page 9 – Gửi Lời Chúc -->
+        <div class="page page-right" data-page="9">
+          <div class="page-inner">
+            <div class="page-header">
+              <div class="page-ornament"></div>
+              <h3 class="page-title">Gửi Lời Chúc</h3>
+              <div class="title-line"></div>
+            </div>
+            <div class="page-body">
+              <p class="body-text">Lời chúc của bạn sẽ là món quà tinh thần quý giá nhất với chúng tôi!</p>
+              <form class="wish-form" id="wish-form">
+                <div class="form-group">
+                  <label><i class="fas fa-user"></i> Tên của bạn</label>
+                  <input type="text" placeholder="Tên bạn..." />
+                </div>
+                <div class="form-group">
+                  <label><i class="fas fa-comment-dots"></i> Lời chúc</label>
+                  <textarea placeholder="Chúc hai bạn..." rows="4"></textarea>
+                </div>
+                <button type="submit" class="wish-btn">
+                  <i class="fas fa-heart"></i> Gửi Lời Chúc
+                </button>
+              </form>
+              <div class="wish-list" id="wish-list">
+                <div class="wish-item">
+                  <strong>Anh Hùng &amp; chị Mai:</strong> "Chúc hai em trăm năm hạnh phúc, mãi mãi yêu thương nhau! 💕"
+                </div>
+                <div class="wish-item">
+                  <strong>Bạn bè lớp 12A:</strong> "Đám cưới là khởi đầu đẹp nhất – chúc mừng cặp đôi hoàn hảo! 🎉"
+                </div>
+              </div>
+            </div>
+            <div class="page-number">9</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPREAD 5: Page 10 – Thông Tin Liên Hệ | Page 11 – Lời Cảm Ơn (back cover) -->
+      <div class="spread hidden" id="spread-5">
+        <!-- LEFT: Page 10 – Thông Tin Liên Hệ -->
+        <div class="page page-left" data-page="10">
+          <div class="page-inner">
+            <div class="page-header">
+              <div class="page-ornament"></div>
+              <h3 class="page-title">Thông Tin Liên Hệ<br/>Gia Đình</h3>
+              <div class="title-line"></div>
+            </div>
+            <div class="page-body">
+              <div class="family-card">
+                <h4 class="family-title"><i class="fas fa-home"></i> Gia Đình Nhà Trai</h4>
+                <div class="contact-item">
+                  <div class="contact-label">Ông Nguyễn Văn Bình</div>
+                  <a href="tel:0901234567" class="contact-phone"><i class="fas fa-phone"></i> 090 123 4567</a>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-label">Bà Lê Thị Hoa</div>
+                  <a href="tel:0912345678" class="contact-phone"><i class="fas fa-phone"></i> 091 234 5678</a>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-label">Chú Rể – Minh Tuấn</div>
+                  <a href="tel:0933456789" class="contact-phone"><i class="fas fa-phone"></i> 093 345 6789</a>
+                </div>
+              </div>
+              <div class="divider-ornament">✦ ✦ ✦</div>
+              <div class="family-card">
+                <h4 class="family-title"><i class="fas fa-home"></i> Gia Đình Nhà Gái</h4>
+                <div class="contact-item">
+                  <div class="contact-label">Ông Trần Văn Minh</div>
+                  <a href="tel:0944567890" class="contact-phone"><i class="fas fa-phone"></i> 094 456 7890</a>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-label">Bà Phạm Thị Thu</div>
+                  <a href="tel:0955678901" class="contact-phone"><i class="fas fa-phone"></i> 095 567 8901</a>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-label">Cô Dâu – Thị Lan</div>
+                  <a href="tel:0966789012" class="contact-phone"><i class="fas fa-phone"></i> 096 678 9012</a>
+                </div>
+              </div>
+              <div class="map-link">
+                <a href="#" class="map-btn"><i class="fas fa-map"></i> Xem Bản Đồ Đường Đi</a>
+              </div>
+            </div>
+            <div class="page-number">10</div>
+          </div>
+        </div>
+        <!-- RIGHT: Page 11 – Lời Cảm Ơn (Back Cover) -->
+        <div class="page page-right cover-right" data-page="11">
+          <div class="page-inner">
+            <div class="back-cover-content">
+              <div class="back-ornament top">✦ ✦ ✦</div>
+              <p class="back-subtitle">Lời Cảm Ơn &amp; Kết Thúc</p>
+              <div class="back-roses"></div>
+              <p class="back-quote italic">
+                "Hành trình ngàn dặm bắt đầu<br/>từ một bước chân,<br/>và cuộc đời đôi lứa bắt đầu<br/>từ một lời 'Có'."
+              </p>
+              <p class="back-text">
+                Cảm ơn bạn đã dành thời gian<br/>
+                đọc tấm thiệp nhỏ này.<br/>
+                Sự hiện diện của bạn chính là<br/>
+                niềm hạnh phúc lớn nhất của chúng tôi.
+              </p>
+              <div class="back-names">Tuấn &amp; Lan</div>
+              <div class="back-date">15 · 05 · 2026</div>
+              <div class="back-ornament bottom">✦ ✦ ✦</div>
+              <div class="page-number light">11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end .book -->
+  </div><!-- end .book-wrapper -->
+</div><!-- end .book-modal -->  
+<script src="script.js"></script>
+</body>
+</html>
+ềm hạnh phúc lớn nhất của chúng tôi.
+              </p>
+              <div class="back-names">Tuấn &amp; Lan</div>
+              <div class="back-date">15 · 05 · 2026</div>
+              <div class="back-ornament bottom">✦ ✦ ✦</div>
+              <div class="page-number light">11</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end .book -->
+  </div><!-- end .book-wrapper -->
+</div><!-- end .book-modal -->  
+<script src="script.js"></script>
+</body>
+</html>
