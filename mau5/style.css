@@ -800,7 +800,7 @@ body {
 .cover-left .page-inner {
   background:
     linear-gradient(rgba(18, 39, 74, 0.28), rgba(18, 39, 74, 0.28)),
-    url('/img/background_mau5.png') center / cover no-repeat;
+    url('../img/background_mau5.png') center / cover no-repeat;
 }
 
 
