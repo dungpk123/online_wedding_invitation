@@ -2066,8 +2066,8 @@ body {
 
 @media (max-width: 767px) {
   :root {
-    --page-w: 47.5vw;
-    --page-h: 66vw;
+    --page-w: 48.6vw;
+    --page-h: min(76vw, 52vh);
   }
 
   html,
@@ -2099,30 +2099,202 @@ body {
   }
 
   .book-modal {
-    padding: max(8px, env(safe-area-inset-top)) 2vw max(18px, env(safe-area-inset-bottom));
+    padding: max(6px, env(safe-area-inset-top)) 1vw max(16px, env(safe-area-inset-bottom));
   }
 
   .book-wrapper {
-    transform: scale(1.02);
+    transform: scale(1.06);
     transform-origin: center center;
   }
 
   .page-title {
-    font-size: .98rem;
+    font-size: .82rem;
+    line-height: 1.16;
   }
 
   .page-inner {
-    padding: 16px 10px 10px;
+    padding: 12px 8px 8px;
   }
 
   .page-counter {
-    bottom: -22px;
-    font-size: .68rem;
-    letter-spacing: .12em;
+    bottom: -18px;
+    font-size: .58rem;
+    letter-spacing: .08em;
   }
 
   .formal-date-number {
+    font-size: 1.56rem;
+  }
+
+  .page-header {
+    margin-bottom: 6px;
+  }
+
+  .page-ornament {
+    font-size: .95rem;
+    margin-bottom: 0;
+  }
+
+  .title-line {
+    width: 54px;
+    margin-top: 5px;
+  }
+
+  .body-text,
+  .timeline-text,
+  .schedule-desc,
+  .event-detail,
+  .contact-label,
+  .contact-phone,
+  .profile-info,
+  .profile-desc,
+  .wish-item,
+  .photo-caption,
+  .formal-text,
+  .formal-guest-hint,
+  .formal-month-year,
+  .formal-day,
+  .back-text,
+  .back-quote,
+  .map-link-on-event .map-btn {
+    font-size: .56rem;
+    line-height: 1.45;
+  }
+
+  .timeline-date,
+  .schedule-time,
+  .event-name,
+  .family-title,
+  .profile-name,
+  .contact-phone,
+  .formal-label,
+  .formal-groom,
+  .formal-bride,
+  .back-subtitle,
+  .back-date,
+  .back-names {
+    font-size: .66rem;
+  }
+
+  .signature {
+    font-size: .9rem;
+  }
+
+  .open-quote,
+  .close-quote {
     font-size: 2rem;
+  }
+
+  .two-columns {
+    width: 98%;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .profile-card {
+    max-width: 47%;
+    gap: 3px;
+  }
+
+  .avatar {
+    width: 54px;
+    height: 54px;
+    font-size: 1.2rem;
+    border-width: 1.5px;
+  }
+
+  .profile-fullname {
+    font-size: .74rem;
+    line-height: 1.1;
+  }
+
+  .profile-info i {
+    width: 10px;
+  }
+
+  .timeline {
+    gap: 8px;
+    padding-left: 10px;
+  }
+
+  .timeline-item {
+    gap: 8px;
+  }
+
+  .timeline-dot {
+    width: 16px;
+    height: 16px;
+    font-size: .42rem;
+  }
+
+  .timeline-content {
+    padding-bottom: 8px;
+  }
+
+  .event-card,
+  .family-card,
+  .wish-item,
+  .photo-placeholder,
+  .formal-date-box {
+    padding: 8px;
+  }
+
+  .event-icon,
+  .formal-heart,
+  .photo-placeholder i {
+    font-size: .95rem;
+  }
+
+  .schedule-item {
+    grid-template-columns: 34px 10px 1fr;
+    gap: 6px;
+  }
+
+  .schedule-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .divider-ornament,
+  .formal-top-ornament,
+  .formal-bottom-ornament,
+  .back-ornament {
+    font-size: .62rem;
+    letter-spacing: .18em;
+  }
+
+  .rsvp-form,
+  .wish-form {
+    gap: 6px;
+  }
+
+  .form-group label,
+  .radio-label {
+    font-size: .6rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px 9px;
+    font-size: .62rem;
+  }
+
+  .rsvp-btn,
+  .wish-btn,
+  .map-btn {
+    padding: 9px 10px;
+    font-size: .64rem;
+  }
+
+  .inner-corner {
+    width: 34px;
+    height: 30px;
+  }
+
+  .inner-page-frame {
+    --inner-frame-inset: 8px;
+    --inner-frame-gap: 34px;
   }
 
   .notice-card {
@@ -2141,7 +2313,7 @@ body {
 
 @media (max-width: 767px) and (orientation: landscape) {
   :root {
-    --page-h: 74vh;
+    --page-h: 79vh;
     --page-w: calc(var(--page-h) * 0.72);
   }
 
@@ -2150,7 +2322,7 @@ body {
   }
 
   .book-wrapper {
-    transform: scale(1.04);
+    transform: scale(1.08);
   }
 
   .nav-prev {
@@ -2168,11 +2340,11 @@ body {
   }
 
   .page-inner {
-    padding: 14px 12px 12px;
+    padding: 13px 10px 10px;
   }
 
   .page-title {
-    font-size: .9rem;
+    font-size: .82rem;
   }
 
   .body-text,
@@ -2183,37 +2355,37 @@ body {
   .contact-phone,
   .profile-info,
   .profile-desc {
-    font-size: .62rem;
+    font-size: .56rem;
   }
 
   .page-counter {
-    bottom: -24px;
-    font-size: .66rem;
+    bottom: -18px;
+    font-size: .56rem;
   }
 
   .two-columns {
-    gap: 10px;
-    width: 97%;
+    gap: 8px;
+    width: 98%;
   }
 
   .profile-card {
-    max-width: 150px;
-    gap: 4px;
+    max-width: 46%;
+    gap: 3px;
   }
 
   .avatar {
-    width: 66px;
-    height: 66px;
-    font-size: 1.45rem;
+    width: 52px;
+    height: 52px;
+    font-size: 1.1rem;
   }
 
   .profile-fullname {
-    font-size: .88rem;
+    font-size: .72rem;
   }
 
   .inner-corner {
-    width: 44px;
-    height: 38px;
+    width: 34px;
+    height: 30px;
   }
 }
 
