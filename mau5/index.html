@@ -31,6 +31,16 @@
 <!-- BOOK MODAL -->
 <div id="book-modal" class="book-modal hidden">
   <div class="modal-bg" id="modal-bg"></div>
+  <div class="rotate-device-overlay" id="rotate-device-overlay" aria-live="polite">
+    <div class="rotate-device-card">
+      <div class="rotate-device-icon" aria-hidden="true">
+        <i class="fas fa-mobile-screen-button"></i>
+        <i class="fas fa-rotate-right"></i>
+      </div>
+      <h3 class="rotate-device-title">Vui lòng xoay ngang điện thoại</h3>
+      <p class="rotate-device-text">Thiệp cưới này được tối ưu để xem ở chế độ ngang. Hãy xoay thiết bị sang ngang để tiếp tục xem nội dung.</p>
+    </div>
+  </div>
 
   <div class="book-wrapper">
     <!-- Navigation arrows -->
@@ -40,12 +50,6 @@
     <button class="nav-btn nav-next" id="next-btn" aria-label="Trang sau" title="Trang sau">
       <i class="fas fa-chevron-right"></i>
     </button>
-
-    <!-- Close button -->
-    <button class="close-btn" id="close-btn" aria-label="Đóng" title="Đóng thiệp">
-      <i class="fas fa-times"></i>
-    </button>
-
     <!-- Page counter -->
     <div class="page-counter" id="page-counter">1 / 11</div>
 
@@ -58,12 +62,19 @@
         <div class="page page-left cover-left">
           <div class="page-inner">
             <div class="cover-content">
-              <div class="cover-ornament top-ornament">✦ ✦ ✦</div>
+              <!-- corner decorations -->
+              <div class="corner top-left"><img src="/img/frame.png" alt="frame corner"></div>
+              <div class="corner top-right"><img src="/img/frame.png" alt="frame corner"></div>
+              <div class="corner bottom-left"><img src="/img/frame.png" alt="frame corner"></div>
+              <div class="corner bottom-right"><img src="/img/frame.png" alt="frame corner"></div>
+
+              <div class="cover-ornament top-ornament">✦ <span class="ornament-center">✦</span> ✦</div>
               <p class="cover-subtitle">Thiệp Cưới</p>
               <div class="cover-roses"></div>
-              <h2 class="cover-names">Tuấn<br/><img class="cover-img" src="/img/nhancuoi.png" alt="Khoảnh khắc chuẩn bị ngày cưới" />
-<br/>Lan</h2>
+              <h2 class="cover-names">Tuấn<br/><span class="cover-amp">&amp;</span><br/>Lan</h2>
+              <img class="cover-undertext" src="/img/nhancuoi.png" alt="ornament under names" />
               <div class="cover-date-box">15 · 05 · 2026</div>
+              <img class="cover-underdays" src="/img/frame_underdays.png" alt="ornament under date" />
               <div class="cover-ornament bottom-ornament">✦ ✦ ✦</div>
             </div>
           </div>
@@ -113,21 +124,20 @@
             <div class="page-body two-columns">
               <div class="profile-card">
                 <div class="avatar groom-avatar">
+                  <img src="https://th.bing.com/th/id/OIP.OZ_sN0N3-I0kvKaFED7NHAHaKx?w=208&h=301&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Ảnh chú rể" />
                   <i class="fas fa-user-tie"></i>
                 </div>
-                <h4 class="profile-name">Chú Rể</h4>
                 <p class="profile-fullname">Nguyễn Minh Tuấn</p>
                 <p class="profile-info"><i class="fas fa-birthday-cake"></i> 12/03/1995</p>
                 <p class="profile-info"><i class="fas fa-map-marker-alt"></i> Hà Nội</p>
                 <p class="profile-info"><i class="fas fa-briefcase"></i> Kỹ Sư Phần Mềm</p>
                 <p class="profile-desc">Chàng trai điềm tĩnh, đáng tin cậy, luôn mang lại cảm giác an toàn và ấm áp.</p>
               </div>
-              <div class="profile-divider"><i class="fas fa-heart heart-icon"></i></div>
               <div class="profile-card">
                 <div class="avatar bride-avatar">
+                  <img src="https://tse1.mm.bing.net/th/id/OIP.k05Y4-Wdh1azRq4SrQpWUQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ảnh cô dâu" />
                   <i class="fas fa-user"></i>
                 </div>
-                <h4 class="profile-name">Cô Dâu</h4>
                 <p class="profile-fullname">Trần Thị Lan</p>
                 <p class="profile-info"><i class="fas fa-birthday-cake"></i> 08/07/1997</p>
                 <p class="profile-info"><i class="fas fa-map-marker-alt"></i> TP. Hồ Chí Minh</p>
@@ -216,6 +226,9 @@
                 <p class="event-detail"><i class="fas fa-clock"></i> 12:00 – 14:00 trưa</p>
                 <p class="event-detail"><i class="fas fa-map-marker-alt"></i> Nhà Hàng Tầng 5 – Khách Sạn Melia</p>
               </div>
+              <div class="map-link map-link-on-event">
+                <a href="#" class="map-btn"><i class="fas fa-map"></i> Xem Bản Đồ Đường Đi</a>
+              </div>
             </div>
             <div class="page-number">4</div>
           </div>
@@ -225,7 +238,7 @@
           <div class="page-inner">
             <div class="page-header">
               <div class="page-ornament"></div>
-              <h3 class="page-title">Lịch Trình<br/>Buổi Lễ</h3>
+              <h3 class="page-title">Bên Lịch Trình<br/>Buổi Lễ</h3>
               <div class="title-line"></div>
             </div>
             <div class="page-body">
@@ -330,7 +343,9 @@
             <p class="formal-text">hiện diện trong lễ thành hôn của</p>
             <div class="formal-couple">
               <span class="formal-groom">Nguyễn Minh Tuấn</span>
-              <span class="formal-heart">❤</span>
+              <div class="formal-heart-row">
+                <span class="formal-heart">❤</span>
+              </div>
               <span class="formal-bride">Trần Thị Lan</span>
             </div>
             <div class="formal-date-box">
@@ -343,6 +358,7 @@
               Khách Sạn Melia Hà Nội<br/>
               44B Lý Thường Kiệt, Hoàn Kiếm, Hà Nội
             </p>
+            <img class="formal-bottom-image" src="/img/nhancuoicapdoi.png" alt="Nhẫn cưới cặp đôi" />
             <div class="formal-bottom-ornament">✦ ✦ ✦</div>
             <div class="page-number">7</div>
           </div>
@@ -477,9 +493,6 @@
                   <a href="tel:0966789012" class="contact-phone"><i class="fas fa-phone"></i> 096 678 9012</a>
                 </div>
               </div>
-              <div class="map-link">
-                <a href="#" class="map-btn"><i class="fas fa-map"></i> Xem Bản Đồ Đường Đi</a>
-              </div>
             </div>
             <div class="page-number">10</div>
           </div>
@@ -501,7 +514,9 @@
                 niềm hạnh phúc lớn nhất của chúng tôi.
               </p>
               <div class="back-names">Tuấn &amp; Lan</div>
+              <img class="back-undertext" src="/img/nhancuoi.png" alt="ornament under names" />
               <div class="back-date">15 · 05 · 2026</div>
+              <img class="back-underdays" src="/img/frame_underdays.png" alt="ornament under date" />
               <div class="back-ornament bottom">✦ ✦ ✦</div>
               <div class="page-number light">11</div>
             </div>
@@ -512,23 +527,17 @@
     </div><!-- end .book -->
   </div><!-- end .book-wrapper -->
 </div><!-- end .book-modal -->  
-<script src="script.js"></script>
-</body>
-</html>
-ềm hạnh phúc lớn nhất của chúng tôi.
-              </p>
-              <div class="back-names">Tuấn &amp; Lan</div>
-              <div class="back-date">15 · 05 · 2026</div>
-              <div class="back-ornament bottom">✦ ✦ ✦</div>
-              <div class="page-number light">11</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- end .book -->
-  </div><!-- end .book-wrapper -->
-</div><!-- end .book-modal -->  
+<div id="rsvp-toast" class="toast hidden">Cảm ơn bạn đã xác nhận tham dự!</div>
+<div id="wish-toast" class="toast hidden">Lời chúc của bạn đã được gửi đi!</div>
+<div id="notice-modal" class="notice-modal hidden" aria-hidden="true">
+  <div class="notice-card" role="alertdialog" aria-modal="true" aria-labelledby="notice-message">
+    <div class="notice-ornament">✦ ✦ ✦</div>
+    <h4 class="notice-title">Thông Báo</h4>
+    <p id="notice-message" class="notice-message">Thông báo</p>
+    <button id="notice-ok" class="notice-ok-btn" type="button">OK</button>
+  </div>
+</div>
+<div id="floating-wishes-container" class="floating-wishes-container"></div>
 <script src="script.js"></script>
 </body>
 </html>

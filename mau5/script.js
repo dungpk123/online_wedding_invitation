@@ -22,18 +22,49 @@
   const wishList = document.getElementById("wish-list");
   const rsvpToast = document.getElementById("rsvp-toast");
   const wishToast = document.getElementById("wish-toast");
+  const noticeModal = document.getElementById("notice-modal");
+  const noticeMessage = document.getElementById("notice-message");
+  const noticeOkBtn = document.getElementById("notice-ok");
+  const NOTICE_HIDE_DURATION = 320;
 
   const spreads = Array.from(document.querySelectorAll(".spread"));
   const TOTAL_SPREADS = spreads.length;
   const TOTAL_PAGES = 11;
   const FLIP_DURATION = 780;
   const OPEN_COVER_DURATION = 620;
+  const CLOSE_COVER_DURATION = 620;
 
   let currentSpread = 0;
   let isAnimating = false;
   let isBookClosed = true;
+  let noticeHideTimer = null;
 
   const PETAL_CHARS = [".", "*", "o", "+"];
+
+  function decorateInnerPages() {
+    const innerPages = document.querySelectorAll(".page:not(.cover-left):not(.cover-right) .page-inner");
+    innerPages.forEach((inner) => {
+      if (inner.querySelector(".inner-page-frame")) return;
+
+      const frame = document.createElement("div");
+      frame.className = "inner-page-frame";
+
+      ["top-left", "top-right", "bottom-left", "bottom-right"].forEach((pos) => {
+        const corner = document.createElement("div");
+        corner.className = "inner-corner " + pos;
+
+        const img = document.createElement("img");
+        img.src = "/img/frame.png";
+        img.alt = "";
+        img.setAttribute("aria-hidden", "true");
+
+        corner.appendChild(img);
+        frame.appendChild(corner);
+      });
+
+      inner.prepend(frame);
+    });
+  }
 
   function spawnPetal() {
     if (!petalsEl) return;
@@ -125,6 +156,28 @@
     }, OPEN_COVER_DURATION);
   }
 
+  function closeCoverFromLeftToRight() {
+    if (isAnimating || isBookClosed) return;
+    if (!book) {
+      isBookClosed = true;
+      if (prevBtn) prevBtn.style.display = "none";
+      updateNav();
+      return;
+    }
+
+    isAnimating = true;
+    book.classList.add("closing-cover");
+
+    setTimeout(() => {
+      book.classList.remove("closing-cover");
+      book.classList.add("is-closed");
+      isBookClosed = true;
+      if (prevBtn) prevBtn.style.display = "none";
+      updateNav();
+      isAnimating = false;
+    }, CLOSE_COVER_DURATION);
+  }
+
   function flipTo(targetSpread) {
     if (isBookClosed || isAnimating) return;
     if (targetSpread === currentSpread) return;
@@ -192,7 +245,53 @@
     setTimeout(() => {
       el.classList.remove("show");
       el.classList.add("hidden");
-    }, 3200);
+    }, 3800);
+  }
+
+  function showNotice(message, toastEl) {
+    if (noticeMessage && noticeModal) {
+      if (noticeHideTimer) {
+        clearTimeout(noticeHideTimer);
+        noticeHideTimer = null;
+      }
+
+      noticeMessage.textContent = message;
+      noticeModal.classList.remove("hidden");
+      noticeModal.classList.remove("is-hiding");
+      void noticeModal.offsetWidth;
+      noticeModal.classList.add("is-visible");
+      noticeModal.setAttribute("aria-hidden", "false");
+
+      if (noticeOkBtn) {
+        setTimeout(() => noticeOkBtn.focus(), 20);
+      }
+
+      return;
+    }
+
+    // Fallback for unexpected DOM mismatches.
+    if (toastEl) {
+      toastEl.textContent = message;
+      showToast(toastEl);
+    }
+  }
+
+  function hideNotice() {
+    if (!noticeModal) return;
+
+    noticeModal.classList.remove("is-visible");
+    noticeModal.classList.add("is-hiding");
+    noticeModal.setAttribute("aria-hidden", "true");
+
+    if (noticeHideTimer) {
+      clearTimeout(noticeHideTimer);
+    }
+
+    noticeHideTimer = setTimeout(() => {
+      noticeModal.classList.add("hidden");
+      noticeModal.classList.remove("is-hiding");
+      noticeHideTimer = null;
+    }, NOTICE_HIDE_DURATION);
   }
 
   function sanitize(str) {
@@ -211,6 +310,22 @@
   if (bookWrapper) {
     bookWrapper.addEventListener("click", (e) => e.stopPropagation());
   }
+
+  if (noticeOkBtn) {
+    noticeOkBtn.addEventListener("click", hideNotice);
+  }
+
+  if (noticeModal) {
+    noticeModal.addEventListener("click", (e) => {
+      if (e.target === noticeModal) hideNotice();
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && noticeModal && !noticeModal.classList.contains("hidden")) {
+      hideNotice();
+    }
+  });
 
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
   if (modalBg) {
@@ -234,10 +349,7 @@
     prevBtn.addEventListener("click", () => {
       if (isAnimating || isBookClosed) return;
       if (currentSpread === 0) {
-        isBookClosed = true;
-        if (book) book.classList.add("is-closed");
-        if (prevBtn) prevBtn.style.display = "none";
-        updateNav();
+        closeCoverFromLeftToRight();
         return;
       }
       flipTo(currentSpread - 1);
@@ -257,10 +369,7 @@
 
     if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
       if (!isBookClosed && currentSpread === 0) {
-        isBookClosed = true;
-        if (book) book.classList.add("is-closed");
-        if (prevBtn) prevBtn.style.display = "none";
-        updateNav();
+        closeCoverFromLeftToRight();
       } else {
         flipTo(currentSpread - 1);
       }
@@ -288,10 +397,7 @@
           flipTo(currentSpread + 1);
         }
       } else if (!isBookClosed && currentSpread === 0) {
-        isBookClosed = true;
-        book.classList.add("is-closed");
-        if (prevBtn) prevBtn.style.display = "none";
-        updateNav();
+        closeCoverFromLeftToRight();
       } else {
         flipTo(currentSpread - 1);
       }
@@ -301,7 +407,7 @@
   if (rsvpForm) {
     rsvpForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      showToast(rsvpToast);
+      showNotice("Đã gửi xác nhận tham dự thành công!", rsvpToast);
       rsvpForm.reset();
     });
   }
@@ -321,10 +427,11 @@
       item.innerHTML = "<strong>" + name + ":</strong> \"" + msg + "\"";
       wishList.prepend(item);
       wishForm.reset();
-      showToast(wishToast);
+      showNotice("Gửi lời chúc thành công!", wishToast);
     });
   }
 
+  decorateInnerPages();
   startPetals();
   resetBookToClosed();
 })();
