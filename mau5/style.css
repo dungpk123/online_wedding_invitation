@@ -2065,6 +2065,16 @@ body {
 }
 
 @media (max-width: 767px) {
+  :root {
+    --page-w: 47.5vw;
+    --page-h: 66vw;
+  }
+
+  html,
+  body {
+    min-height: 100dvh;
+  }
+
   .landing-content {
     width: min(94vw, 520px);
     padding: 30px 18px;
@@ -2089,11 +2099,26 @@ body {
   }
 
   .book-modal {
-    padding: 16px 12px 34px;
+    padding: max(8px, env(safe-area-inset-top)) 2vw max(18px, env(safe-area-inset-bottom));
+  }
+
+  .book-wrapper {
+    transform: scale(1.02);
+    transform-origin: center center;
   }
 
   .page-title {
     font-size: .98rem;
+  }
+
+  .page-inner {
+    padding: 16px 10px 10px;
+  }
+
+  .page-counter {
+    bottom: -22px;
+    font-size: .68rem;
+    letter-spacing: .12em;
   }
 
   .formal-date-number {
@@ -2116,8 +2141,16 @@ body {
 
 @media (max-width: 767px) and (orientation: landscape) {
   :root {
-    --page-h: 64vh;
+    --page-h: 74vh;
     --page-w: calc(var(--page-h) * 0.72);
+  }
+
+  .book-modal {
+    padding: max(8px, env(safe-area-inset-top)) max(8px, env(safe-area-inset-right)) max(18px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+  }
+
+  .book-wrapper {
+    transform: scale(1.04);
   }
 
   .nav-prev {
@@ -2184,20 +2217,6 @@ body {
   }
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
-  .book-modal:not(.hidden) .rotate-device-overlay {
-    display: flex;
-  }
-
-  .book-modal:not(.hidden) .book-wrapper,
-  .book-modal:not(.hidden) .page-counter {
-    opacity: .12;
-    pointer-events: none;
-    filter: blur(6px);
-  }
-
-  .book-modal:not(.hidden) .nav-btn {
-    opacity: 0;
-    pointer-events: none;
-  }
+.rotate-device-overlay {
+  display: none !important;
 }

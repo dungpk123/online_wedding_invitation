@@ -136,6 +136,7 @@
     if (isAnimating) return;
     if (bookModal) bookModal.classList.add("hidden");
     if (landing) landing.classList.remove("fade-out");
+    void exitFullscreen();
     setTimeout(() => {
       resetBookToClosed();
     }, 400);
@@ -299,8 +300,31 @@
     return str.replace(/[&<>"']/g, (c) => map[c]);
   }
 
+  async function enterFullscreen() {
+    const root = document.documentElement;
+
+    if (!root || document.fullscreenElement || !root.requestFullscreen) return;
+
+    try {
+      await root.requestFullscreen({ navigationUI: "hide" });
+    } catch (_error) {
+      // Browser support varies on mobile; ignore rejected requests.
+    }
+  }
+
+  async function exitFullscreen() {
+    if (!document.fullscreenElement || !document.exitFullscreen) return;
+
+    try {
+      await document.exitFullscreen();
+    } catch (_error) {
+      // Ignore browsers that do not allow programmatic fullscreen exit.
+    }
+  }
+
   if (openBtn) {
     openBtn.addEventListener("click", () => {
+      void enterFullscreen();
       if (landing) landing.classList.add("fade-out");
       if (bookModal) bookModal.classList.remove("hidden");
       resetBookToClosed();
