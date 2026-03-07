@@ -2066,8 +2066,8 @@ body {
 
 @media (max-width: 767px) {
   :root {
-    --page-w: 48.6vw;
-    --page-h: min(76vw, 52vh);
+    --page-w: 49.2vw;
+    --page-h: min(70vw, 84vh);
   }
 
   html,
@@ -2099,21 +2099,90 @@ body {
   }
 
   .book-modal {
-    padding: max(6px, env(safe-area-inset-top)) 1vw max(16px, env(safe-area-inset-bottom));
+    padding: max(4px, env(safe-area-inset-top)) .4vw max(12px, env(safe-area-inset-bottom));
   }
 
   .book-wrapper {
-    transform: scale(1.06);
+    transform: scale(1.1);
     transform-origin: center center;
   }
 
   .page-title {
-    font-size: .82rem;
+    font-size: .86rem;
     line-height: 1.16;
   }
 
   .page-inner {
     padding: 12px 8px 8px;
+  }
+
+  .cover-left .page-inner,
+  .cover-right .page-inner {
+    padding: 10px;
+  }
+
+  .cover-content,
+  .back-cover-content {
+    border-width: 1px;
+  }
+
+  .cover-content {
+    --line-x-inset: 8px;
+    --line-y-inset: 8px;
+    --line-gap: 34px;
+    padding-top: 22px;
+  }
+
+  .cover-content .corner {
+    width: 54px;
+    height: 48px;
+  }
+
+  .cover-ornament,
+  .back-ornament {
+    font-size: .56rem;
+    letter-spacing: .2em;
+  }
+
+  .ornament-center {
+    font-size: 1.45em;
+    transform: translateY(1px);
+  }
+
+  .cover-subtitle,
+  .back-subtitle {
+    margin: 5px 0;
+    font-size: .62rem;
+    letter-spacing: .18em;
+  }
+
+  .cover-names,
+  .back-names {
+    font-size: 2rem;
+    line-height: 1.08;
+  }
+
+  .cover-amp {
+    font-size: .95rem;
+  }
+
+  .cover-undertext,
+  .back-undertext {
+    width: min(62%, 56px);
+    margin-bottom: 4px;
+  }
+
+  .cover-date-box,
+  .back-date {
+    letter-spacing: .12em;
+    font-size: .55rem;
+  }
+
+  .cover-underdays,
+  .back-underdays {
+    width: min(64%, 180px);
+    margin-top: -54px;
+    margin-bottom: 2px;
   }
 
   .page-counter {
@@ -2157,7 +2226,7 @@ body {
   .back-text,
   .back-quote,
   .map-link-on-event .map-btn {
-    font-size: .56rem;
+    font-size: .6rem;
     line-height: 1.45;
   }
 
@@ -2173,7 +2242,7 @@ body {
   .back-subtitle,
   .back-date,
   .back-names {
-    font-size: .66rem;
+    font-size: .7rem;
   }
 
   .signature {
@@ -2204,7 +2273,7 @@ body {
   }
 
   .profile-fullname {
-    font-size: .74rem;
+    font-size: .78rem;
     line-height: 1.1;
   }
 
@@ -2270,21 +2339,21 @@ body {
 
   .form-group label,
   .radio-label {
-    font-size: .6rem;
+    font-size: .64rem;
   }
 
   .form-group input,
   .form-group select,
   .form-group textarea {
     padding: 8px 9px;
-    font-size: .62rem;
+    font-size: .66rem;
   }
 
   .rsvp-btn,
   .wish-btn,
   .map-btn {
     padding: 9px 10px;
-    font-size: .64rem;
+    font-size: .68rem;
   }
 
   .inner-corner {
@@ -2313,8 +2382,8 @@ body {
 
 @media (max-width: 767px) and (orientation: landscape) {
   :root {
-    --page-h: 79vh;
-    --page-w: calc(var(--page-h) * 0.72);
+    --page-w: 47.8vw;
+    --page-h: min(66vw, 88vh);
   }
 
   .book-modal {
@@ -2322,7 +2391,7 @@ body {
   }
 
   .book-wrapper {
-    transform: scale(1.08);
+    transform: scale(1.12);
   }
 
   .nav-prev {
@@ -2343,6 +2412,46 @@ body {
     padding: 13px 10px 10px;
   }
 
+  .cover-left .page-inner,
+  .cover-right .page-inner {
+    padding: 9px;
+  }
+
+  .cover-content {
+    --line-x-inset: 7px;
+    --line-y-inset: 7px;
+    --line-gap: 30px;
+    padding-top: 18px;
+  }
+
+  .cover-content .corner {
+    width: 48px;
+    height: 42px;
+  }
+
+  .cover-names,
+  .back-names {
+    font-size: 1.75rem;
+  }
+
+  .cover-subtitle,
+  .back-subtitle {
+    font-size: .58rem;
+    letter-spacing: .15em;
+    margin: 4px 0;
+  }
+
+  .cover-date-box,
+  .back-date {
+    font-size: .5rem;
+    letter-spacing: .1em;
+  }
+
+  .cover-underdays,
+  .back-underdays {
+    margin-top: -46px;
+  }
+
   .page-title {
     font-size: .82rem;
   }
@@ -2355,7 +2464,7 @@ body {
   .contact-phone,
   .profile-info,
   .profile-desc {
-    font-size: .56rem;
+    font-size: .6rem;
   }
 
   .page-counter {
@@ -2380,7 +2489,7 @@ body {
   }
 
   .profile-fullname {
-    font-size: .72rem;
+    font-size: .76rem;
   }
 
   .inner-corner {
