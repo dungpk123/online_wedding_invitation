@@ -2116,6 +2116,14 @@ body {
     padding: 12px 8px 8px;
   }
 
+  .page-header {
+    margin-bottom: 5px;
+  }
+
+  .page-body {
+    gap: 5px;
+  }
+
   .cover-left .page-inner,
   .cover-right .page-inner {
     padding: 10px;
@@ -2197,6 +2205,289 @@ body {
 
   .page-header {
     margin-bottom: 6px;
+  }
+
+  .page[data-page="2"] .page-body.two-columns {
+    width: 100%;
+    margin-top: 0;
+    padding-top: 6px;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .page[data-page="2"] .profile-card {
+    gap: 4px;
+  }
+
+  .page[data-page="2"] .avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .page[data-page="2"] .profile-fullname {
+    font-size: .68rem;
+    line-height: 1.08;
+  }
+
+  .page[data-page="2"] .profile-info {
+    font-size: .52rem;
+    line-height: 1.24;
+  }
+
+  .page[data-page="2"] .profile-info i {
+    width: 9px;
+  }
+
+  .page[data-page="3"] .timeline {
+    gap: 6px;
+    padding-left: 8px;
+  }
+
+  .page[data-page="3"] .timeline-item {
+    gap: 6px;
+  }
+
+  .page[data-page="3"] .timeline-item::after {
+    left: 5px;
+    top: 15px;
+    bottom: -8px;
+  }
+
+  .page[data-page="3"] .timeline-date {
+    font-size: .58rem;
+    margin-bottom: 1px;
+  }
+
+  .page[data-page="3"] .timeline-text {
+    font-size: .56rem;
+    line-height: 1.35;
+  }
+
+  .page[data-page="4"] .page-body,
+  .page[data-page="5"] .page-body,
+  .page[data-page="6"] .page-body,
+  .page[data-page="7"] .page-inner,
+  .page[data-page="8"] .page-body,
+  .page[data-page="9"] .page-body,
+  .page[data-page="10"] .page-body,
+  .page[data-page="11"] .back-cover-content {
+    padding-top: 4px;
+  }
+
+  .page[data-page="4"] .event-card {
+    padding: 8px 9px 7px;
+    border-radius: 10px;
+  }
+
+  .page[data-page="4"] .event-name {
+    font-size: .72rem;
+  }
+
+  .page[data-page="4"] .event-detail {
+    font-size: .56rem;
+    line-height: 1.3;
+  }
+
+  .page[data-page="4"] .map-link-on-event .map-btn {
+    padding: 8px 10px;
+    font-size: .62rem;
+  }
+
+  .page[data-page="5"] .schedule {
+    gap: 5px;
+    padding-top: 0;
+  }
+
+  .page[data-page="5"] .schedule-item {
+    grid-template-columns: 32px 9px 1fr;
+    gap: 5px;
+  }
+
+  .page[data-page="5"] .schedule-time {
+    font-size: .64rem;
+  }
+
+  .page[data-page="5"] .schedule-dot {
+    width: 8px;
+    height: 8px;
+    border-width: 1.5px;
+  }
+
+  .page[data-page="5"] .schedule-item:not(:last-child) .schedule-dot::after {
+    height: 16px;
+  }
+
+  .page[data-page="5"] .schedule-dot::before {
+    width: 9px;
+  }
+
+  .page[data-page="5"] .schedule-desc {
+    font-size: .57rem;
+    line-height: 1.34;
+    padding-bottom: 3px;
+  }
+
+  .page[data-page="6"] .photo-grid {
+    gap: 4px;
+  }
+
+  .page[data-page="6"] .photo-placeholder {
+    font-size: .56rem;
+    gap: 3px;
+  }
+
+  .page[data-page="6"] .photo-caption {
+    font-size: .58rem;
+    line-height: 1.3;
+  }
+
+  .page[data-page="7"].formal-invite,
+  .page[data-page="7"] .formal-invite {
+    padding-top: 12px;
+  }
+
+  .page[data-page="7"] .formal-label {
+    margin: 5px 0 4px;
+    font-size: .62rem;
+    letter-spacing: .2em;
+  }
+
+  .page[data-page="7"] .formal-guest-hint,
+  .page[data-page="7"] .formal-text,
+  .page[data-page="7"] .formal-venue {
+    font-size: .58rem;
+    line-height: 1.34;
+  }
+
+  .page[data-page="7"] .formal-couple {
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .page[data-page="7"] .formal-groom,
+  .page[data-page="7"] .formal-bride {
+    font-size: 1.02rem;
+  }
+
+  .page[data-page="7"] .formal-heart-row {
+    width: min(78%, 120px);
+    gap: 8px;
+  }
+
+  .page[data-page="7"] .formal-date-number {
+    font-size: 1.42rem;
+  }
+
+  .page[data-page="7"] .formal-day,
+  .page[data-page="7"] .formal-month-year {
+    font-size: .58rem;
+    letter-spacing: .12em;
+  }
+
+  .page[data-page="7"] .formal-bottom-image {
+    width: min(76%, 120px);
+  }
+
+  .page[data-page="8"] .body-text,
+  .page[data-page="9"] .body-text,
+  .page[data-page="10"] .body-text,
+  .page[data-page="11"] .back-text,
+  .page[data-page="11"] .back-quote {
+    font-size: .58rem;
+    line-height: 1.32;
+  }
+
+  .page[data-page="8"] .rsvp-form,
+  .page[data-page="9"] .wish-form {
+    gap: 4px;
+  }
+
+  .page[data-page="8"] .form-group,
+  .page[data-page="9"] .form-group {
+    gap: 2px;
+  }
+
+  .page[data-page="8"] .form-group label,
+  .page[data-page="8"] .radio-label,
+  .page[data-page="9"] .form-group label {
+    font-size: .58rem;
+  }
+
+  .page[data-page="8"] .form-group input,
+  .page[data-page="8"] .form-group select,
+  .page[data-page="9"] .form-group input,
+  .page[data-page="9"] .form-group textarea {
+    padding: 6px 7px;
+    font-size: .58rem;
+    border-radius: 7px;
+  }
+
+  .page[data-page="9"] .form-group textarea {
+    min-height: 78px;
+  }
+
+  .page[data-page="8"] .rsvp-btn,
+  .page[data-page="9"] .wish-btn {
+    padding: 8px 10px;
+    font-size: .6rem;
+  }
+
+  .page[data-page="9"] .wish-list {
+    gap: 4px;
+    max-height: 94px;
+  }
+
+  .page[data-page="9"] .wish-item {
+    padding: 5px 7px;
+    font-size: .54rem;
+    line-height: 1.28;
+  }
+
+  .page[data-page="10"] .family-card {
+    padding: 8px 9px;
+    border-radius: 10px;
+  }
+
+  .page[data-page="10"] .family-title {
+    font-size: .72rem;
+    margin-bottom: 3px;
+  }
+
+  .page[data-page="10"] .contact-item {
+    gap: 4px;
+    padding: 3px 0;
+  }
+
+  .page[data-page="10"] .contact-label,
+  .page[data-page="10"] .contact-phone {
+    font-size: .56rem;
+    line-height: 1.28;
+  }
+
+  .page[data-page="11"] .back-cover-content {
+    justify-content: center;
+    gap: 4px;
+    padding-top: 14px;
+  }
+
+  .page[data-page="11"] .back-subtitle {
+    font-size: .58rem;
+    letter-spacing: .14em;
+  }
+
+  .page[data-page="11"] .back-names {
+    font-size: 1.18rem;
+  }
+
+  .page[data-page="11"] .back-undertext {
+    width: min(56%, 52px);
+    margin-bottom: 3px;
+  }
+
+  .page[data-page="11"] .back-underdays {
+    width: min(58%, 136px);
+    margin-top: -38px;
   }
 
   .page-ornament {
@@ -2495,6 +2786,401 @@ body {
   .inner-corner {
     width: 34px;
     height: 30px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  :root {
+    --page-h: min(86dvh, 340px);
+    --page-w: calc(var(--page-h) * 0.72);
+  }
+
+  html,
+  body {
+    min-height: 100dvh;
+  }
+
+  .book-modal {
+    padding: max(8px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left));
+  }
+
+  .book-wrapper {
+    transform: none;
+    transform-origin: center center;
+  }
+
+  .nav-prev {
+    left: -20px;
+  }
+
+  .nav-next {
+    right: -20px;
+  }
+
+  .nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: .8rem;
+  }
+
+  .page-inner {
+    padding: 14px 10px 10px;
+  }
+
+  .page-header {
+    margin-bottom: 4px;
+  }
+
+  .page-body {
+    gap: 4px;
+  }
+
+  .cover-left .page-inner,
+  .cover-right .page-inner {
+    padding: 10px;
+  }
+
+  .cover-content {
+    --line-x-inset: 8px;
+    --line-y-inset: 8px;
+    --line-gap: 32px;
+    padding-top: 20px;
+  }
+
+  .cover-content .corner {
+    width: 52px;
+    height: 46px;
+  }
+
+  .cover-names,
+  .back-names {
+    font-size: 1.9rem;
+  }
+
+  .cover-subtitle,
+  .back-subtitle {
+    font-size: .62rem;
+    letter-spacing: .16em;
+  }
+
+  .cover-date-box,
+  .back-date {
+    font-size: .54rem;
+    letter-spacing: .12em;
+  }
+
+  .cover-underdays,
+  .back-underdays {
+    margin-top: -50px;
+  }
+
+  .page-title {
+    font-size: .88rem;
+  }
+
+  .body-text,
+  .timeline-text,
+  .schedule-desc,
+  .event-detail,
+  .contact-label,
+  .contact-phone,
+  .profile-info,
+  .profile-desc,
+  .wish-item,
+  .photo-caption,
+  .formal-text,
+  .formal-guest-hint,
+  .formal-month-year,
+  .formal-day,
+  .back-text,
+  .back-quote,
+  .map-link-on-event .map-btn {
+    font-size: .62rem;
+    line-height: 1.46;
+  }
+
+  .timeline-date,
+  .schedule-time,
+  .event-name,
+  .family-title,
+  .profile-name,
+  .formal-label,
+  .formal-groom,
+  .formal-bride,
+  .back-names {
+    font-size: .74rem;
+  }
+
+  .two-columns {
+    width: 98%;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .page[data-page="2"] .page-body.two-columns {
+    margin-top: 0;
+    padding-top: 8px;
+    gap: 8px;
+  }
+
+  .profile-card {
+    max-width: 47%;
+    gap: 4px;
+  }
+
+  .page[data-page="2"] .avatar {
+    width: 46px;
+    height: 46px;
+  }
+
+  .page[data-page="2"] .profile-fullname {
+    font-size: .66rem;
+    line-height: 1.05;
+  }
+
+  .page[data-page="2"] .profile-info {
+    font-size: .5rem;
+    line-height: 1.18;
+  }
+
+  .page[data-page="2"] .profile-info i {
+    width: 8px;
+  }
+
+  .avatar {
+    width: 58px;
+    height: 58px;
+    font-size: 1.24rem;
+  }
+
+  .profile-fullname {
+    font-size: .8rem;
+  }
+
+  .page[data-page="3"] .timeline {
+    gap: 5px;
+    padding-left: 6px;
+  }
+
+  .page[data-page="3"] .timeline-item {
+    gap: 5px;
+  }
+
+  .page[data-page="3"] .timeline-dot {
+    width: 12px;
+    height: 12px;
+    flex-basis: 12px;
+    margin-top: 2px;
+  }
+
+  .page[data-page="3"] .timeline-item::after {
+    left: 5px;
+    top: 12px;
+    bottom: -6px;
+  }
+
+  .page[data-page="3"] .timeline-date {
+    font-size: .56rem;
+    margin-bottom: 1px;
+  }
+
+  .page[data-page="3"] .timeline-text {
+    font-size: .54rem;
+    line-height: 1.28;
+  }
+
+  .page[data-page="4"] .event-card {
+    padding: 7px 8px 6px;
+  }
+
+  .page[data-page="4"] .event-icon {
+    font-size: .7rem;
+    margin-bottom: 2px;
+  }
+
+  .page[data-page="4"] .event-name {
+    font-size: .68rem;
+    margin-bottom: 1px;
+  }
+
+  .page[data-page="4"] .event-detail {
+    font-size: .52rem;
+    line-height: 1.24;
+  }
+
+  .page[data-page="4"] .divider-ornament {
+    font-size: .44rem;
+    letter-spacing: .24em;
+  }
+
+  .page[data-page="4"] .map-link-on-event .map-btn {
+    padding: 7px 10px;
+    font-size: .56rem;
+  }
+
+  .page[data-page="5"] .schedule {
+    gap: 4px;
+  }
+
+  .page[data-page="5"] .schedule-item {
+    grid-template-columns: 28px 8px 1fr;
+    gap: 4px;
+  }
+
+  .page[data-page="5"] .schedule-time {
+    font-size: .58rem;
+  }
+
+  .page[data-page="5"] .schedule-dot {
+    width: 7px;
+    height: 7px;
+    margin-top: 2px;
+  }
+
+  .page[data-page="5"] .schedule-item:not(:last-child) .schedule-dot::after {
+    height: 13px;
+  }
+
+  .page[data-page="5"] .schedule-dot::before {
+    width: 7px;
+  }
+
+  .page[data-page="5"] .schedule-desc {
+    font-size: .53rem;
+    line-height: 1.24;
+  }
+
+  .page[data-page="6"] .photo-grid {
+    gap: 3px;
+  }
+
+  .page[data-page="6"] .photo-placeholder {
+    font-size: .5rem;
+  }
+
+  .page[data-page="6"] .photo-caption {
+    font-size: .53rem;
+    line-height: 1.22;
+  }
+
+  .page[data-page="7"] .formal-label {
+    font-size: .58rem;
+    margin: 4px 0 3px;
+  }
+
+  .page[data-page="7"] .formal-guest-hint,
+  .page[data-page="7"] .formal-text,
+  .page[data-page="7"] .formal-venue {
+    font-size: .53rem;
+    line-height: 1.24;
+  }
+
+  .page[data-page="7"] .formal-couple {
+    gap: 3px;
+    margin-bottom: 5px;
+  }
+
+  .page[data-page="7"] .formal-groom,
+  .page[data-page="7"] .formal-bride {
+    font-size: .94rem;
+  }
+
+  .page[data-page="7"] .formal-date-number {
+    font-size: 1.28rem;
+  }
+
+  .page[data-page="7"] .formal-day,
+  .page[data-page="7"] .formal-month-year {
+    font-size: .54rem;
+  }
+
+  .page[data-page="7"] .formal-bottom-image {
+    width: min(74%, 110px);
+  }
+
+  .page[data-page="8"] .body-text,
+  .page[data-page="9"] .body-text,
+  .page[data-page="10"] .body-text,
+  .page[data-page="11"] .back-text,
+  .page[data-page="11"] .back-quote {
+    font-size: .53rem;
+    line-height: 1.22;
+  }
+
+  .page[data-page="8"] .form-group label,
+  .page[data-page="8"] .radio-label,
+  .page[data-page="9"] .form-group label {
+    font-size: .54rem;
+  }
+
+  .page[data-page="8"] .form-group input,
+  .page[data-page="8"] .form-group select,
+  .page[data-page="9"] .form-group input,
+  .page[data-page="9"] .form-group textarea {
+    padding: 5px 6px;
+    font-size: .54rem;
+  }
+
+  .page[data-page="9"] .form-group textarea {
+    min-height: 70px;
+  }
+
+  .page[data-page="8"] .rsvp-btn,
+  .page[data-page="9"] .wish-btn {
+    padding: 7px 9px;
+    font-size: .56rem;
+  }
+
+  .page[data-page="9"] .wish-list {
+    max-height: 78px;
+  }
+
+  .page[data-page="9"] .wish-item {
+    font-size: .5rem;
+    line-height: 1.2;
+  }
+
+  .page[data-page="10"] .family-card {
+    padding: 7px 8px;
+  }
+
+  .page[data-page="10"] .family-title {
+    font-size: .66rem;
+  }
+
+  .page[data-page="10"] .contact-label,
+  .page[data-page="10"] .contact-phone {
+    font-size: .52rem;
+    line-height: 1.2;
+  }
+
+  .page[data-page="11"] .back-cover-content {
+    justify-content: center;
+    gap: 3px;
+    padding-top: 12px;
+  }
+
+  .page[data-page="11"] .back-subtitle {
+    font-size: .54rem;
+  }
+
+  .page[data-page="11"] .back-names {
+    font-size: 1.08rem;
+  }
+
+  .page[data-page="11"] .back-undertext {
+    width: min(54%, 48px);
+  }
+
+  .page[data-page="11"] .back-underdays {
+    width: min(56%, 120px);
+    margin-top: -34px;
+  }
+
+  .page-counter {
+    bottom: -20px;
+    font-size: .6rem;
+    letter-spacing: .1em;
   }
 }
 
