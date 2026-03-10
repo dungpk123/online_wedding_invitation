@@ -2138,7 +2138,9 @@ body {
     --line-x-inset: 8px;
     --line-y-inset: 8px;
     --line-gap: 34px;
-    padding-top: 22px;
+    padding-top: 12px;
+    justify-content: center;
+    gap: 3px;
   }
 
   .cover-content .corner {
@@ -2166,7 +2168,7 @@ body {
 
   .cover-names,
   .back-names {
-    font-size: 2rem;
+    font-size: 1.82rem;
     line-height: 1.08;
   }
 
@@ -2183,13 +2185,13 @@ body {
   .cover-date-box,
   .back-date {
     letter-spacing: .12em;
-    font-size: .55rem;
+    font-size: .53rem;
   }
 
   .cover-underdays,
   .back-underdays {
-    width: min(64%, 180px);
-    margin-top: -54px;
+    width: min(60%, 150px);
+    margin-top: -28px;
     margin-bottom: 2px;
   }
 
@@ -2210,9 +2212,9 @@ body {
   .page[data-page="2"] .page-body.two-columns {
     width: 100%;
     margin-top: 0;
-    padding-top: 6px;
+    padding-top: 0;
     gap: 8px;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   }
 
@@ -2221,18 +2223,18 @@ body {
   }
 
   .page[data-page="2"] .avatar {
-    width: 48px;
-    height: 48px;
+    width: 62px;
+    height: 62px;
   }
 
   .page[data-page="2"] .profile-fullname {
-    font-size: .68rem;
+    font-size: .74rem;
     line-height: 1.08;
   }
 
   .page[data-page="2"] .profile-info {
-    font-size: .52rem;
-    line-height: 1.24;
+    font-size: .56rem;
+    line-height: 1.26;
   }
 
   .page[data-page="2"] .profile-info i {
@@ -2286,7 +2288,14 @@ body {
 
   .page[data-page="4"] .event-detail {
     font-size: .56rem;
-    line-height: 1.3;
+    line-height: 1.24;
+  }
+
+  .page[data-page="4"] .event-location {
+    margin-left: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .page[data-page="4"] .map-link-on-event .map-btn {
@@ -2844,7 +2853,9 @@ body {
     --line-x-inset: 8px;
     --line-y-inset: 8px;
     --line-gap: 32px;
-    padding-top: 20px;
+    padding-top: 10px;
+    justify-content: center;
+    gap: 2px;
   }
 
   .cover-content .corner {
@@ -2854,7 +2865,7 @@ body {
 
   .cover-names,
   .back-names {
-    font-size: 1.9rem;
+    font-size: 1.74rem;
   }
 
   .cover-subtitle,
@@ -2871,7 +2882,8 @@ body {
 
   .cover-underdays,
   .back-underdays {
-    margin-top: -50px;
+    margin-top: -24px;
+    width: min(58%, 130px);
   }
 
   .page-title {
@@ -2919,8 +2931,9 @@ body {
 
   .page[data-page="2"] .page-body.two-columns {
     margin-top: 0;
-    padding-top: 8px;
+    padding-top: 0;
     gap: 8px;
+    align-items: center;
   }
 
   .profile-card {
@@ -2929,18 +2942,18 @@ body {
   }
 
   .page[data-page="2"] .avatar {
-    width: 46px;
-    height: 46px;
+    width: 58px;
+    height: 58px;
   }
 
   .page[data-page="2"] .profile-fullname {
-    font-size: .66rem;
+    font-size: .7rem;
     line-height: 1.05;
   }
 
   .page[data-page="2"] .profile-info {
-    font-size: .5rem;
-    line-height: 1.18;
+    font-size: .54rem;
+    line-height: 1.2;
   }
 
   .page[data-page="2"] .profile-info i {
@@ -3005,7 +3018,14 @@ body {
 
   .page[data-page="4"] .event-detail {
     font-size: .52rem;
-    line-height: 1.24;
+    line-height: 1.18;
+  }
+
+  .page[data-page="4"] .event-location {
+    margin-left: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .page[data-page="4"] .divider-ornament {
