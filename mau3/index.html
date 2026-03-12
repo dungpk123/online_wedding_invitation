@@ -581,6 +581,14 @@ h2 {
 	display: inline;
 }
 
+.album-mobile-modal {
+	display: none;
+}
+
+body.mobile-album-expanded {
+	overflow: hidden;
+}
+
 .album-canvas {
 	position: relative;
 	min-height: clamp(620px, 68vw, 900px);
@@ -712,6 +720,8 @@ h2 {
 	top: var(--y);
 	width: var(--card-size);
 	height: calc(var(--drop) + var(--card-size) + 48px);
+	margin-left: var(--offset-x, 0px);
+	margin-top: var(--offset-y, 0px);
 	transform: translate(-50%, -8px);
 	transform-origin: 50% 0;
 	z-index: 6;
@@ -900,8 +910,10 @@ h2 {
 }
 
 .hanger-1 {
-	--x: 13%;
-	--y: 70%;
+	--x: -4%;
+	--y: 68%;
+	--offset-x: 26px;
+	--offset-y: 0px;
 	--drop: 64px;
 	--card-size: 30%;
 	--tilt: -3deg;
@@ -913,8 +925,10 @@ h2 {
 }
 
 .hanger-2 {
-	--x: 20%;
-	--y: 49%;
+	--x: 5%;
+	--y: 46%;
+	--offset-x: 18px;
+	--offset-y: -2px;
 	--drop: 88px;
 	--card-size: 30%;
 	--tilt: 3deg;
@@ -926,8 +940,10 @@ h2 {
 }
 
 .hanger-3 {
-	--x: 31%;
-	--y: 62%;
+	--x: 13%;
+	--y: 26%;
+	--offset-x: 8px;
+	--offset-y: 2px;
 	--drop: 76px;
 	--card-size: 30%;
 	--tilt: -2deg;
@@ -939,8 +955,10 @@ h2 {
 }
 
 .hanger-4 {
-	--x: 47%;
-	--y: 56%;
+	--x: 30%;
+	--y: 46%;
+	--offset-x: -8px;
+	--offset-y: 0px;
 	--drop: 92px;
 	--card-size: 30%;
 	--tilt: 4deg;
@@ -952,8 +970,10 @@ h2 {
 }
 
 .hanger-5 {
-	--x: 31%;
-	--y: 35%;
+	--x: 30%;
+	--y: 12%;
+	--offset-x: -6px;
+	--offset-y: -2px;
 	--drop: 96px;
 	--card-size: 30%;
 	--tilt: -3deg;
@@ -966,7 +986,9 @@ h2 {
 
 .hanger-6 {
 	--x: 45%;
-	--y: 30%;
+	--y: 10%;
+	--offset-x: -18px;
+	--offset-y: 0px;
 	--drop: 84px;
 	--card-size: 30%;
 	--tilt: 3deg;
@@ -978,8 +1000,10 @@ h2 {
 }
 
 .hanger-7 {
-	--x: 55%;
-	--y: 25%;
+	--x: 49%;
+	--y: 40%;
+	--offset-x: -28px;
+	--offset-y: 0px;
 	--drop: 84px;
 	--card-size: 30%;
 	--tilt: 3deg;
@@ -991,8 +1015,10 @@ h2 {
 }
 
 .hanger-8 {
-    --x: 61%;
-    --y: 51%;
+	--x: 58%;
+    --y: 25%;
+	--offset-x: -44px;
+	--offset-y: 0px;
     --drop: 84px;
     --card-size: 30%;
     --tilt: 3deg;
@@ -1004,8 +1030,10 @@ h2 {
 }
 
 .hanger-9 {
-    --x: 68%;
-    --y: 34%;
+	--x: 65%;
+    --y: 54%;
+	--offset-x: -68px;
+	--offset-y: 0px;
     --drop: 84px;
     --card-size: 30%;
     --tilt: 3deg;
@@ -1017,8 +1045,10 @@ h2 {
 }
 
 .hanger-10 {
-    --x: 77%;
+	--x: 83%;
     --y: 56%;
+	--offset-x: -86px;
+	--offset-y: 0px;
     --drop: 84px;
     --card-size: 30%;
     --tilt: 3deg;
@@ -1484,6 +1514,54 @@ h2 {
 	background: #fff;
 }
 
+.music-fab {
+	position: fixed;
+	left: 16px;
+	bottom: 16px;
+	z-index: 30;
+	border: none;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.92);
+	box-shadow: 0 10px 22px rgba(97, 63, 79, 0.24);
+	color: #5e3d4b;
+	display: grid;
+	place-items: center;
+	font-size: 1.35rem;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.music-fab:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 12px 24px rgba(97, 63, 79, 0.28);
+}
+
+.music-fab .music-icon {
+	display: inline-block;
+	line-height: 1;
+	transform-origin: 50% 50%;
+}
+
+.music-fab.is-playing {
+	background: rgba(255, 236, 244, 0.95);
+}
+
+.music-fab.is-playing .music-icon {
+	animation: musicSpin 2.2s linear infinite;
+}
+
+@keyframes musicSpin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
 .reveal {
 	opacity: 0;
 	transform: translateY(30px);
@@ -1580,7 +1658,7 @@ h2 {
 	}
 
 	.hanger-6 {
-		--x: 61%;
+		--x: 54%;
 	}
 
 	.memory-caption {
@@ -1710,6 +1788,61 @@ h2 {
 		padding: 32px 26px 20px;
 	}
 
+	.album-canvas.landscape-mode .memory-hanger {
+		--card-size: 20%;
+		--drop: 72px;
+	}
+
+	.album-canvas.landscape-mode .hanger-1 {
+		--x: 16%;
+		--y: 67%;
+	}
+
+	.album-canvas.landscape-mode .hanger-2 {
+		--x: 25%;
+		--y: 48%;
+	}
+
+	.album-canvas.landscape-mode .hanger-3 {
+		--x: 35%;
+		--y: 62%;
+	}
+
+	.album-canvas.landscape-mode .hanger-4 {
+		--x: 47%;
+		--y: 54%;
+	}
+
+	.album-canvas.landscape-mode .hanger-5 {
+		--x: 37%;
+		--y: 34%;
+	}
+
+	.album-canvas.landscape-mode .hanger-6 {
+		--x: 46%;
+		--y: 30%;
+	}
+
+	.album-canvas.landscape-mode .hanger-7 {
+		--x: 59%;
+		--y: 24%;
+	}
+
+	.album-canvas.landscape-mode .hanger-8 {
+		--x: 64%;
+		--y: 48%;
+	}
+
+	.album-canvas.landscape-mode .hanger-9 {
+		--x: 71%;
+		--y: 33%;
+	}
+
+	.album-canvas.landscape-mode .hanger-10 {
+		--x: 76%;
+		--y: 55%;
+	}
+
 	.album-canvas.landscape-mode .album-petal-layer {
 		display: block;
 	}
@@ -1790,6 +1923,9 @@ h2 {
 		font-size: 0.78rem;
 		line-height: 1.3;
 		white-space: nowrap;
+		max-width: 140px;
+		overflow: hidden;
+		text-overflow: ellipsis;
 		text-align: center;
 	}
 
@@ -1806,6 +1942,39 @@ h2 {
 	.album-canvas.landscape-mode .memory-hanger.fx-hanger-wind.reveal.show {
 		animation: hangerBloomIn 0.8s cubic-bezier(0.23, 1.06, 0.34, 1) both, hangerSway var(--wind-duration, 6.4s) ease-in-out infinite !important;
 		animation-delay: var(--delay, 0s), calc(var(--delay, 0s) + 0.75s);
+	}
+
+	.album-mobile-modal {
+		position: fixed;
+		inset: 0;
+		z-index: 35;
+		background: rgba(244, 248, 255, 0.97);
+		display: none;
+	}
+
+	.album-mobile-modal.open {
+		display: block;
+	}
+
+	.album-mobile-modal-head {
+		height: 58px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 10px 14px;
+	}
+
+	.album-mobile-modal-content {
+		height: calc(100vh - 58px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: auto;
+		padding: 10px;
+	}
+
+	.album-mobile-modal-content .album-canvas {
+		margin: 0;
 	}
 }
 
@@ -1921,6 +2090,14 @@ h2 {
 		top: 16px;
 		right: 16px;
 	}
+
+	.music-fab {
+		left: 12px;
+		bottom: 12px;
+		width: 46px;
+		height: 46px;
+		font-size: 1.2rem;
+	}
 }
 </style>
 </head>
@@ -1944,17 +2121,17 @@ h2 {
                         <p class="hero-sub" data-editable="wedding">Hôn lễ của chúng mình sẽ tổ chức vào lúc 18h thứ 7 ngày 26/12/2026</p>
 						<img class="hero-sakura-inline photo" src="https://i.postimg.cc/gcwgNhcG/sakura-img3.png" alt="Hoa sakura trang trí" />
                         <div class="hero-countdown" aria-label="Đếm ngược tới lễ cưới" data-editable="time">
-                            <div class="countdown-item" data-editable="time_2">
-                                <strong id="countdownHours" data-editable="field_2">0</strong>
+                            <div class="countdown-item" >
+                                <strong id="countdownHours" class="field_2">0</strong>
                                 <span data-editable="time_3">Giờ</span>
                             </div>
-                            <div class="countdown-item" data-editable="field_3">
-                                <strong id="countdownMinutes" data-editable="field_4">0</strong>
-                                <span data-editable="field_5">Phút</span>
+                            <div class="countdown-item" >
+                                <strong id="countdownMinutes" class="field_4">0</strong>
+                                <span class="field_5">Phút</span>
                             </div>
-                            <div class="countdown-item" data-editable="field_6">
-                                <strong id="countdownSeconds" data-editable="field_7">0</strong>
-                                <span data-editable="field_8">Giây</span>
+                            <div class="countdown-item" >
+                                <strong id="countdownSeconds" class="field_7">0</strong>
+                                <span class="field_8">Giây</span>
                             </div>
                         </div>
                     </div>
@@ -2175,6 +2352,16 @@ h2 {
             </div>
         </section>
 
+		<div class="album-mobile-modal" id="albumMobileModal" aria-hidden="true">
+			<div class="album-mobile-modal-head">
+				<button type="button" class="album-view-toggle" id="albumModalToggle" aria-label="Chuyen ve che do doc" aria-pressed="true">
+					<span class="icon-open" aria-hidden="true">⤢</span>
+					<span class="icon-close" aria-hidden="true">⤡</span>
+				</button>
+			</div>
+			<div class="album-mobile-modal-content" id="albumMobileModalContent"></div>
+		</div>
+
         <section class="rsvp section fx-rsvp" id="rsvp">
             <div class="container" data-editable="rsvp">
                 <div class="rsvp-card reveal fade-up" id="rsvpCard" data-editable="rsvp_2">
@@ -2273,6 +2460,13 @@ h2 {
         <button class="lightbox-nav next" id="nextImage" aria-label="Ảnh sau" data-editable="lightbox_next">›</button>
     </div>
 
+	<button id="musicToggle" class="music-fab" type="button" aria-label="Bat nhac nen" title="Bat nhac nen">
+		<span class="music-icon" aria-hidden="true">♪</span>
+	</button>
+	<audio id="bgMusic" preload="none" loop>
+		<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+	</audio>
+
 	<script>
 (function () {
 const viewInviteBtn = document.getElementById("viewInviteBtn");
@@ -2289,12 +2483,18 @@ const downloadPdfBtn = document.getElementById("downloadPdfBtn");
 const countdownHoursEl = document.getElementById("countdownHours");
 const countdownMinutesEl = document.getElementById("countdownMinutes");
 const countdownSecondsEl = document.getElementById("countdownSeconds");
+const heroWeddingTextEl = document.querySelector('[data-editable="wedding"]');
+const eventDateEl = document.querySelector('[data-editable="event_date"]');
+const eventTimeEl = document.querySelector('[data-editable="event_time"]');
+const timelineStartTimeEl = document.querySelector('[data-editable="event_time_2"]');
 
 const albumButtons = document.querySelectorAll(".album-item");
 const hangerItems = document.querySelectorAll(".fx-hanger-wind");
-const albumSection = document.getElementById("album");
 const albumCanvas = document.getElementById("albumCanvas");
 const albumViewToggle = document.getElementById("albumViewToggle");
+const albumModalToggle = document.getElementById("albumModalToggle");
+const albumMobileModal = document.getElementById("albumMobileModal");
+const albumMobileModalContent = document.getElementById("albumMobileModalContent");
 const albumPetalsBack = document.getElementById("albumPetalsBack");
 const albumPetalsFront = document.getElementById("albumPetalsFront");
 const lightbox = document.getElementById("lightbox");
@@ -2316,27 +2516,85 @@ let albumGustTimer = null;
 let lastProximityGust = 0;
 const petalParticles = [];
 const pointerWind = { x: 0, y: 0, active: false, timeout: null };
+const albumCanvasHomeParent = albumCanvas?.parentElement || null;
+const albumCanvasHomeNextSibling = albumCanvas?.nextElementSibling || null;
+let isAlbumModalOpen = false;
+
+function setAlbumToggleState(isLandscapeMode) {
+[albumViewToggle, albumModalToggle].forEach((button) => {
+if (!button) {
+return;
+}
+
+button.classList.toggle("is-landscape", isLandscapeMode);
+button.setAttribute("aria-pressed", isLandscapeMode ? "true" : "false");
+button.setAttribute("aria-label", isLandscapeMode ? "Chuyen ve che do doc" : "Chuyen sang che do ngang");
+});
+}
+
+function tryLockLandscape() {
+if (!window.screen || !window.screen.orientation || typeof window.screen.orientation.lock !== "function") {
+return;
+}
+
+window.screen.orientation.lock("landscape").catch(() => {});
+}
+
+function tryUnlockOrientation() {
+if (!window.screen || !window.screen.orientation || typeof window.screen.orientation.unlock !== "function") {
+return;
+}
+
+window.screen.orientation.unlock();
+}
+
+function closeAlbumLandscapeModal() {
+if (!albumCanvas) {
+return;
+}
+
+if (albumCanvasHomeParent && albumCanvas.parentElement !== albumCanvasHomeParent) {
+if (albumCanvasHomeNextSibling && albumCanvasHomeNextSibling.parentElement === albumCanvasHomeParent) {
+albumCanvasHomeParent.insertBefore(albumCanvas, albumCanvasHomeNextSibling);
+} else {
+albumCanvasHomeParent.appendChild(albumCanvas);
+}
+}
+
+albumCanvas.classList.remove("landscape-mode");
+if (albumMobileModal) {
+albumMobileModal.classList.remove("open");
+albumMobileModal.setAttribute("aria-hidden", "true");
+}
+
+document.body.classList.remove("mobile-album-expanded");
+isAlbumModalOpen = false;
+setAlbumToggleState(false);
+tryUnlockOrientation();
+}
+
+function openAlbumLandscapeModal() {
+if (window.innerWidth > 900 || !albumCanvas || !albumMobileModal || !albumMobileModalContent) {
+return;
+}
+
+albumCanvas.classList.add("landscape-mode");
+albumMobileModalContent.appendChild(albumCanvas);
+albumMobileModal.classList.add("open");
+albumMobileModal.setAttribute("aria-hidden", "false");
+document.body.classList.add("mobile-album-expanded");
+isAlbumModalOpen = true;
+setAlbumToggleState(true);
+tryLockLandscape();
+}
 
 function syncAlbumViewToggleState() {
-if (!albumCanvas || !albumViewToggle || !albumSection) {
+if (window.innerWidth > 900) {
+closeAlbumLandscapeModal();
 return;
 }
 
-const isMobileViewport = window.innerWidth <= 900;
-if (!isMobileViewport) {
-albumCanvas.classList.remove("landscape-mode");
-albumSection.classList.remove("album-landscape");
-albumViewToggle.classList.remove("is-landscape");
-albumViewToggle.setAttribute("aria-pressed", "false");
-albumViewToggle.setAttribute("aria-label", "Chuyen sang che do ngang");
-return;
-}
-
-const isLandscapeMode = albumCanvas.classList.contains("landscape-mode");
-albumSection.classList.toggle("album-landscape", isLandscapeMode);
-albumViewToggle.classList.toggle("is-landscape", isLandscapeMode);
-albumViewToggle.setAttribute("aria-pressed", isLandscapeMode ? "true" : "false");
-albumViewToggle.setAttribute("aria-label", isLandscapeMode ? "Chuyen ve che do doc" : "Chuyen sang che do ngang");
+setAlbumToggleState(isAlbumModalOpen);
 }
 
 function getAlbumImageData(button) {
@@ -2355,6 +2613,86 @@ function getAlbumSources() {
 return Array.from(albumButtons).map((button) => getAlbumImageData(button));
 }
 
+function parseDateFromText(text) {
+if (!text) {
+return null;
+}
+
+const matched = String(text).match(/(\d{1,2})\s*[\/.-]\s*(\d{1,2})\s*[\/.-]\s*(\d{2,4})/);
+if (!matched) {
+return null;
+}
+
+const day = Number(matched[1]);
+const month = Number(matched[2]);
+let year = Number(matched[3]);
+if (year < 100) {
+year += 2000;
+}
+
+if (!Number.isInteger(day) || !Number.isInteger(month) || !Number.isInteger(year)) {
+return null;
+}
+
+if (day < 1 || day > 31 || month < 1 || month > 12 || year < 2000 || year > 2100) {
+return null;
+}
+
+return { day, month, year };
+}
+
+function parseTimeFromText(text) {
+if (!text) {
+return null;
+}
+
+const normalized = String(text)
+.toLowerCase()
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g, "");
+const hhmm = normalized.match(/(\d{1,2})\s*[:h]\s*(\d{1,2})/);
+if (hhmm) {
+const hours = Number(hhmm[1]);
+const minutes = Number(hhmm[2]);
+if (hours >= 0 && hours <= 23 && minutes >= 0 && minutes <= 59) {
+return { hours, minutes };
+}
+}
+
+const hourOnly = normalized.match(/(?:luc\s*)?(\d{1,2})\s*(?:h|gio)/);
+if (hourOnly) {
+const hours = Number(hourOnly[1]);
+if (hours >= 0 && hours <= 23) {
+return { hours, minutes: 0 };
+}
+}
+
+return null;
+}
+
+function getWeddingTargetDate() {
+const dateCandidate =
+parseDateFromText(heroWeddingTextEl?.textContent) ||
+parseDateFromText(eventDateEl?.textContent) ||
+{ day: 26, month: 12, year: 2026 };
+
+const timeCandidate =
+parseTimeFromText(heroWeddingTextEl?.textContent) ||
+parseTimeFromText(eventTimeEl?.textContent) ||
+parseTimeFromText(timelineStartTimeEl?.textContent) ||
+{ hours: 18, minutes: 0 };
+
+return new Date(
+dateCandidate.year,
+dateCandidate.month - 1,
+dateCandidate.day,
+timeCandidate.hours,
+timeCandidate.minutes,
+0,
+0
+);
+}
+
 if (viewInviteBtn && inviteSection) {
 viewInviteBtn.addEventListener("click", () => {
 inviteSection.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -2369,7 +2707,7 @@ if (!countdownHoursEl || !countdownMinutesEl || !countdownSecondsEl) {
 return;
 }
 
-const targetDate = new Date(2026, 11, 26, 18, 0, 0);
+const targetDate = getWeddingTargetDate();
 const now = new Date();
 const diffMs = Math.max(0, targetDate.getTime() - now.getTime());
 const totalSeconds = Math.floor(diffMs / 1000);
@@ -2598,8 +2936,26 @@ if (window.innerWidth > 900) {
 return;
 }
 
-albumCanvas.classList.toggle("landscape-mode");
-syncAlbumViewToggleState();
+if (isAlbumModalOpen) {
+closeAlbumLandscapeModal();
+return;
+}
+
+openAlbumLandscapeModal();
+});
+}
+
+if (albumModalToggle) {
+albumModalToggle.addEventListener("click", () => {
+closeAlbumLandscapeModal();
+});
+}
+
+if (albumMobileModal) {
+albumMobileModal.addEventListener("click", (event) => {
+if (event.target === albumMobileModal) {
+closeAlbumLandscapeModal();
+}
 });
 }
 
@@ -2784,6 +3140,11 @@ closeModal();
 }
 
 document.addEventListener("keydown", (event) => {
+if (event.key === "Escape" && isAlbumModalOpen) {
+closeAlbumLandscapeModal();
+return;
+}
+
 if (!lightbox || !lightbox.classList.contains("open")) {
 return;
 }
@@ -2850,15 +3211,21 @@ musicToggle.addEventListener("click", async () => {
 if (bgMusic.paused) {
 try {
 await bgMusic.play();
-musicToggle.textContent = "Nhac nen: On";
+musicToggle.classList.add("is-playing");
+musicToggle.setAttribute("aria-label", "Tat nhac nen");
+musicToggle.title = "Tat nhac nen";
 } catch (_error) {
-musicToggle.textContent = "Khong the phat nhac";
+musicToggle.classList.remove("is-playing");
+musicToggle.setAttribute("aria-label", "Khong the phat nhac");
+musicToggle.title = "Khong the phat nhac";
 }
 return;
 }
 
 bgMusic.pause();
-musicToggle.textContent = "Nhac nen: Off";
+musicToggle.classList.remove("is-playing");
+musicToggle.setAttribute("aria-label", "Bat nhac nen");
+musicToggle.title = "Bat nhac nen";
 });
 }
 
