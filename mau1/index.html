@@ -10,23 +10,23 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="intro-overlay" class="intro-overlay" aria-hidden="true">
-    <div class="intro-content">
-      <p class="intro-kicker">Trân trọng</p>
-      <h1 class="intro-title">Thanh Hằng <span>&amp;</span> Minh Trí</h1>
+  <div id="intro-overlay" class="intro-overlay" aria-hidden="true" data-editable="groom">
+    <div class="intro-content" data-editable="groom_2">
+      <p class="intro-kicker" data-editable="invite">Trân trọng</p>
+      <h1 class="intro-title" data-editable="groom_3">Thanh Hằng <span data-editable="field">&amp;</span> Minh Trí</h1>
       <div class="intro-divider"></div>
-      <p class="intro-date">06 . 01 . 2026</p>
+      <p class="intro-date" data-editable="field_2">06 . 01 . 2026</p>
     </div>
   </div>
 
-  <div id="petals-container" class="petals-layer" aria-hidden="true">
-    <div class="petal petal-1">❀</div>
-    <div class="petal petal-2">✿</div>
-    <div class="petal petal-3">❀</div>
-    <div class="petal petal-4">✿</div>
-    <div class="petal petal-5">❀</div>
-    <div class="petal petal-6">✿</div>
-    <div class="petal petal-7">❀</div>
+  <div id="petals-container" class="petals-layer" aria-hidden="true" data-editable="field_3">
+    <div class="petal petal-1" data-editable="field_4">❀</div>
+    <div class="petal petal-2" data-editable="field_5">✿</div>
+    <div class="petal petal-3" data-editable="field_6">❀</div>
+    <div class="petal petal-4" data-editable="field_7">✿</div>
+    <div class="petal petal-5" data-editable="field_8">❀</div>
+    <div class="petal petal-6" data-editable="field_9">✿</div>
+    <div class="petal petal-7" data-editable="field_10">❀</div>
   </div>
 
   <canvas id="fireworks-canvas"></canvas>
@@ -34,140 +34,140 @@
   <div class="scroll-progress-wrap"><div id="progress-bar"></div></div>
 
   <button id="music-toggle" class="music-toggle" aria-label="Bật/Tắt nhạc">
-    <span id="music-icon">♫</span>
+    <span id="music-icon" data-editable="music_icon">♫</span>
   </button>
 
-  <audio id="wedding-audio" preload="none" loop>
+  <audio id="wedding-audio" preload="none" loop data-editable="field_11">
     <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_7cbe53d3d3.mp3" type="audio/mpeg" />
   </audio>
 
   <header class="site-header">
     <nav class="navbar">
-      <div class="brand">❤ Hang &amp; Tri</div>
-      <div class="nav-links">
-        <a href="#intro">Giới thiệu</a>
-        <a href="#story">Câu chuyện</a>
-        <a href="#program">Chương trình</a>
-        <a href="#location">Địa điểm</a>
-        <a href="#gallery">Thư viện</a>
-        <a href="#rsvp" class="btn btn-nav-rsvp">Xác nhận</a>
+      <div class="brand" data-editable="field_12">❤ Hang &amp; Tri</div>
+      <div class="nav-links" data-editable="venue">
+        <a href="#intro" data-editable="field_13">Giới thiệu</a>
+        <a href="#story" data-editable="field_14">Câu chuyện</a>
+        <a href="#program" data-editable="timeline">Chương trình</a>
+        <a href="#location" data-editable="venue_2">Địa điểm</a>
+        <a href="#gallery" data-editable="album">Thư viện</a>
+        <a href="#rsvp" class="btn btn-nav-rsvp" data-editable="rsvp">Xác nhận</a>
       </div>
     </nav>
   </header>
 
   <section id="intro" class="hero">
     <div id="hero-parallax" class="hero-bg"></div>
-    <div class="hero-content">
-      <p class="hero-kicker">Trân trọng báo tin</p>
-      <h1>Thanh Hằng <span>&amp;</span>  Minh Trí</h1>
-      <div id="countdown" class="countdown">
-        <div><b id="days">00</b><small>Ngày</small></div>
-        <i>:</i>
-        <div><b id="hours">00</b><small>Giờ</small></div>
-        <i>:</i>
-        <div><b id="minutes">00</b><small>Phút</small></div>
-        <i>:</i>
-        <div><b id="seconds">00</b><small>Giây</small></div>
+    <div class="hero-content" data-editable="groom_4">
+      <p class="hero-kicker" data-editable="invite_2">Trân trọng báo tin</p>
+      <h1 data-editable="groom_5">Thanh Hằng <span data-editable="field_15">&amp;</span>  Minh Trí</h1>
+      <div id="countdown" class="countdown" data-editable="date">
+        <div data-editable="date_2"><b id="days" data-editable="field_16">00</b><small data-editable="date_3">Ngày</small></div>
+        <i data-editable="field_17">:</i>
+        <div data-editable="time"><b id="hours" data-editable="field_18">00</b><small data-editable="time_2">Giờ</small></div>
+        <i data-editable="field_19">:</i>
+        <div data-editable="field_20"><b id="minutes" data-editable="field_21">00</b><small data-editable="field_22">Phút</small></div>
+        <i data-editable="field_23">:</i>
+        <div data-editable="field_24"><b id="seconds" data-editable="field_25">00</b><small data-editable="field_26">Giây</small></div>
       </div>
-      <p class="hero-date">06 . 01 . 2026</p>
+      <p class="hero-date" data-editable="field_27">06 . 01 . 2026</p>
     </div>
   </section>
 
   <section class="quote reveal-section">
-    <p>“Đôi khi giữa cuộc sống bình dị, tình yêu lại viết nên câu chuyện cổ tích của riêng mình.”</p>
+    <p data-editable="love">“Đôi khi giữa cuộc sống bình dị, tình yêu lại viết nên câu chuyện cổ tích của riêng mình.”</p>
   </section>
 
   <section class="calendar reveal-section">
-    <div class="calendar-top">
-      <h2>Our wedding day</h2>
-      <p>Tháng 01</p>
+    <div class="calendar-top" data-editable="wedding">
+      <h2 data-editable="wedding_2">Our wedding day</h2>
+      <p data-editable="month">Tháng 01</p>
     </div>
     <div class="calendar-grid minimal" id="calendar-grid"></div>
   </section>
 
   <section id="story" class="story reveal-section">
-    <h2 class="section-title">Câu Chuyện Tình Yêu</h2>
-    <div class="story-zigzag">
+    <h2 class="section-title" data-editable="love_2">Câu Chuyện Tình Yêu</h2>
+    <div class="story-zigzag" data-editable="groom_6">
       <article class="story-row">
-        <div class="story-text">
-          <h3>First Meeting</h3>
-          <time>Spring 2020</time>
-          <p>Tình cờ ngồi chung bàn ở quán cà phê nhỏ, từ một cuộc trò chuyện ngắn thành hàng giờ không muốn kết thúc.</p>
+        <div class="story-text" data-editable="groom_7">
+          <h3 data-editable="field_28">First Meeting</h3>
+          <time data-editable="story_time_1">Spring 2020</time>
+          <p data-editable="groom_8">Tình cờ ngồi chung bàn ở quán cà phê nhỏ, từ một cuộc trò chuyện ngắn thành hàng giờ không muốn kết thúc.</p>
         </div>
-        <div class="story-image"><img class="zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/%E1%BA%A2nh-c%C6%B0%E1%BB%9Bi-tr%C3%AAn-b%C3%A1n-%C4%91%E1%BA%A3o-S%C6%A1n-Tr%C3%A0.jpg" alt="First meeting" /></div>
+        <div class="story-image"><img class="zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/%E1%BA%A2nh-c%C6%B0%E1%BB%9Bi-tr%C3%AAn-b%C3%A1n-%C4%91%E1%BA%A3o-S%C6%A1n-Tr%C3%A0.jpg" alt="First meeting" data-image-editable="couple_photo" /></div>
         <div class="story-node"></div>
       </article>
 
       <article class="story-row reverse">
-        <div class="story-text">
-          <h3>First Date</h3>
-          <time>Summer 2020</time>
-          <p>Buổi hẹn đầu là một chiều đi dạo bên biển, nơi cả hai chia sẻ ước mơ và tin rằng mình đã tìm đúng người.</p>
+        <div class="story-text" data-editable="venue_3">
+          <h3 data-editable="date_4">First Date</h3>
+          <time data-editable="story_time_2">Summer 2020</time>
+          <p data-editable="venue_4">Buổi hẹn đầu là một chiều đi dạo bên biển, nơi cả hai chia sẻ ước mơ và tin rằng mình đã tìm đúng người.</p>
         </div>
-        <div class="story-image"><img class="zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-c%C6%B0%E1%BB%9Bi-si%C3%AAu-%C4%91%E1%BA%B9p-%E1%BB%9F-%C4%90%C3%A0-N%E1%BA%B5ng-1536x1068.jpg" alt="First date" /></div>
+        <div class="story-image"><img class="zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-c%C6%B0%E1%BB%9Bi-si%C3%AAu-%C4%91%E1%BA%B9p-%E1%BB%9F-%C4%90%C3%A0-N%E1%BA%B5ng-1536x1068.jpg" alt="First date" data-image-editable="couple_photo_2" /></div>
         <div class="story-node"></div>
       </article>
 
       <article class="story-row">
-        <div class="story-text">
-          <h3>The Proposal</h3>
-          <time>Winter 2024</time>
-          <p>Giữa rừng thông se lạnh ở Đà Lạt, một câu hỏi giản dị đã mở ra chương mới đẹp nhất của hai chúng mình.</p>
+        <div class="story-text" data-editable="groom_9">
+          <h3 data-editable="field_29">The Proposal</h3>
+          <time data-editable="story_time_3">Winter 2024</time>
+          <p data-editable="groom_10">Giữa rừng thông se lạnh ở Đà Lạt, một câu hỏi giản dị đã mở ra chương mới đẹp nhất của hai chúng mình.</p>
         </div>
-        <div class="story-image"><img class="zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/B%E1%BB%99-h%C3%ACnh-c%C6%B0%E1%BB%9Bi-c%E1%BB%B1c-ch%E1%BA%A5t-tr%C3%AAn-%C4%91%C3%A8o-H%E1%BA%A3i-V%C3%A2n-1536x945.jpg" alt="Proposal" /></div>
+        <div class="story-image"><img class="zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/B%E1%BB%99-h%C3%ACnh-c%C6%B0%E1%BB%9Bi-c%E1%BB%B1c-ch%E1%BA%A5t-tr%C3%AAn-%C4%91%C3%A8o-H%E1%BA%A3i-V%C3%A2n-1536x945.jpg" alt="Proposal" data-image-editable="photo" /></div>
         <div class="story-node"></div>
       </article>
     </div>
   </section>
 
   <section id="program" class="program reveal-section">
-    <h2 class="section-title">Chương Trình Lễ Cưới</h2>
-    <div class="program-timeline">
+    <h2 class="section-title" data-editable="wedding_3">Chương Trình Lễ Cưới</h2>
+    <div class="program-timeline" data-editable="welcome">
+      <article class="program-event right" data-editable="groom_12">
+        <div class="program-card" data-editable="welcome_2">
+          <time data-editable="program_time_1">11:45 AM</time>
+          <h3 data-editable="welcome_3">Welcome Reception</h3>
+          <p data-editable="field_30">Đón khách và ổn định chỗ ngồi.</p>
+        </div>
+        <span class="program-icon" data-editable="program_icon_1">◌</span>
+      </article>
+
+      <article class="program-event left" data-editable="groom_11">
+        <div class="program-card" data-editable="ceremony">
+          <time data-editable="program_time_2">12:30 PM</time>
+          <h3 data-editable="ceremony_2">The Ceremony</h3>
+          <p data-editable="field_31">Nghi thức thành hôn và trao nhẫn cưới.</p>
+        </div>
+        <span class="program-icon" data-editable="program_icon_2">♡</span>
+      </article>
+
       <article class="program-event right">
-        <div class="program-card">
-          <time>11:45 AM</time>
-          <h3>Welcome Reception</h3>
-          <p>Đón khách và ổn định chỗ ngồi.</p>
+        <div class="program-card" data-editable="family">
+          <time data-editable="program_time_3">13:15 PM</time>
+          <h3 data-editable="album_2">Chụp ảnh lưu niệm</h3>
+          <p data-editable="family_2">Lưu giữ khoảnh khắc cùng gia đình, bạn bè.</p>
         </div>
-        <span class="program-icon">◌</span>
+        <span class="program-icon" data-editable="program_icon_3">⌂</span>
       </article>
 
-      <article class="program-event left">
-        <div class="program-card">
-          <time>12:30 PM</time>
-          <h3>The Ceremony</h3>
-          <p>Nghi thức thành hôn và trao nhẫn cưới.</p>
+      <article class="program-event left" data-editable="groom_13">
+        <div class="program-card" data-editable="wedding_4">
+          <time data-editable="program_time_4">13:30 PM</time>
+          <h3 data-editable="wedding_5">Wedding Banquet</h3>
+          <p data-editable="field_32">Khai tiệc, giao lưu và chung vui.</p>
         </div>
-        <span class="program-icon">♡</span>
-      </article>
-
-      <article class="program-event right">
-        <div class="program-card">
-          <time>13:15 PM</time>
-          <h3>Chụp ảnh lưu niệm</h3>
-          <p>Lưu giữ khoảnh khắc cùng gia đình, bạn bè.</p>
-        </div>
-        <span class="program-icon">⌂</span>
-      </article>
-
-      <article class="program-event left">
-        <div class="program-card">
-          <time>13:30 PM</time>
-          <h3>Wedding Banquet</h3>
-          <p>Khai tiệc, giao lưu và chung vui.</p>
-        </div>
-        <span class="program-icon">✦</span>
+        <span class="program-icon" data-editable="program_icon_4">✦</span>
       </article>
     </div>
   </section>
 
   <section id="location" class="location reveal-section">
-    <h2 class="section-title">Địa Điểm</h2>
-    <p class="location-name">Mường Thanh Luxury Quảng Ninh Hotel</p>
-    <p class="location-addr">Tổ 1, Khu 2, Phường Bãi Cháy, TP. Hạ Long, Quảng Ninh</p>
-    <div class="actions">
-      <a class="btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/9h4yW1H5jR9oA8C88">Mở Google Maps</a>
-      <a class="btn btn-outline" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&destination=Muong+Thanh+Luxury+Quang+Ninh+Hotel">Chỉ đường</a>
+    <h2 class="section-title" data-editable="venue_5">Địa Điểm</h2>
+    <p class="location-name" data-editable="groom_14">Mường Thanh Luxury Quảng Ninh Hotel</p>
+    <p class="location-addr" data-editable="field_33">Tổ 1, Khu 2, Phường Bãi Cháy, TP. Hạ Long, Quảng Ninh</p>
+    <div class="actions" data-editable="ceremony_3">
+      <a class="btn" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/9h4yW1H5jR9oA8C88" data-editable="ceremony_4">Mở Google Maps</a>
+      <a class="btn btn-outline" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&destination=Muong+Thanh+Luxury+Quang+Ninh+Hotel" data-editable="address">Chỉ đường</a>
     </div>
     <div class="map-wrap">
       <iframe title="Wedding location map" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.990422177531!2d107.03960417616668!3d20.952994990379234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a5944122170c1%3A0xc3911c0f0a204618!2zTcaw4budbmcgVGhhbmggTHV4dXJ5IFF14bqjbmcgTmluaA!5e0!3m2!1svi!2s!4v1715421250321!5m2!1svi!2s"></iframe>
@@ -175,84 +175,84 @@
   </section>
 
   <section id="gallery" class="gallery reveal-section">
-    <h2 class="section-title">Thư Viện Ảnh</h2>
-    <div class="gallery-slider" id="gallery-slider">
-      <button class="gallery-btn gallery-btn-prev" id="gallery-prev" aria-label="Ảnh trước">‹</button>
+    <h2 class="section-title" data-editable="album_3">Thư Viện Ảnh</h2>
+    <div class="gallery-slider" id="gallery-slider" data-editable="field_34">
+      <button class="gallery-btn gallery-btn-prev" id="gallery-prev" aria-label="Ảnh trước" data-editable="gallery_prev">‹</button>
       <div class="gallery-track" id="gallery-track">
-        <img class="gallery-slide zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-c%C6%B0%E1%BB%9Bi-%C4%91%E1%BA%B9p-nh%C6%B0-c%E1%BB%95-t%C3%ADch-t%E1%BA%A1i-c%E1%BA%A7u-V%C3%A0ng.jpg" alt="Engagement" />
-        <img class="gallery-slide zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-c%C6%B0%E1%BB%9Bi-si%C3%AAu-%C4%91%E1%BA%B9p-%E1%BB%9F-%C4%90%C3%A0-N%E1%BA%B5ng-1536x1068.jpg" alt="Engagement" />
-        <img class="gallery-slide zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/B%E1%BB%99-h%C3%ACnh-c%C6%B0%E1%BB%9Bi-c%E1%BB%B1c-ch%E1%BA%A5t-tr%C3%AAn-%C4%91%C3%A8o-H%E1%BA%A3i-V%C3%A2n-1536x945.jpg" alt="Engagement" />
-        <img class="gallery-slide zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-c%C6%B0%E1%BB%9Bi-%C4%91%E1%BA%B9p-nh%C6%B0-c%E1%BB%95-t%C3%ADch-t%E1%BA%A1i-c%E1%BA%A7u-V%C3%A0ng.jpg" alt="Engagement" />
+        <img class="gallery-slide zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-c%C6%B0%E1%BB%9Bi-%C4%91%E1%BA%B9p-nh%C6%B0-c%E1%BB%95-t%C3%ADch-t%E1%BA%A1i-c%E1%BA%A7u-V%C3%A0ng.jpg" alt="Engagement" data-image-editable="photo_2" />
+        <img class="gallery-slide zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-c%C6%B0%E1%BB%9Bi-si%C3%AAu-%C4%91%E1%BA%B9p-%E1%BB%9F-%C4%90%C3%A0-N%E1%BA%B5ng-1536x1068.jpg" alt="Engagement" data-image-editable="photo_3" />
+        <img class="gallery-slide zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/B%E1%BB%99-h%C3%ACnh-c%C6%B0%E1%BB%9Bi-c%E1%BB%B1c-ch%E1%BA%A5t-tr%C3%AAn-%C4%91%C3%A8o-H%E1%BA%A3i-V%C3%A2n-1536x945.jpg" alt="Engagement" data-image-editable="photo_4" />
+        <img class="gallery-slide zoomable-image" src="https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-c%C6%B0%E1%BB%9Bi-%C4%91%E1%BA%B9p-nh%C6%B0-c%E1%BB%95-t%C3%ADch-t%E1%BA%A1i-c%E1%BA%A7u-V%C3%A0ng.jpg" alt="Engagement" data-image-editable="photo_5" />
       </div>
-      <button class="gallery-btn gallery-btn-next" id="gallery-next" aria-label="Ảnh tiếp theo">›</button>
+      <button class="gallery-btn gallery-btn-next" id="gallery-next" aria-label="Ảnh tiếp theo" data-editable="gallery_next">›</button>
     </div>
   </section>
 
   <section id="rsvp" class="rsvp reveal-section">
-    <h2 class="section-title">Xác Nhận Tham Dự</h2>
-    <p class="sub">Vui lòng phản hồi trước ngày 15 tháng 12, 2025</p>
+    <h2 class="section-title" data-editable="rsvp_2">Xác Nhận Tham Dự</h2>
+    <p class="sub" data-editable="date_5">Vui lòng phản hồi trước ngày 15 tháng 12, 2025</p>
     <form id="rsvp-form" class="rsvp-form">
-      <label>Họ và tên<input id="rsvp-name" type="text" required placeholder="Nhập họ và tên" /></label>
-      <div class="form-row">
-        <label>Tham dự
+      <label data-editable="field_35">Họ và tên<input id="rsvp-name" type="text" required placeholder="Nhập họ và tên" /></label>
+      <div class="form-row" data-editable="groom_15">
+        <label data-editable="groom_16">Tham dự
           <select id="rsvp-status">
-            <option value="yes">Có, tôi sẽ tham dự</option>
-            <option value="no">Rất tiếc, tôi không thể tham dự</option>
+            <option value="yes" data-editable="field_36">Có, tôi sẽ tham dự</option>
+            <option value="no" data-editable="groom_17">Rất tiếc, tôi không thể tham dự</option>
           </select>
         </label>
-        <label>Số lượng khách<input id="rsvp-guests" type="number" min="1" max="5" value="1" /></label>
+        <label data-editable="field_37">Số lượng khách<input id="rsvp-guests" type="number" min="1" max="5" value="1" /></label>
       </div>
-      <label>Yêu cầu ăn uống<textarea id="rsvp-diet" rows="3" placeholder="Ăn chay, dị ứng, v.v."></textarea></label>
+      <label data-editable="love_3">Yêu cầu ăn uống<textarea id="rsvp-diet" rows="3" placeholder="Ăn chay, dị ứng, v.v."></textarea></label>
       <button id="submit-btn" type="submit" class="btn btn-primary btn-block">
-        <span id="btn-text">Gửi xác nhận</span>
+        <span id="btn-text" data-editable="rsvp_3">Gửi xác nhận</span>
         <span id="btn-spinner" class="loading-spinner hidden"></span>
       </button>
     </form>
   </section>
 
   <section class="gift reveal-section">
-    <h2 class="section-title">Mừng Cưới</h2>
-    <div class="gift-card">
-      <h3>Mừng Cưới</h3>
-      <div class="qr-placeholder">QR CODE</div>
-      <p>Vietcombank</p>
-      <div class="copy-box" onclick="copyToClipboard('123456789012', this)">
-        <strong>1234 5678 9012</strong>
-        <span class="copy-tooltip">Đã sao chép!</span>
+    <h2 class="section-title" data-editable="gift">Mừng Cưới</h2>
+    <div class="gift-card" data-editable="gift_2">
+      <h3 data-editable="gift_3">Mừng Cưới</h3>
+      <div class="qr-placeholder" data-editable="field_38">QR CODE</div>
+      <p data-editable="field_39">Vietcombank</p>
+      <div class="copy-box" onclick="copyToClipboard('123456789012', this)" data-editable="field_40">
+        <strong data-editable="field_41">1234 5678 9012</strong>
+        <span class="copy-tooltip" data-editable="field_42">Đã sao chép!</span>
       </div>
-      <p>PHAM MINH TRI</p>
+      <p data-editable="field_43">PHAM MINH TRI</p>
     </div>
   </section>
 
   <section class="thanks reveal-section">
-    <h2>Lời Cảm Ơn</h2>
-    <p>“Sự hiện diện của quý vị là món quà vô giá nhất đối với chúng mình.”</p>
+    <h2 data-editable="field_44">Lời Cảm Ơn</h2>
+    <p data-editable="gift_4">“Sự hiện diện của quý vị là món quà vô giá nhất đối với chúng mình.”</p>
   </section>
 
   <footer class="site-footer reveal-section">
-    <h3>Hang &amp; Tri</h3>
-    <p>Cảm ơn bạn đã là một phần trong câu chuyện của chúng mình.</p>
-    <div class="footer-links">
-      <a href="#intro">Về đầu trang</a>
-      <a href="#rsvp">Xác nhận ngay</a>
-      <a href="#location">Chỉ đường</a>
+    <h3 data-editable="field_45">Hang &amp; Tri</h3>
+    <p data-editable="field_46">Cảm ơn bạn đã là một phần trong câu chuyện của chúng mình.</p>
+    <div class="footer-links" data-editable="address_2">
+      <a href="#intro" data-editable="field_47">Về đầu trang</a>
+      <a href="#rsvp" data-editable="date_6">Xác nhận ngay</a>
+      <a href="#location" data-editable="address_3">Chỉ đường</a>
     </div>
-    <small>Tạo bằng yêu thương © 2026</small>
+    <small data-editable="love_4">Tạo bằng yêu thương © 2026</small>
   </footer>
 
-  <div id="thank-you-modal" class="modal-overlay" aria-hidden="true">
-    <div class="modal-card">
-      <h3>Cảm ơn bạn!</h3>
-      <p id="modal-msg">Chúng mình rất vui vì bạn sẽ tham dự!</p>
-      <button class="btn btn-primary btn-block" onclick="closeModal()">Đóng</button>
+  <div id="thank-you-modal" class="modal-overlay" aria-hidden="true" data-editable="field_48">
+    <div class="modal-card" data-editable="field_49">
+      <h3 data-editable="field_50">Cảm ơn bạn!</h3>
+      <p id="modal-msg" data-editable="field_51">Chúng mình rất vui vì bạn sẽ tham dự!</p>
+      <button class="btn btn-primary btn-block" onclick="closeModal()" data-editable="modal_close">Đóng</button>
     </div>
   </div>
 
-  <div id="image-lightbox" class="lightbox" aria-hidden="true">
-    <button id="lightbox-close" class="lightbox-close" aria-label="Đóng xem ảnh">×</button>
-    <button id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Ảnh trước">‹</button>
-    <img id="lightbox-image" src="" alt="Wedding moment" />
-    <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Ảnh tiếp theo">›</button>
+  <div id="image-lightbox" class="lightbox" aria-hidden="true" data-editable="field_52">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Đóng xem ảnh" data-editable="lightbox_close">×</button>
+    <button id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Ảnh trước" data-editable="lightbox_prev">‹</button>
+    <img id="lightbox-image" src="" alt="Wedding moment" data-image-editable="photo_6" />
+    <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Ảnh tiếp theo" data-editable="lightbox_next">›</button>
   </div>
 
   <script src="script.js"></script>

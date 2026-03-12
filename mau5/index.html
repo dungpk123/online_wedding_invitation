@@ -16,12 +16,12 @@
   <div class="landing-overlay"></div>
   <div class="landing-content">
     <div class="rose-divider top"></div>
-    <p class="subtitle-top">Trân trọng kính mời</p>
-    <h1 class="couple-name">Tuấn <span class="amp">&amp;</span> Lan</h1>
-    <p class="wedding-date">15 · 05 · 2026</p>
-    <div class="rose-divider">✦ ✦ ✦</div>
-    <p class="invitation-text">Chúng tôi trân trọng gửi đến bạn<br/>tấm thiệp cưới đặc biệt của chúng mình</p>
-    <button id="open-book-btn" class="open-btn" aria-label="Mở thiệp cưới" title="Mở thiệp cưới">
+    <p class="subtitle-top" data-editable="invite">Trân trọng kính mời</p>
+    <h1 class="couple-name" data-editable="field">Tuấn <span class="amp" data-editable="field_2">&amp;</span> Lan</h1>
+    <p class="wedding-date" data-editable="field_3">15 · 05 · 2026</p>
+    <div class="rose-divider" data-editable="field_4">✦ ✦ ✦</div>
+    <p class="invitation-text" data-editable="invite_2">Chúng tôi trân trọng gửi đến bạn<br/>tấm thiệp cưới đặc biệt của chúng mình</p>
+    <button id="open-book-btn" class="open-btn" aria-label="Mở thiệp cưới" title="Mở thiệp cưới" data-editable="open_book_button">
       <i class="fas fa-book-open"></i> Mở Thiệp Cưới
     </button>
   </div>
@@ -37,12 +37,12 @@
         <i class="fas fa-mobile-screen-button"></i>
         <i class="fas fa-rotate-right"></i>
       </div>
-      <h3 class="rotate-device-title">Vui lòng xoay ngang điện thoại</h3>
-      <p class="rotate-device-text">Thiệp cưới này được tối ưu để xem ở chế độ ngang. Hãy xoay thiết bị sang ngang để tiếp tục xem nội dung.</p>
+      <h3 class="rotate-device-title" data-editable="field_5">Vui lòng xoay ngang điện thoại</h3>
+      <p class="rotate-device-text" data-editable="button">Thiệp cưới này được tối ưu để xem ở chế độ ngang. Hãy xoay thiết bị sang ngang để tiếp tục xem nội dung.</p>
     </div>
   </div>
 
-  <div class="book-wrapper">
+  <div class="book-wrapper" data-editable="field_6">
     <!-- Navigation arrows -->
     <button class="nav-btn nav-prev" id="prev-btn" disabled aria-label="Trang trước" title="Trang trước">
       <i class="fas fa-chevron-left"></i>
@@ -51,7 +51,7 @@
       <i class="fas fa-chevron-right"></i>
     </button>
     <!-- Page counter -->
-    <div class="page-counter" id="page-counter">1 / 11</div>
+    <div class="page-counter" id="page-counter" data-editable="field_7">1 / 11</div>
 
     <!-- The Book -->
     <div class="book" id="book">
@@ -60,21 +60,21 @@
       <div class="spread" id="spread-0">
         <!-- LEFT: Front Cover -->
         <div class="page page-left cover-left">
-          <div class="page-inner">
+          <div class="page-inner" data-editable="field_93">
             <div class="cover-content">
               <!-- corner decorations -->
-              <div class="corner top-left"><img src="../img/frame.png" alt="frame corner"></div>
-              <div class="corner top-right"><img src="../img/frame.png" alt="frame corner"></div>
-              <div class="corner bottom-left"><img src="../img/frame.png" alt="frame corner"></div>
-              <div class="corner bottom-right"><img src="../img/frame.png" alt="frame corner"></div>
+              <div class="corner top-left"><img src="../img/frame.png" alt="frame corner" data-image-editable="couple_photo"></div>
+              <div class="corner top-right"><img src="../img/frame.png" alt="frame corner" data-image-editable="couple_photo_2"></div>
+              <div class="corner bottom-left"><img src="../img/frame.png" alt="frame corner" data-image-editable="photo"></div>
+              <div class="corner bottom-right"><img src="../img/frame.png" alt="frame corner" data-image-editable="photo_2"></div>
 
-              <div class="cover-ornament top-ornament">✦ <span class="ornament-center">✦</span> ✦</div>
-              <p class="cover-subtitle">Thiệp Cưới</p>
+              <div class="cover-ornament top-ornament" data-editable="field_8">✦ <span class="ornament-center" data-editable="field_9">✦</span> ✦</div>
+              <p class="cover-subtitle" data-editable="field_10">Thiệp Cưới</p>
               <div class="cover-roses"></div>
-              <h2 class="cover-names">Tuấn<br/><span class="cover-amp">&amp;</span><br/>Lan</h2>
-              <img class="cover-undertext" src="../img/nhancuoi.png" alt="ornament under names" />
-              <div class="cover-date-box">15 · 05 · 2026</div>
-              <img class="cover-underdays" src="../img/frame_underdays.png" alt="ornament under date" />
+              <h2 class="cover-names" data-editable="field_11">Tuấn<br/><span class="cover-amp" data-editable="field_12">&amp;</span><br/>Lan</h2>
+              <img class="cover-undertext" src="../img/nhancuoi.png" alt="ornament under names" data-image-editable="photo_3" />
+              <div class="cover-date-box" data-editable="field_13">15 · 05 · 2026</div>
+              <img class="cover-underdays" src="../img/frame_underdays.png" alt="ornament under date" data-image-editable="photo_4" />
             </div>
           </div>
         </div>
@@ -83,29 +83,29 @@
           <div class="page-inner">
             <div class="page-header">
               <div class="page-ornament"></div>
-              <h3 class="page-title">Lời Mở Đầu</h3>
+              <h3 class="page-title" data-editable="field_14">Lời Mở Đầu</h3>
               <div class="title-line"></div>
             </div>
-            <div class="page-body">
-              <p class="open-quote">"</p>
-              <p class="body-text italic">
+            <div class="page-body" data-editable="date">
+              <p class="open-quote" data-editable="field_15">"</p>
+              <p class="body-text italic" data-editable="field_16">
                 Trong hành trình dài rộng của cuộc đời,<br/>
                 hai trái tim đã tìm thấy nhau<br/>
                 giữa muôn vàn ngẫu nhiên kỳ diệu.
               </p>
-              <p class="body-text">
-                Hôm nay, chúng tôi – <strong>Nguyễn Minh Tuấn</strong> và <strong>Trần Thị Lan</strong> –
+              <p class="body-text" data-editable="date_2">
+                Hôm nay, chúng tôi – <strong data-editable="field_17">Nguyễn Minh Tuấn</strong> và <strong data-editable="field_18">Trần Thị Lan</strong> –
                 với tất cả niềm vui và hạnh phúc trong lòng, trân trọng gửi đến bạn
                 lời mời chân thành nhất đến chứng kiến ngày trọng đại của đời chúng tôi.
               </p>
-              <p class="body-text">
+              <p class="body-text" data-editable="wedding">
                 Sự hiện diện của bạn sẽ là món quà vô giá,
                 là niềm vui nhân đôi trong ngày hôn lễ thiêng liêng này.
               </p>
-              <p class="close-quote">"</p>
-              <div class="signature">— Tuấn &amp; Lan —</div>
+              <p class="close-quote" data-editable="field_18b">"</p>
+              <div class="signature" data-editable="field_19">— Tuấn &amp; Lan —</div>
             </div>
-            <div class="page-number">1</div>
+            <div class="page-number" data-editable="field_20">1</div>
           </div>
         </div>
       </div>
@@ -117,32 +117,32 @@
           <div class="page-inner">
             <div class="page-header">
               <div class="page-ornament"></div>
-              <h3 class="page-title">Giới Thiệu<br/>Cô Dâu &amp; Chú Rể</h3>
+              <h3 class="page-title" data-editable="groom">Giới Thiệu<br/>Cô Dâu &amp; Chú Rể</h3>
               <div class="title-line"></div>
             </div>
             <div class="page-body two-columns">
               <div class="profile-card">
                 <div class="avatar groom-avatar">
-                  <img src="https://th.bing.com/th/id/OIP.OZ_sN0N3-I0kvKaFED7NHAHaKx?w=208&h=301&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Ảnh chú rể" />
+                  <img src="https://th.bing.com/th/id/OIP.OZ_sN0N3-I0kvKaFED7NHAHaKx?w=208&h=301&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Ảnh chú rể" data-image-editable="photo_5" />
                   <i class="fas fa-user-tie"></i>
                 </div>
-                <p class="profile-fullname">Nguyễn Minh Tuấn</p>
-                <p class="profile-info"><i class="fas fa-birthday-cake"></i> 12/03/1995</p>
-                <p class="profile-info"><i class="fas fa-map-marker-alt"></i> Hà Nội</p>
-                <p class="profile-info"><i class="fas fa-briefcase"></i> Kỹ Sư Phần Mềm</p>
+                <p class="profile-fullname" data-editable="field_21">Nguyễn Minh Tuấn</p>
+                <p class="profile-info" data-editable="event_date"><i class="fas fa-birthday-cake"></i> 12/03/1995</p>
+                <p class="profile-info" data-editable="field_22"><i class="fas fa-map-marker-alt"></i> Hà Nội</p>
+                <p class="profile-info" data-editable="field_23"><i class="fas fa-briefcase"></i> Kỹ Sư Phần Mềm</p>
               </div>
               <div class="profile-card">
                 <div class="avatar bride-avatar">
-                  <img src="https://tse1.mm.bing.net/th/id/OIP.k05Y4-Wdh1azRq4SrQpWUQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ảnh cô dâu" />
+                  <img src="https://tse1.mm.bing.net/th/id/OIP.k05Y4-Wdh1azRq4SrQpWUQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ảnh cô dâu" data-image-editable="photo_6" />
                   <i class="fas fa-user"></i>
                 </div>
-                <p class="profile-fullname">Trần Thị Lan</p>
-                <p class="profile-info"><i class="fas fa-birthday-cake"></i> 08/07/1997</p>
-                <p class="profile-info"><i class="fas fa-map-marker-alt"></i> TP. Hồ Chí Minh</p>
-                <p class="profile-info"><i class="fas fa-briefcase"></i> Giáo Viên</p>
+                <p class="profile-fullname" data-editable="field_24">Trần Thị Lan</p>
+                <p class="profile-info" data-editable="event_date_2"><i class="fas fa-birthday-cake"></i> 08/07/1997</p>
+                <p class="profile-info" data-editable="field_25"><i class="fas fa-map-marker-alt"></i> TP. Hồ Chí Minh</p>
+                <p class="profile-info" data-editable="field_26"><i class="fas fa-briefcase"></i> Giáo Viên</p>
               </div>
             </div>
-            <div class="page-number">2</div>
+            <div class="page-number" data-editable="field_27">2</div>
           </div>
         </div>
         <!-- RIGHT: Page 3 – Chuyện Tình Yêu -->
@@ -150,42 +150,42 @@
           <div class="page-inner">
             <div class="page-header">
               <div class="page-ornament"></div>
-              <h3 class="page-title">Chuyện Tình Yêu<br/>Của Chúng Mình</h3>
+              <h3 class="page-title" data-editable="love">Chuyện Tình Yêu<br/>Của Chúng Mình</h3>
               <div class="title-line"></div>
             </div>
-            <div class="page-body">
+            <div class="page-body" data-editable="event_time_4">
               <div class="timeline">
                 <div class="timeline-item">
                   <div class="timeline-dot"><i class="fas fa-star"></i></div>
-                  <div class="timeline-content">
-                    <span class="timeline-date">Tháng 3 · 2020</span>
-                    <p class="timeline-text">Lần đầu gặp nhau tại một buổi hội thảo tình nguyện. Ánh mắt giao nhau – và thế giới như dừng lại.</p>
+                  <div class="timeline-content" data-editable="month">
+                    <span class="timeline-date" data-editable="month_2">Tháng 3 · 2020</span>
+                    <p class="timeline-text" data-editable="field_28">Lần đầu gặp nhau tại một buổi hội thảo tình nguyện. Ánh mắt giao nhau – và thế giới như dừng lại.</p>
                   </div>
                 </div>
                 <div class="timeline-item">
                   <div class="timeline-dot"><i class="fas fa-heart"></i></div>
-                  <div class="timeline-content">
-                    <span class="timeline-date">Tháng 8 · 2020</span>
-                    <p class="timeline-text">Tuấn dũng cảm tỏ tình trong buổi chiều hoàng hôn tại Hồ Tây. Lan gật đầu với nụ cười rạng rỡ.</p>
+                  <div class="timeline-content" data-editable="month_3">
+                    <span class="timeline-date" data-editable="month_4">Tháng 8 · 2020</span>
+                    <p class="timeline-text" data-editable="field_29">Tuấn dũng cảm tỏ tình trong buổi chiều hoàng hôn tại Hồ Tây. Lan gật đầu với nụ cười rạng rỡ.</p>
                   </div>
                 </div>
                 <div class="timeline-item">
                   <div class="timeline-dot"><i class="fas fa-map-marker-alt"></i></div>
-                  <div class="timeline-content">
-                    <span class="timeline-date">Tháng 1 · 2023</span>
-                    <p class="timeline-text">Chuyến du lịch Đà Lạt cùng nhau – những kỷ niệm ngọt ngào không thể quên.</p>
+                  <div class="timeline-content" data-editable="groom_2">
+                    <span class="timeline-date" data-editable="month_5">Tháng 1 · 2023</span>
+                    <p class="timeline-text" data-editable="groom_3">Chuyến du lịch Đà Lạt cùng nhau – những kỷ niệm ngọt ngào không thể quên.</p>
                   </div>
                 </div>
                 <div class="timeline-item">
                   <div class="timeline-dot"><i class="fas fa-ring"></i></div>
-                  <div class="timeline-content">
-                    <span class="timeline-date">Tháng 12 · 2025</span>
-                    <p class="timeline-text">Tuấn cầu hôn Lan tại Paris – thành phố của tình yêu. Một chương mới bắt đầu!</p>
+                  <div class="timeline-content" data-editable="month_6">
+                    <span class="timeline-date" data-editable="month_7">Tháng 12 · 2025</span>
+                    <p class="timeline-text" data-editable="love_2">Tuấn cầu hôn Lan tại Paris – thành phố của tình yêu. Một chương mới bắt đầu!</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="page-number">3</div>
+            <div class="page-number" data-editable="field_30">3</div>
           </div>
         </div>
       </div>
@@ -197,37 +197,47 @@
           <div class="page-inner">
             <div class="page-header">
               <div class="page-ornament"></div>
-              <h3 class="page-title">Thời Gian &amp;<br/>Địa Điểm Tổ Chức</h3>
+              <h3 class="page-title" data-editable="venue">Thời Gian &amp;<br/>Địa Điểm Tổ Chức</h3>
               <div class="title-line"></div>
             </div>
-            <div class="page-body">
+            <div class="page-body" data-editable="field_39">
               <div class="event-card">
-                <div class="event-icon"><i class="fas fa-glass-cheers"></i></div>
-                <h4 class="event-name">Tiệc Đón Khách</h4>
-                <p class="event-detail"><i class="fas fa-clock"></i> 10:00 – 11:00 sáng</p>
-                <p class="event-detail"><i class="fas fa-calendar-alt"></i> Thứ Sáu, 15 tháng 05 năm 2026</p>
-                <p class="event-detail event-location"><i class="fas fa-map-marker-alt"></i> Sảnh A – Khách Sạn Melia Hà Nội</p>
+                <div class="event-head">
+                  <div class="event-icon"><i class="fas fa-glass-cheers"></i></div>
+                  <h4 class="event-name" data-editable="field_31">Tiệc Đón Khách</h4>
+                </div>
+                <div class="event-meta" data-editable="hotel">
+                  <p class="event-detail" data-editable="event_time"><i class="fas fa-clock"></i> 10:00 – 11:00 sáng</p>
+                  <p class="event-detail event-location" data-editable="hotel_2"><i class="fas fa-map-marker-alt"></i> Sảnh A – Khách Sạn Melia Hà Nội</p>
+                </div>
               </div>
-              <div class="divider-ornament">✦ ✦ ✦</div>
+              <div class="divider-ornament" data-editable="field_32">✦ ✦ ✦</div>
               <div class="event-card">
-                <div class="event-icon"><i class="fas fa-church"></i></div>
-                <h4 class="event-name">Lễ Thành Hôn</h4>
-                <p class="event-detail"><i class="fas fa-clock"></i> 11:00 – 12:00 trưa</p>
-                <p class="event-detail"><i class="fas fa-calendar-alt"></i> Thứ Sáu, 15 tháng 05 năm 2026</p>
-                <p class="event-detail event-location"><i class="fas fa-map-marker-alt"></i> Sảnh Chính – Khách Sạn Melia Hà Nội</p>
+                <div class="event-head">
+                  <div class="event-icon"><i class="fas fa-church"></i></div>
+                  <h4 class="event-name" data-editable="ceremony">Lễ Thành Hôn</h4>
+                </div>
+                <div class="event-meta" data-editable="hotel_3">
+                  <p class="event-detail" data-editable="event_time_2"><i class="fas fa-clock"></i> 11:00 – 12:00 trưa</p>
+                  <p class="event-detail event-location" data-editable="hotel_4"><i class="fas fa-map-marker-alt"></i> Sảnh Chính – Khách Sạn Melia Hà Nội</p>
+                </div>
               </div>
-              <div class="divider-ornament">✦ ✦ ✦</div>
+              <div class="divider-ornament" data-editable="field_33">✦ ✦ ✦</div>
               <div class="event-card">
-                <div class="event-icon"><i class="fas fa-utensils"></i></div>
-                <h4 class="event-name">Tiệc Mừng</h4>
-                <p class="event-detail"><i class="fas fa-clock"></i> 12:00 – 14:00 trưa</p>
-                <p class="event-detail event-location"><i class="fas fa-map-marker-alt"></i> Nhà Hàng Tầng 5 – Khách Sạn Melia</p>
+                <div class="event-head">
+                  <div class="event-icon"><i class="fas fa-utensils"></i></div>
+                  <h4 class="event-name" data-editable="field_34">Tiệc Mừng</h4>
+                </div>
+                <div class="event-meta" data-editable="hotel_5">
+                  <p class="event-detail" data-editable="event_time_3"><i class="fas fa-clock"></i> 12:00 – 14:00 trưa</p>
+                  <p class="event-detail event-location" data-editable="hotel_6"><i class="fas fa-map-marker-alt"></i> Nhà Hàng Tầng 5 – Khách Sạn Melia</p>
+                </div>
               </div>
-              <div class="map-link map-link-on-event">
-                <a href="#" class="map-btn"><i class="fas fa-map"></i> Xem Bản Đồ Đường Đi</a>
+              <div class="map-link map-link-on-event" data-editable="address">
+                <a href="#" class="map-btn" data-editable="address_2"><i class="fas fa-map"></i> Xem Bản Đồ Đường Đi</a>
               </div>
             </div>
-            <div class="page-number">4</div>
+            <div class="page-number" data-editable="field_35">4</div>
           </div>
         </div>
         <!-- RIGHT: Page 5 – Lịch Trình Buổi Lễ -->
@@ -235,59 +245,59 @@
           <div class="page-inner">
             <div class="page-header">
               <div class="page-ornament"></div>
-              <h3 class="page-title">Bên Lịch Trình<br/>Buổi Lễ</h3>
+              <h3 class="page-title" data-editable="ceremony_2">Bên Lịch Trình<br/>Buổi Lễ</h3>
               <div class="title-line"></div>
             </div>
-            <div class="page-body">
-              <div class="schedule">
-                <div class="schedule-item">
-                  <div class="schedule-time">9:30</div>
+            <div class="page-body" data-editable="date_6">
+              <div class="schedule" data-editable="event_time_5">
+                <div class="schedule-item" data-editable="event_time_6">
+                  <div class="schedule-time" data-editable="event_time_7">9:30</div>
                   <div class="schedule-dot"></div>
-                  <div class="schedule-desc">Đón tiếp khách tại sảnh, chụp hình lưu niệm</div>
+                  <div class="schedule-desc" data-editable="album">Đón tiếp khách tại sảnh, chụp hình lưu niệm</div>
                 </div>
-                <div class="schedule-item">
-                  <div class="schedule-time">10:00</div>
+                <div class="schedule-item" data-editable="event_time_8">
+                  <div class="schedule-time" data-editable="event_time_9">10:00</div>
                   <div class="schedule-dot"></div>
-                  <div class="schedule-desc">Tiệc đón khách – Cocktail &amp; canape</div>
+                  <div class="schedule-desc" data-editable="field_36">Tiệc đón khách – Cocktail &amp; canape</div>
                 </div>
-                <div class="schedule-item">
-                  <div class="schedule-time">10:45</div>
+                <div class="schedule-item" data-editable="event_time_10">
+                  <div class="schedule-time" data-editable="event_time_11">10:45</div>
                   <div class="schedule-dot"></div>
-                  <div class="schedule-desc">Mời khách vào Sảnh Chính, ổn định chỗ ngồi</div>
+                  <div class="schedule-desc" data-editable="album_2">Mời khách vào Sảnh Chính, ổn định chỗ ngồi</div>
                 </div>
-                <div class="schedule-item">
-                  <div class="schedule-time">11:00</div>
+                <div class="schedule-item" data-editable="event_time_12">
+                  <div class="schedule-time" data-editable="event_time_13">11:00</div>
                   <div class="schedule-dot highlight"></div>
-                  <div class="schedule-desc"><strong>Lễ Thành Hôn</strong> – Trao nhẫn &amp; lời thề nguyện</div>
+                  <div class="schedule-desc" data-editable="ceremony_3"><strong data-editable="ceremony_4">Lễ Thành Hôn</strong> – Trao nhẫn &amp; lời thề nguyện</div>
                 </div>
-                <div class="schedule-item">
-                  <div class="schedule-time">11:30</div>
+                <div class="schedule-item" data-editable="event_time_14">
+                  <div class="schedule-time" data-editable="event_time_15">11:30</div>
                   <div class="schedule-dot"></div>
-                  <div class="schedule-desc">Cắt bánh cưới &amp; rót rượu mừng</div>
+                  <div class="schedule-desc" data-editable="field_37">Cắt bánh cưới &amp; rót rượu mừng</div>
                 </div>
-                <div class="schedule-item">
-                  <div class="schedule-time">11:45</div>
+                <div class="schedule-item" data-editable="event_time_16">
+                  <div class="schedule-time" data-editable="event_time_17">11:45</div>
                   <div class="schedule-dot"></div>
-                  <div class="schedule-desc">Tân lang tân nương đi vòng chào bàn</div>
+                  <div class="schedule-desc" data-editable="bride">Tân lang tân nương đi vòng chào bàn</div>
                 </div>
-                <div class="schedule-item">
-                  <div class="schedule-time">12:00</div>
+                <div class="schedule-item" data-editable="event_time_18">
+                  <div class="schedule-time" data-editable="event_time_19">12:00</div>
                   <div class="schedule-dot"></div>
-                  <div class="schedule-desc">Khai tiệc – Tiệc cưới chính thức bắt đầu</div>
+                  <div class="schedule-desc" data-editable="wedding_2">Khai tiệc – Tiệc cưới chính thức bắt đầu</div>
                 </div>
-                <div class="schedule-item">
-                  <div class="schedule-time">13:30</div>
+                <div class="schedule-item" data-editable="event_time_20">
+                  <div class="schedule-time" data-editable="event_time_21">13:30</div>
                   <div class="schedule-dot"></div>
-                  <div class="schedule-desc">Văn nghệ, trò chơi &amp; tặng quà</div>
+                  <div class="schedule-desc" data-editable="gift">Văn nghệ, trò chơi &amp; tặng quà</div>
                 </div>
-                <div class="schedule-item">
-                  <div class="schedule-time">14:00</div>
+                <div class="schedule-item" data-editable="event_time_22">
+                  <div class="schedule-time" data-editable="event_time_23">14:00</div>
                   <div class="schedule-dot"></div>
-                  <div class="schedule-desc">Tiễn khách – Tặng quà lưu niệm</div>
+                  <div class="schedule-desc" data-editable="gift_2">Tiễn khách – Tặng quà lưu niệm</div>
                 </div>
               </div>
             </div>
-            <div class="page-number">5</div>
+            <div class="page-number" data-editable="field_38">5</div>
           </div>
         </div>
       </div>
@@ -299,65 +309,65 @@
           <div class="page-inner">
             <div class="page-header">
               <div class="page-ornament"></div>
-              <h3 class="page-title">Album Ảnh<br/>Kỷ Niệm</h3>
+              <h3 class="page-title" data-editable="album_3">Album Ảnh<br/>Kỷ Niệm</h3>
               <div class="title-line"></div>
             </div>
-            <div class="page-body">
-              <div class="photo-grid">
-                <div class="photo-item photo-1">
-                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Gặp Lần Đầu</span></div>
+            <div class="page-body" data-editable="gift_3">
+              <div class="photo-grid" data-editable="field_40">
+                <div class="photo-item photo-1" data-editable="field_41">
+                  <div class="photo-placeholder" data-editable="field_42"><i class="fas fa-camera"></i><span data-editable="field_43"></span></div>
                 </div>
-                <div class="photo-item photo-2">
-                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Ngày Hẹn Hò</span></div>
+                <div class="photo-item photo-2" data-editable="date_3">
+                  <div class="photo-placeholder" data-editable="date_4"><i class="fas fa-camera"></i><span data-editable="date_5"></span></div>
                 </div>
-                <div class="photo-item photo-3">
-                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Du Lịch Đà Lạt</span></div>
+                <div class="photo-item photo-3" data-editable="field_44">
+                  <div class="photo-placeholder" data-editable="field_45"><i class="fas fa-camera"></i><span data-editable="field_46"></span></div>
                 </div>
-                <div class="photo-item photo-4">
-                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Cầu Hôn Paris</span></div>
+                <div class="photo-item photo-4" data-editable="field_47">
+                  <div class="photo-placeholder" data-editable="field_48"><i class="fas fa-camera"></i><span data-editable="field_49"></span></div>
                 </div>
-                <div class="photo-item photo-5">
-                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Chụp Ảnh Cưới</span></div>
+                <div class="photo-item photo-5" data-editable="album_4">
+                  <div class="photo-placeholder" data-editable="album_5"><i class="fas fa-camera"></i><span data-editable="album_6"></span></div>
                 </div>
-                <div class="photo-item photo-6">
-                  <div class="photo-placeholder"><i class="fas fa-camera"></i><span>Cùng Gia Đình</span></div>
+                <div class="photo-item photo-6" data-editable="family">
+                  <div class="photo-placeholder" data-editable="family_2"><i class="fas fa-camera"></i><span data-editable="family_3"></span></div>
                 </div>
               </div>
-              <p class="photo-caption">Những khoảnh khắc đáng nhớ trên hành trình yêu thương của chúng mình ♡</p>
+              <p class="photo-caption" data-editable="album_7">Những khoảnh khắc đáng nhớ trên hành trình yêu thương của chúng mình ♡</p>
             </div>
-            <div class="page-number">6</div>
+            <div class="page-number" data-editable="field_50">6</div>
           </div>
         </div>
         <!-- RIGHT: Page 7 – Thiệp Mời Chính Thức -->
-        <div class="page page-right" data-page="7">
-          <div class="page-inner formal-invite">
-            <div class="formal-top-ornament">✦ ✦ ✦</div>
-            <p class="formal-label">Trân trọng kính mời</p>
+        <div class="page page-right" data-page="7" data-editable="field_51">
+          <div class="page-inner formal-invite" data-editable="field_52">
+            <div class="formal-top-ornament" data-editable="field_53">✦ ✦ ✦</div>
+            <p class="formal-label" data-editable="invite_3">Trân trọng kính mời</p>
             <div class="formal-guest-line">
               <div class="guest-name-line"></div>
-              <p class="formal-guest-hint">(Tên quý khách)</p>
+              <p class="formal-guest-hint" data-editable="field_54">(Tên quý khách)</p>
             </div>
-            <p class="formal-text">hiện diện trong lễ thành hôn của</p>
-            <div class="formal-couple">
-              <span class="formal-groom">Nguyễn Minh Tuấn</span>
-              <div class="formal-heart-row">
-                <span class="formal-heart">❤</span>
+            <p class="formal-text" data-editable="ceremony_5">hiện diện trong lễ thành hôn của</p>
+            <div class="formal-couple" data-editable="field_55">
+              <span class="formal-groom" data-editable="field_56">Nguyễn Minh Tuấn</span>
+              <div class="formal-heart-row" data-editable="field_57">
+                <span class="formal-heart" data-editable="field_58">❤</span>
               </div>
-              <span class="formal-bride">Trần Thị Lan</span>
+              <span class="formal-bride" data-editable="field_59">Trần Thị Lan</span>
             </div>
-            <div class="formal-date-box">
-              <div class="formal-day">Thứ Sáu</div>
-              <div class="formal-date-number">15</div>
-              <div class="formal-month-year">Tháng 05 · 2026</div>
+            <div class="formal-date-box" data-editable="field_60">
+              <div class="formal-day" data-editable="field_61">Thứ Sáu</div>
+              <div class="formal-date-number" data-editable="field_62">15</div>
+              <div class="formal-month-year" data-editable="month_8">Tháng 05 · 2026</div>
             </div>
-            <p class="formal-venue">
+            <p class="formal-venue" data-editable="hotel_7">
               <i class="fas fa-map-marker-alt"></i>
               Khách Sạn Melia Hà Nội<br/>
               44B Lý Thường Kiệt, Hoàn Kiếm, Hà Nội
             </p>
-            <img class="formal-bottom-image" src="../img/nhancuoicapdoi.png" alt="Nhẫn cưới cặp đôi" />
-            <div class="formal-bottom-ornament">✦ ✦ ✦</div>
-            <div class="page-number">7</div>
+            <img class="formal-bottom-image" src="../img/nhancuoicapdoi.png" alt="Nhẫn cưới cặp đôi" data-image-editable="photo_7" />
+            <div class="formal-bottom-ornament" data-editable="field_63">✦ ✦ ✦</div>
+            <div class="page-number" data-editable="field_64">7</div>
           </div>
         </div>
       </div>
@@ -369,46 +379,46 @@
           <div class="page-inner">
             <div class="page-header">
               <div class="page-ornament"></div>
-              <h3 class="page-title">Xác Nhận<br/>Tham Dự </h3>
+              <h3 class="page-title" data-editable="rsvp">Xác Nhận<br/>Tham Dự </h3>
               <div class="title-line"></div>
             </div>
-            <div class="page-body">
-              <p class="body-text">Vui lòng xác nhận tham dự trước ngày <strong>01/05/2026</strong> để chúng tôi chuẩn bị tốt nhất cho bạn.</p>
+            <div class="page-body" data-editable="groom_13">
+              <p class="body-text" data-editable="date_7">Vui lòng xác nhận tham dự trước ngày <strong data-editable="event_date_3">01/05/2026</strong> để chúng tôi chuẩn bị tốt nhất cho bạn.</p>
               <form class="rsvp-form" id="rsvp-form">
-                <div class="form-group">
-                  <label><i class="fas fa-user"></i> Họ và Tên</label>
+                <div class="form-group" data-editable="field_65">
+                  <label data-editable="field_66"><i class="fas fa-user"></i> Họ và Tên</label>
                   <input type="text" placeholder="Nguyễn Văn A" required />
                 </div>
-                <div class="form-group">
-                  <label><i class="fas fa-phone"></i> Số Điện Thoại</label>
+                <div class="form-group" data-editable="field_67">
+                  <label data-editable="field_68"><i class="fas fa-phone"></i> Số Điện Thoại</label>
                   <input type="tel" placeholder="0912 345 678" />
                 </div>
-                <div class="form-group">
-                  <label><i class="fas fa-users"></i> Số Người Tham Dự</label>
+                <div class="form-group" data-editable="field_69">
+                  <label data-editable="field_70"><i class="fas fa-users"></i> Số Người Tham Dự</label>
                   <select title="Chọn số người tham dự">
-                    <option>1 người</option>
-                    <option>2 người</option>
-                    <option>3 người</option>
-                    <option>4 người trở lên</option>
+                    <option data-editable="field_71">1 người</option>
+                    <option data-editable="field_72">2 người</option>
+                    <option data-editable="field_73">3 người</option>
+                    <option data-editable="field_74">4 người trở lên</option>
                   </select>
                 </div>
-                <div class="form-group attend-group">
-                  <label><i class="fas fa-check-circle"></i> Xác Nhận</label>
-                  <div class="radio-group">
-                    <label class="radio-label">
-                      <input type="radio" name="attend" value="yes" checked /> Tôi sẽ tham dự 
+                <div class="form-group attend-group" data-editable="groom_4">
+                  <label data-editable="rsvp_2"><i class="fas fa-check-circle"></i> Xác Nhận</label>
+                  <div class="radio-group" data-editable="groom_5">
+                    <label class="radio-label" data-editable="field_75">
+                      <input type="radio" name="attend" value="yes" checked data-editable="groom_6" /> Tôi sẽ tham dự 
                     </label>
-                    <label class="radio-label">
-                      <input type="radio" name="attend" value="no" /> Rất tiếc, không thể đến
+                    <label class="radio-label" data-editable="groom_7">
+                      <input type="radio" name="attend" value="no" data-editable="groom_8" /> Rất tiếc, không thể đến
                     </label>
                   </div>
                 </div>
-                <button type="submit" class="rsvp-btn">
+                <button type="submit" class="rsvp-btn" data-editable="rsvp_submit">
                   <i class="fas fa-paper-plane"></i> Gửi Xác Nhận
                 </button>
               </form>
             </div>
-            <div class="page-number">8</div>
+            <div class="page-number" data-editable="field_76">8</div>
           </div>
         </div>
         <!-- RIGHT: Page 9 – Gửi Lời Chúc -->
@@ -416,34 +426,34 @@
           <div class="page-inner">
             <div class="page-header">
               <div class="page-ornament"></div>
-              <h3 class="page-title">Gửi Lời Chúc</h3>
+              <h3 class="page-title" data-editable="button_2">Gửi Lời Chúc</h3>
               <div class="title-line"></div>
             </div>
             <div class="page-body">
-              <p class="body-text">Lời chúc của bạn sẽ là món quà tinh thần quý giá nhất với chúng tôi!</p>
+              <p class="body-text" data-editable="gift_4">Lời chúc của bạn sẽ là món quà tinh thần quý giá nhất với chúng tôi!</p>
               <form class="wish-form" id="wish-form">
-                <div class="form-group">
-                  <label><i class="fas fa-user"></i> Tên của bạn</label>
+                <div class="form-group" data-editable="field_77">
+                  <label data-editable="field_78"><i class="fas fa-user"></i> Tên của bạn</label>
                   <input type="text" placeholder="Tên bạn..." />
                 </div>
-                <div class="form-group">
-                  <label><i class="fas fa-comment-dots"></i> Lời chúc</label>
+                <div class="form-group" data-editable="field_79">
+                  <label data-editable="field_80"><i class="fas fa-comment-dots"></i> Lời chúc</label>
                   <textarea placeholder="Chúc hai bạn..." rows="4"></textarea>
                 </div>
-                <button type="submit" class="wish-btn">
+                <button type="submit" class="wish-btn" data-editable="wish_submit">
                   <i class="fas fa-heart"></i> Gửi Lời Chúc
                 </button>
               </form>
-              <div class="wish-list" id="wish-list">
-                <div class="wish-item">
-                  <strong>Anh Hùng &amp; chị Mai:</strong> "Chúc hai em trăm năm hạnh phúc, mãi mãi yêu thương nhau! 💕"
+              <div class="wish-list" id="wish-list" data-editable="groom_9">
+                <div class="wish-item" data-editable="groom_10">
+                  <strong data-editable="groom_11">Anh Hùng &amp; chị Mai:</strong> "Chúc hai em trăm năm hạnh phúc, mãi mãi yêu thương nhau! 💕"
                 </div>
-                <div class="wish-item">
-                  <strong>Bạn bè lớp 12A:</strong> "Đám cưới là khởi đầu đẹp nhất – chúc mừng cặp đôi hoàn hảo! 🎉"
+                <div class="wish-item" data-editable="field_81">
+                  <strong data-editable="field_82">Bạn bè lớp 12A:</strong> "Đám cưới là khởi đầu đẹp nhất – chúc mừng cặp đôi hoàn hảo! 🎉"
                 </div>
               </div>
             </div>
-            <div class="page-number">9</div>
+            <div class="page-number" data-editable="field_83">9</div>
           </div>
         </div>
       </div>
@@ -455,67 +465,67 @@
           <div class="page-inner">
             <div class="page-header">
               <div class="page-ornament"></div>
-              <h3 class="page-title">Thông Tin Liên Hệ<br/>Gia Đình</h3>
+              <h3 class="page-title" data-editable="groom_12">Thông Tin Liên Hệ<br/>Gia Đình</h3>
               <div class="title-line"></div>
             </div>
             <div class="page-body">
-              <div class="family-card">
-                <h4 class="family-title"><i class="fas fa-home"></i> Gia Đình Nhà Trai</h4>
-                <div class="contact-item">
-                  <div class="contact-label">Ông Nguyễn Văn Bình</div>
-                  <a href="tel:0901234567" class="contact-phone"><i class="fas fa-phone"></i> 090 123 4567</a>
+              <div class="family-card" data-editable="groom_14">
+                <h4 class="family-title" data-editable="family_4"><i class="fas fa-home"></i> Gia Đình Nhà Trai</h4>
+                <div class="contact-item" data-editable="groom_15">
+                  <div class="contact-label" data-editable="groom_16">Ông Nguyễn Văn Bình</div>
+                  <a href="tel:0901234567" class="contact-phone" data-editable="field_84"><i class="fas fa-phone"></i> 090 123 4567</a>
                 </div>
-                <div class="contact-item">
-                  <div class="contact-label">Bà Lê Thị Hoa</div>
-                  <a href="tel:0912345678" class="contact-phone"><i class="fas fa-phone"></i> 091 234 5678</a>
+                <div class="contact-item" data-editable="bride_2">
+                  <div class="contact-label" data-editable="bride_3">Bà Lê Thị Hoa</div>
+                  <a href="tel:0912345678" class="contact-phone" data-editable="field_85"><i class="fas fa-phone"></i> 091 234 5678</a>
                 </div>
-                <div class="contact-item">
-                  <div class="contact-label">Chú Rể – Minh Tuấn</div>
-                  <a href="tel:0933456789" class="contact-phone"><i class="fas fa-phone"></i> 093 345 6789</a>
+                <div class="contact-item" data-editable="groom_17">
+                  <div class="contact-label" data-editable="groom_18">Chú Rể – Minh Tuấn</div>
+                  <a href="tel:0933456789" class="contact-phone" data-editable="field_86"><i class="fas fa-phone"></i> 093 345 6789</a>
                 </div>
               </div>
-              <div class="divider-ornament">✦ ✦ ✦</div>
-              <div class="family-card">
-                <h4 class="family-title"><i class="fas fa-home"></i> Gia Đình Nhà Gái</h4>
-                <div class="contact-item">
-                  <div class="contact-label">Ông Trần Văn Minh</div>
-                  <a href="tel:0944567890" class="contact-phone"><i class="fas fa-phone"></i> 094 456 7890</a>
+              <div class="divider-ornament" data-editable="field_87">✦ ✦ ✦</div>
+              <div class="family-card" data-editable="groom_19">
+                <h4 class="family-title" data-editable="family_5"><i class="fas fa-home"></i> Gia Đình Nhà Gái</h4>
+                <div class="contact-item" data-editable="groom_20">
+                  <div class="contact-label" data-editable="groom_21">Ông Trần Văn Minh</div>
+                  <a href="tel:0944567890" class="contact-phone" data-editable="field_88"><i class="fas fa-phone"></i> 094 456 7890</a>
                 </div>
-                <div class="contact-item">
-                  <div class="contact-label">Bà Phạm Thị Thu</div>
-                  <a href="tel:0955678901" class="contact-phone"><i class="fas fa-phone"></i> 095 567 8901</a>
+                <div class="contact-item" data-editable="bride_4">
+                  <div class="contact-label" data-editable="bride_5">Bà Phạm Thị Thu</div>
+                  <a href="tel:0955678901" class="contact-phone" data-editable="field_89"><i class="fas fa-phone"></i> 095 567 8901</a>
                 </div>
-                <div class="contact-item">
-                  <div class="contact-label">Cô Dâu – Thị Lan</div>
-                  <a href="tel:0966789012" class="contact-phone"><i class="fas fa-phone"></i> 096 678 9012</a>
+                <div class="contact-item" data-editable="bride_6">
+                  <div class="contact-label" data-editable="bride_7">Cô Dâu – Thị Lan</div>
+                  <a href="tel:0966789012" class="contact-phone" data-editable="field_90"><i class="fas fa-phone"></i> 096 678 9012</a>
                 </div>
               </div>
             </div>
-            <div class="page-number">10</div>
+            <div class="page-number" data-editable="field_91">10</div>
           </div>
         </div>
         <!-- RIGHT: Page 11 – Lời Cảm Ơn (Back Cover) -->
-        <div class="page page-right cover-right" data-page="11">
+        <div class="page page-right cover-right" data-page="11" data-editable="field_92">
           <div class="page-inner">
-            <div class="back-cover-content">
-              <div class="back-ornament top">✦ ✦ ✦</div>
-              <p class="back-subtitle">Lời Cảm Ơn &amp; Kết Thúc</p>
+            <div class="back-cover-content" data-editable="field_94">
+              <div class="back-ornament top" data-editable="field_95">✦ ✦ ✦</div>
+              <p class="back-subtitle" data-editable="field_96">Lời Cảm Ơn &amp; Kết Thúc</p>
               <div class="back-roses"></div>
-              <p class="back-quote italic">
+              <p class="back-quote italic" data-editable="field_97">
                 "Hành trình ngàn dặm bắt đầu<br/>từ một bước chân,<br/>và cuộc đời đôi lứa bắt đầu<br/>từ một lời 'Có'."
               </p>
-              <p class="back-text">
+              <p class="back-text" data-editable="happy">
                 Cảm ơn bạn đã dành thời gian<br/>
                 đọc tấm thiệp nhỏ này.<br/>
                 Sự hiện diện của bạn chính là<br/>
                 niềm hạnh phúc lớn nhất của chúng tôi.
               </p>
-              <div class="back-names">Tuấn &amp; Lan</div>
-              <img class="back-undertext" src="../img/nhancuoi.png" alt="ornament under names" />
-              <div class="back-date">15 · 05 · 2026</div>
-              <img class="back-underdays" src="../img/frame_underdays.png" alt="ornament under date" />
-              <div class="back-ornament bottom">✦ ✦ ✦</div>
-              <div class="page-number light">11</div>
+              <div class="back-names" data-editable="field_98">Tuấn &amp; Lan</div>
+              <img class="back-undertext" src="../img/nhancuoi.png" alt="ornament under names" data-image-editable="photo_8" />
+              <div class="back-date" data-editable="field_99">15 · 05 · 2026</div>
+              <img class="back-underdays" src="../img/frame_underdays.png" alt="ornament under date" data-image-editable="photo_9" />
+              <div class="back-ornament bottom" data-editable="field_100">✦ ✦ ✦</div>
+              <div class="page-number light" data-editable="field_101">11</div>
             </div>
           </div>
         </div>
@@ -524,14 +534,14 @@
     </div><!-- end .book -->
   </div><!-- end .book-wrapper -->
 </div><!-- end .book-modal -->  
-<div id="rsvp-toast" class="toast hidden">Cảm ơn bạn đã xác nhận tham dự!</div>
-<div id="wish-toast" class="toast hidden">Lời chúc của bạn đã được gửi đi!</div>
-<div id="notice-modal" class="notice-modal hidden" aria-hidden="true">
-  <div class="notice-card" role="alertdialog" aria-modal="true" aria-labelledby="notice-message">
-    <div class="notice-ornament">✦ ✦ ✦</div>
-    <h4 class="notice-title">Thông Báo</h4>
-    <p id="notice-message" class="notice-message">Thông báo</p>
-    <button id="notice-ok" class="notice-ok-btn" type="button">OK</button>
+<div id="rsvp-toast" class="toast hidden" data-editable="rsvp_3">Cảm ơn bạn đã xác nhận tham dự!</div>
+<div id="wish-toast" class="toast hidden" data-editable="button_3">Lời chúc của bạn đã được gửi đi!</div>
+<div id="notice-modal" class="notice-modal hidden" aria-hidden="true" data-editable="field_102">
+  <div class="notice-card" role="alertdialog" aria-modal="true" aria-labelledby="notice-message" data-editable="field_103">
+    <div class="notice-ornament" data-editable="field_104">✦ ✦ ✦</div>
+    <h4 class="notice-title" data-editable="groom_22">Thông Báo</h4>
+    <p id="notice-message" class="notice-message" data-editable="groom_23">Thông báo</p>
+    <button id="notice-ok" class="notice-ok-btn" type="button" data-editable="notice_ok">OK</button>
   </div>
 </div>
 <div id="floating-wishes-container" class="floating-wishes-container"></div>

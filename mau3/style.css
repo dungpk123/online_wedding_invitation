@@ -129,7 +129,7 @@ body {
 .hero-banner {
 	width: 100%;
 	height: min(44vh, 430px);
-	background-image: linear-gradient(rgba(44, 26, 33, 0.25), rgba(44, 26, 33, 0.25)), url("../img/background_sakura.jpg");
+	background-image: linear-gradient(rgba(44, 26, 33, 0.25), rgba(44, 26, 33, 0.25)), url("");
 	background-size: cover;
 	background-position: center;
 }

@@ -5,10 +5,14 @@
 (function () {
   "use strict";
 
+  if (window.__WEDDING_MAU5_INIT_DOC__ === document) return;
+  window.__WEDDING_MAU5_INIT_DOC__ = document;
+
   const landing = document.getElementById("landing");
   const openBtn = document.getElementById("open-book-btn");
   const bookModal = document.getElementById("book-modal");
   const modalBg = document.getElementById("modal-bg");
+  const rotateDeviceOverlay = document.getElementById("rotate-device-overlay");
   const closeBtn = document.getElementById("close-btn");
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
@@ -40,6 +44,44 @@
   let noticeHideTimer = null;
 
   const PETAL_CHARS = [".", "*", "o", "+"];
+
+  function normalizeDriveImageUrl(url) {
+    if (!url) return "";
+
+    const fileMatch = url.match(/drive\.google\.com\/file\/d\/([^/]+)/i);
+    if (fileMatch && fileMatch[1]) {
+      return "https://drive.google.com/uc?export=view&id=" + fileMatch[1];
+    }
+
+    const openMatch = url.match(/[?&]id=([^&]+)/i);
+    if (/drive\.google\.com/i.test(url) && openMatch && openMatch[1]) {
+      return "https://drive.google.com/uc?export=view&id=" + openMatch[1];
+    }
+
+    return url;
+  }
+
+  function applyCssMappedImageSources() {
+    const editableImages = document.querySelectorAll("img[data-image-editable]");
+
+    editableImages.forEach((img) => {
+      const rawSrc = (img.getAttribute("src") || "").trim();
+      const hasNonPlaceholderSrc = rawSrc !== "" && !/^(\.\.\/)?img\//i.test(rawSrc) && !/^\/img\//i.test(rawSrc);
+      if (hasNonPlaceholderSrc) return;
+
+      const bgImage = window.getComputedStyle(img).backgroundImage;
+      if (!bgImage || bgImage === "none") return;
+
+      const match = bgImage.match(/^url\(["']?(.*?)["']?\)$/i);
+      if (!match || !match[1]) return;
+
+      const resolvedUrl = normalizeDriveImageUrl(match[1]);
+      if (!resolvedUrl) return;
+
+      img.src = resolvedUrl;
+      img.style.backgroundImage = "none";
+    });
+  }
 
   function decorateInnerPages() {
     const innerPages = document.querySelectorAll(".page:not(.cover-left):not(.cover-right) .page-inner");
@@ -136,6 +178,7 @@
     if (isAnimating) return;
     if (bookModal) bookModal.classList.add("hidden");
     if (landing) landing.classList.remove("fade-out");
+    syncRotatePrompt();
     void exitFullscreen();
     setTimeout(() => {
       resetBookToClosed();
@@ -300,9 +343,36 @@
     return str.replace(/[&<>"']/g, (c) => map[c]);
   }
 
+  function isMobileBookExperience() {
+    const hasMatchMedia = typeof window.matchMedia === "function";
+    const coarsePointer = hasMatchMedia && window.matchMedia("(pointer: coarse)").matches;
+    const smallViewport = Math.max(window.innerWidth || 0, window.innerHeight || 0) <= 1024;
+    const touchCapable = (navigator.maxTouchPoints || 0) > 0 || "ontouchstart" in window;
+
+    return smallViewport && (coarsePointer || touchCapable);
+  }
+
+  function isPortraitViewport() {
+    if (typeof window.matchMedia === "function") {
+      return window.matchMedia("(orientation: portrait)").matches;
+    }
+
+    return window.innerHeight >= window.innerWidth;
+  }
+
+  function syncRotatePrompt() {
+    if (!bookModal || !rotateDeviceOverlay) return;
+
+    const shouldPromptRotate = !bookModal.classList.contains("hidden") && isMobileBookExperience() && isPortraitViewport();
+
+    bookModal.classList.toggle("needs-rotation", shouldPromptRotate);
+    rotateDeviceOverlay.setAttribute("aria-hidden", shouldPromptRotate ? "false" : "true");
+  }
+
   async function enterFullscreen() {
     const root = document.documentElement;
 
+    if (!isMobileBookExperience()) return;
     if (!root || document.fullscreenElement || !root.requestFullscreen) return;
 
     try {
@@ -328,6 +398,7 @@
       if (landing) landing.classList.add("fade-out");
       if (bookModal) bookModal.classList.remove("hidden");
       resetBookToClosed();
+      syncRotatePrompt();
     });
   }
 
@@ -357,6 +428,10 @@
       if (e.target === modalBg) closeModal();
     });
   }
+
+  window.addEventListener("resize", syncRotatePrompt);
+  window.addEventListener("orientationchange", syncRotatePrompt);
+  document.addEventListener("fullscreenchange", syncRotatePrompt);
 
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
@@ -456,6 +531,8 @@
   }
 
   decorateInnerPages();
+  applyCssMappedImageSources();
   startPetals();
   resetBookToClosed();
+  syncRotatePrompt();
 })();

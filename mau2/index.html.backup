@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Mời Cưới</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-line">
+            <img class="ornament-inline" src="img/anh.png" alt="" aria-hidden="true">
+            <p class="couple-names">Thành Nam & Ngọc Lan</p>
+            <img class="ornament-inline ornament-inline-right" src="img/anh.png" alt="" aria-hidden="true">
+        </div>
+    </div>
+</section>
+
+<!-- ===== INTRO ===== -->
+<section class="intro fade reveal fx-fade-up reveal-stagger">
+    <p class="intro-title">Hôn lễ của chúng mình sẽ tổ chức</p>
+    <p class="intro-time">Vào lúc 18h thứ 7 ngày 15/06/2026</p>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://tonywedding.vn/wp-content/uploads/2025/12/z7369987445334_60410bb69579fbf32780dfd3d4174cf0.jpg" alt="Ảnh cưới 1">
+        </div>
+        <div class="gallery-item">
+            <img src="https://tonywedding.vn/wp-content/uploads/2025/12/z7369987495474_bee5538b19e6eebcc6d7312c3fad2387.jpg" alt="Ảnh cưới 2">
+        </div>
+        <div class="gallery-item">
+            <img src="https://tonywedding.vn/wp-content/uploads/2025/12/z7369987229127_445585cf352283a4e338082a076e05d6.jpg" alt="Ảnh cưới 3">
+        </div>
+    </div>
+</section>
+
+<!-- ===== PROFILE ===== -->
+<section class="profile fade reveal fx-fade-down reveal-stagger">
+    <div class="profile-watermark" aria-hidden="true">V&amp;T</div>
+
+    <div class="profile-header">
+        <div class="profile-header-decor" aria-hidden="true">
+            <span></span>
+            <i>♥</i>
+            <span></span>
+        </div>
+        <h2>Cặp Đôi Hạnh Phúc</h2>
+        <p>Hôn lễ của chúng mình sẽ tổ chức vào lúc 18h thứ 7 ngày 15/06/2026</p>
+    </div>
+
+    <div class="couple-showcase">
+        <article class="person-card groom-card">
+            <div class="person-frame">
+                <img src="data:image/webp;base64,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" alt="Chú rể Văn Toàn">
+                <div class="person-overlay" aria-hidden="true"></div>
+                <div class="person-label">
+                    <h3 class="script">Văn Toàn</h3>
+                    <p>CHÚ RỂ</p>
+                </div>
+            </div>
+            <p class="person-tagline">"Người chồng lý tưởng"</p>
+            <p class="person-text">Chú rể là người điềm đạm, thân thiện, giao tiếp tốt và yêu gia đình. Anh luôn là chỗ dựa vững chắc cho người bạn đời của mình.</p>
+        </article>
+
+        <article class="person-card bride-card">
+            <div class="person-frame">  
+                <img src="https://tse2.mm.bing.net/th/id/OIP.8zuU7WNIqQjj6x11Xs-zAQHaKz?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Cô dâu Tú Trinh">
+                <div class="person-overlay" aria-hidden="true"></div>
+                <div class="person-label">
+                    <h3 class="script">Tú Trinh</h3>
+                    <p>CÔ DÂU</p>
+                </div>
+            </div>
+            <p class="person-tagline">"Nàng thơ dịu dàng"</p>
+            <p class="person-text">Cô dâu dịu dàng, nữ tính, thích nấu ăn và du lịch cùng gia đình. Nụ cười của cô ấy luôn mang lại niềm vui cho mọi người xung quanh.</p>
+        </article>
+    </div>
+
+    
+</section>
+
+<!-- ===== LOVE JOURNEY ===== -->
+<section class="love-journey fade reveal fx-scale-blur reveal-stagger">
+    <div class="journey-wrap">
+        <div class="journey-photos">
+            <div class="journey-photo-main parallax-bg" data-parallax-speed="0.055">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzEejNQNt3gMpl4kafqRr5zXXVMpKCp2SecRhwc_UWe418BYpooPJNT511u4Z2knTAUhNH1UcnIV4nZQ-s_qKX8eXY9jnJOYLH7Sq-tAVXQ6Z56waa6VDeTlbL3BLrFtq9-No1nKYqqw6pPnJX_dDBWTIUfIp8t7D_eoT9UAJrWaASgP-U4CU8SHY6HWl69hahDjfejJUJQu0AYJql5Bngbe2jlmU3NhxUblfl3uVWdWIralNF7RKIiat7zivc7IEGyp0PrDC0ZOfb" alt="Khoảnh khắc tình yêu">
+            </div>
+            <div class="journey-photo-sub">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzEejNQNt3gMpl4kafqRr5zXXVMpKCp2SecRhwc_UWe418BYpooPJNT511u4Z2knTAUhNH1UcnIV4nZQ-s_qKX8eXY9jnJOYLH7Sq-tAVXQ6Z56waa6VDeTlbL3BLrFtq9-No1nKYqqw6pPnJX_dDBWTIUfIp8t7D_eoT9UAJrWaASgP-U4CU8SHY6HWl69hahDjfejJUJQu0AYJql5Bngbe2jlmU3NhxUblfl3uVWdWIralNF7RKIiat7zivc7IEGyp0PrDC0ZOfb" alt="Khoảnh khắc ngọt ngào">
+            </div>
+        </div>
+
+        <div class="journey-content">
+            <h2 class="script">Hành Trình Tình Yêu</h2>
+            <p class="journey-subtitle">A love story written in the stars</p>
+
+            <div class="journey-steps">
+                <article class="journey-step">
+                    <h3>Gặp Gỡ</h3>
+                    <p>Trong một ngày bình yên, chúng mình tình cờ gặp nhau. Từ ánh nhìn đầu tiên, cả hai đã cảm nhận được sự đồng điệu rất khó gọi tên.</p>
+                </article>
+                <article class="journey-step">
+                    <h3>Gắn Kết</h3>
+                    <p>Qua từng cuộc trò chuyện, từng chuyến đi ngắn và những lần sẻ chia, tình yêu lớn dần theo năm tháng bằng sự thấu hiểu và tin tưởng.</p>
+                </article>
+                <article class="journey-step">
+                    <h3>Lời Hứa</h3>
+                    <p>Dưới ánh hoàng hôn dịu dàng, chúng mình đã chọn nắm tay nhau bước vào chặng đường mới, cùng vun đắp một mái ấm hạnh phúc.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WEDDING PROGRAM ===== -->
+<section class="wedding-program fade reveal fx-fade-up reveal-stagger" aria-label="Chương trình lễ thành hôn">
+    <div class="program-grid">
+        <div class="program-photo-col">
+            <div class="program-photo-wrap">
+                <div class="program-arch-photo parallax-bg" data-parallax-speed="0.05">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf4Z4ZbPRN5HeMLWstu_X4bZaWpVD0gX6maXzcOyF5f7917n5dzggjTSrqgeb53hTfifunVcm4-qK5gpdDwGkLfUOtY9k8U0gG7-CeYIb_9HUTyS0jj-l2_ztLumS9QohV4K0XgjoA-vtCR6UI3iA7MaQRmEAf2zKT6QakLfEP103f7gMJJOu4pxSc8ZvHPZkTOdp4-Gj66mwwE_S2H5PLwh3UXZWUfaWTE_x5YmU7szAIX0ZtwyTNt-ucQgNwsQXYqXOl1No8A7Ty" alt="Nhẫn cưới và hoa">
+                </div>
+                <div class="program-corner corner-br" aria-hidden="true"></div>
+                <div class="program-corner corner-tl" aria-hidden="true"></div>
+                <div class="program-note">
+                    <p class="program-note-title script">Lưu Ngày</p>
+                    <p>Sự hiện diện của bạn là niềm vinh hạnh của chúng tôi</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="program-content-col">
+            <div class="program-heading">
+                <span class="script">Chương Trình</span>
+                <h2>Lễ Thành Hôn</h2>
+                <div class="program-divider" aria-hidden="true"></div>
+            </div>
+
+            <div class="program-timeline">
+                <article class="program-item">
+                    <p class="program-time">17:00</p>
+                    <div class="program-dot" aria-hidden="true"></div>
+                    <div class="program-detail">
+                        <h3><span aria-hidden="true">◌</span> Đón Khách</h3>
+                        <p>Chào đón quan khách và chụp hình lưu niệm cùng cô dâu chú rể tại sảnh tiệc.</p>
+                    </div>
+                </article>
+
+                <article class="program-item">
+                    <p class="program-time">18:00</p>
+                    <div class="program-dot" aria-hidden="true"></div>
+                    <div class="program-detail">
+                        <h3><span aria-hidden="true">♡</span> Lễ Thành Hôn</h3>
+                        <p>Nghi lễ trao nhẫn, rót rượu và cắt bánh cưới trong không gian ấm cúng.</p>
+                    </div>
+                </article>
+
+                <article class="program-item">
+                    <p class="program-time">18:30</p>
+                    <div class="program-dot" aria-hidden="true"></div>
+                    <div class="program-detail">
+                        <h3><span aria-hidden="true">✦</span> Khai Tiệc</h3>
+                        <p>Thưởng thức thực đơn tiệc cưới cao cấp được chuẩn bị bởi các đầu bếp hàng đầu.</p>
+                    </div>
+                </article>
+
+                <article class="program-item">
+                    <p class="program-time">20:00</p>
+                    <div class="program-dot" aria-hidden="true"></div>
+                    <div class="program-detail">
+                        <h3><span aria-hidden="true">♪</span> Vũ Hội &amp; Quà Tặng</h3>
+                        <p>Các tiết mục văn nghệ đặc sắc và gửi lời cảm ơn đến quý quan khách.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="program-info-card">
+                <div class="program-info-block">
+                    <p class="program-info-label">Địa Điểm</p>
+                    <p class="program-info-value">Grand Palace Convention Center</p>
+                </div>
+                <div class="program-info-sep" aria-hidden="true"></div>
+                <div class="program-info-block">
+                    <p class="program-info-label">Thời Gian</p>
+                    <p class="program-info-value">Thứ 7, 15 Tháng 12, 2025</p>
+                </div>
+                <a class="program-map-btn" href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Xem Bản Đồ</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COUNTDOWN DETAILS ===== -->
+<section class="countdown-plus fade reveal fx-fade-down reveal-stagger" aria-label="Đếm ngược tới ngày cưới" data-wedding-date="2026-12-15T18:00:00">
+    <h2>Đếm Ngày</h2>
+
+    <div class="countdown-grid">
+        <div class="countdown-item">
+            <span id="days">00</span>
+            <p>Ngày</p>
+        </div>
+        <div class="countdown-item">
+            <span id="hours">00</span>
+            <p>Giờ</p>
+        </div>
+        <div class="countdown-item">
+            <span id="minutes">00</span>
+            <p>Phút</p>
+        </div>
+        <div class="countdown-item">
+            <span id="seconds">00</span>
+            <p>Giây</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ALBUM ẢNH KỶ NIỆM ===== -->
+<section class="album fade reveal fx-scale-blur reveal-stagger">
+    <h2>Album Ảnh Kỷ Niệm</h2>
+    <div class="album-slider" id="albumSlider">
+        <div class="album-main">
+            <button class="album-nav album-nav-prev" id="albumPrev" type="button" aria-label="Ảnh trước">❮</button>
+            <img id="albumMainImage" class="album-main-image" src="https://tonywedding.vn/wp-content/uploads/2025/12/z7369987445334_60410bb69579fbf32780dfd3d4174cf0.jpg" alt="Khoảnh khắc cưới lãng mạn">
+            <button class="album-nav album-nav-next" id="albumNext" type="button" aria-label="Ảnh tiếp theo">❯</button>
+        </div>
+
+        <div class="album-thumbs-wrap">
+            <button class="album-strip-nav album-strip-prev" id="albumStripPrev" type="button" aria-label="Thu nhỏ trước">❮</button>
+            <div class="album-thumbnails" id="albumThumbnails" aria-label="Chọn ảnh kỷ niệm">
+            <button class="album-thumb is-active" type="button" data-image="https://tonywedding.vn/wp-content/uploads/2025/12/z7369987495474_bee5538b19e6eebcc6d7312c3fad2387.jpg" data-alt="Khoảnh khắc cưới lãng mạn" aria-label="Ảnh 1 đang chọn">
+                <img src="https://tonywedding.vn/wp-content/uploads/2025/12/z7369987495474_bee5538b19e6eebcc6d7312c3fad2387.jpg" alt="Thumbnail ảnh cưới 1">
+            </button>
+            <button class="album-thumb" type="button" data-image="https://tonywedding.vn/wp-content/uploads/2025/12/z7369987229127_445585cf352283a4e338082a076e05d6.jpg" data-alt="Cô dâu chú rể nắm tay dưới ánh hoàng hôn" aria-label="Chọn ảnh 2">
+                <img src="https://tonywedding.vn/wp-content/uploads/2025/12/z7369987229127_445585cf352283a4e338082a076e05d6.jpg" alt="Thumbnail ảnh cưới 2">
+            </button>
+            <button class="album-thumb" type="button" data-image="https://tonywedding.vn/wp-content/uploads/2025/12/z7375958988435_08bb2c1643632e0e02d6a6abee2bf3d7-300x450.jpg" data-alt="Khoảnh khắc trao nhẫn cưới" aria-label="Chọn ảnh 3">
+                <img src="https://tonywedding.vn/wp-content/uploads/2025/12/z7375958988435_08bb2c1643632e0e02d6a6abee2bf3d7-300x450.jpg" alt="Thumbnail ảnh cưới 3">
+            </button>
+            <button class="album-thumb" type="button" data-image="https://tonywedding.vn/wp-content/uploads/2025/12/z7369987445334_60410bb69579fbf32780dfd3d4174cf0.jpg" data-alt="Bó hoa cưới và thiệp mời" aria-label="Chọn ảnh 4">
+                <img src="https://tonywedding.vn/wp-content/uploads/2025/12/z7369987445334_60410bb69579fbf32780dfd3d4174cf0.jpg" alt="Thumbnail ảnh cưới 4">
+            </button>
+            <button class="album-thumb" type="button" data-image="https://tonywedding.vn/wp-content/uploads/2025/12/z7375959089522_99ceec84b2e2195503bca91b0692b3bc.jpg" data-alt="Khoảnh khắc chúc mừng từ gia đình" aria-label="Chọn ảnh 5">
+                <img src="https://tonywedding.vn/wp-content/uploads/2025/12/z7375959089522_99ceec84b2e2195503bca91b0692b3bc.jpg" alt="Thumbnail ảnh cưới 5">
+            </button>
+              <button class="album-thumb" type="button" data-image="https://tonywedding.vn/wp-content/uploads/2025/12/z7375959053680_b188c464aae716ee6563b6122b123b05.jpg" data-alt="Khoảnh khắc chúc mừng từ gia đình" aria-label="Chọn ảnh 6">
+                <img src="https://tonywedding.vn/wp-content/uploads/2025/12/z7375959053680_b188c464aae716ee6563b6122b123b05.jpg" alt="Thumbnail ảnh cưới 6">
+            </button>
+              <button class="album-thumb" type="button" data-image="https://tonywedding.vn/wp-content/uploads/2025/12/z7375958847026_25010b773f23f016f3344f00c120fb4a.jpg" data-alt="Khoảnh khắc chúc mừng từ gia đình" aria-label="Chọn ảnh 7">
+                <img src="https://tonywedding.vn/wp-content/uploads/2025/12/z7375958847026_25010b773f23f016f3344f00c120fb4a.jpg" alt="Thumbnail ảnh cưới 7">
+            </button>
+              <button class="album-thumb" type="button" data-image="https://tonywedding.vn/wp-content/uploads/2025/12/z7375959089522_99ceec84b2e2195503bca91b0692b3bc.jpg" data-alt="Khoảnh khắc chúc mừng từ gia đình" aria-label="Chọn ảnh 5">
+                <img src="https://tonywedding.vn/wp-content/uploads/2025/12/z7375959089522_99ceec84b2e2195503bca91b0692b3bc.jpg" alt="Thumbnail ảnh cưới 8">
+            </button>
+            </div>
+            <button class="album-strip-nav album-strip-next" id="albumStripNext" type="button" aria-label="Thu nhỏ tiếp theo">❯</button>
+        </div>
+    </div>
+    
+</section>
+
+<div class="album-lightbox" id="albumLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Xem ảnh kỷ niệm toàn màn hình">
+    <button class="album-lightbox-close" id="albumLightboxClose" type="button" aria-label="Đóng">✕</button>
+    <button class="album-lightbox-nav album-lightbox-prev" id="albumLightboxPrev" type="button" aria-label="Ảnh trước">❮</button>
+
+    <div class="album-lightbox-stage">
+        <div class="album-lightbox-progress" aria-hidden="true">
+            <span id="albumLightboxProgressBar" class="album-lightbox-progress-bar"></span>
+        </div>
+        <img id="albumLightboxImage" class="album-lightbox-image" src="" alt="Ảnh kỷ niệm phóng to">
+    </div>
+
+    <button class="album-lightbox-nav album-lightbox-next" id="albumLightboxNext" type="button" aria-label="Ảnh tiếp theo">❯</button>
+
+    <div class="album-lightbox-toolbar">
+        <button class="album-lightbox-play" id="albumLightboxPlayPause" type="button" aria-pressed="false">▶ Play</button>
+    </div>
+</div>
+
+<!-- ===== XÁC NHẬN THAM DỰ ===== -->
+<section class="rsvp-form fade reveal fx-fade-up reveal-stagger">
+    <div class="rsvp-box">
+        <div class="corner corner-tl" aria-hidden="true"></div>
+        <div class="corner corner-tr" aria-hidden="true"></div>
+        <div class="corner corner-bl" aria-hidden="true"></div>
+        <div class="corner corner-br" aria-hidden="true"></div>
+
+        <h2 class="script">Xác Nhận Tham Dự</h2>
+
+        <form>
+            <div class="rsvp-row">
+                <div class="rsvp-group">
+                    <label for="rsvp-name">Họ và Tên</label>
+                    <input id="rsvp-name" class="input-underline" type="text" name="name" required>
+                </div>
+                <div class="rsvp-group">
+                    <label for="rsvp-guests">Số lượng khách</label>
+                    <select id="rsvp-guests" class="input-underline" name="guests">
+                        <option>1 Khách</option>
+                        <option>2 Khách</option>
+                        <option>3 Khách</option>
+                        <option>4 Khách</option>
+                    </select>
+                </div>
+            </div>
+            <div class="rsvp-row">
+                <div class="rsvp-group">
+                    <label for="rsvp-phone">Số điện thoại</label>
+                    <input id="rsvp-phone" class="input-underline" type="tel" name="phone" required>
+                </div>
+            </div>
+            <fieldset class="attendance-choice">
+                <legend>Bạn sẽ tham dự?</legend>
+                <label for="attend-yes" class="choice-option">
+                    <input id="attend-yes" type="radio" name="attendance" value="yes" checked>
+                    Mình sẽ tham dự
+                </label>
+                <label for="attend-no" class="choice-option">
+                    <input id="attend-no" type="radio" name="attendance" value="no">
+                    Rất tiếc không tham dự
+                </label>
+            </fieldset>
+            <div class="rsvp-submit-wrap">
+                <button type="submit" class="rsvp-submit">Gửi Xác Nhận</button>
+            </div>
+        </form>
+
+        <div class="rsvp-footer">
+            <span class="heart" aria-hidden="true">♥</span>
+            <p>We can't wait to celebrate with you</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GỬI LỜI CHÚC ===== -->
+<section class="wishes fade reveal fx-fade-down reveal-stagger">
+    <div class="wishes-box">
+        <div class="wish-corner wish-corner-tl" aria-hidden="true"></div>
+        <div class="wish-corner wish-corner-tr" aria-hidden="true"></div>
+        <div class="wish-corner wish-corner-bl" aria-hidden="true"></div>
+        <div class="wish-corner wish-corner-br" aria-hidden="true"></div>
+
+        <h2>Gửi Lời Chúc</h2>
+        <p class="wishes-subtitle">Để lại đôi lời yêu thương dành cho cô dâu chú rể</p>
+
+        <form id="wishForm" class="wishes-form">
+            <div class="form-group">
+                <label for="wish-name">Họ và Tên</label>
+                <input id="wish-name" class="input-underline" type="text" name="wish-name" required>
+            </div>
+            <div class="form-group">
+                <label for="wish-text">Lời chúc</label>
+                <textarea id="wish-text" class="input-underline" name="wish-text" rows="4" required></textarea>
+            </div>
+            <button type="submit">Gửi Lời Chúc</button>
+        </form>
+
+        <div class="wishes-list-wrap">
+            <h3>Lời chúc từ bạn bè &amp; người thân</h3>
+            <div id="wishList" class="wishes-list">
+                <article class="wish-item">
+                    <p class="wish-item-text">Chúc hai bạn trăm năm hạnh phúc, mãi luôn yêu thương và đồng hành cùng nhau.</p>
+                    <p class="wish-item-author">— Minh Anh</p>
+                </article>
+                <article class="wish-item">
+                    <p class="wish-item-text">Mừng ngày trọng đại của hai bạn, chúc tổ ấm luôn ngập tràn tiếng cười.</p>
+                    <p class="wish-item-author">— Tuấn Kiệt</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== VIDEO =====
+<section class="video fade reveal fx-scale-blur reveal-stagger">
+    <button class="video-thumb" id="openVideo" type="button" aria-label="Mở video">
+        <img src="https://picsum.photos/800/500?6" alt="Video kỷ niệm">
+        <span class="play-btn" aria-hidden="true">▶</span>
+    </button>
+</section> -->
+
+<!-- ===== THANK YOU ===== -->
+<section class="thank-you fade reveal fx-fade-up reveal-stagger">
+    <div class="thank-you-content">
+        <h2 class="script">Cảm ơn!</h2>
+        <p>Sự hiện diện của quý vị là niềm vui và vinh hạnh cho gia đình chúng tôi.</p>
+        <p><strong>Chân thành cảm ơn!</strong></p>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Video kỷ niệm">
+    <div class="modal-content">
+        <button id="closeModal" type="button" aria-label="Đóng">&times;</button>
+        <video controls>
+            <source src="sample.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+<script src="script.js?v=20260304-5"></script>
+</body>
+</html>

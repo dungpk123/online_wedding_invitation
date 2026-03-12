@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sakura Wedding Theme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Marcellus&family=Great+Vibes&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="washi-texture" aria-hidden="true"></div>
+    <div class="petals-layer" id="petalsLayer" aria-hidden="true"></div>
+    <div class="petals-cross-layer" id="petalsCrossLayer" aria-hidden="true"></div>
+
+    <header class="hero section" id="hero">
+        <div class="hero-banner" aria-hidden="true"></div>
+        <div class="container">
+            <div class="intro-box-wrap reveal fade-up">
+                <img class="intro-decor intro-decor-left" src="../img/sakura_img1.png" alt="" aria-hidden="true" />
+                <img class="intro-decor intro-decor-right" src="../img/sakura_img1.png" alt="" aria-hidden="true" />
+
+                <div class="intro-box">
+                    <div class="intro-box-inner">
+                        <h1 class="couple-name">Chí Linh <span>&amp;</span> Ngọc Anh</h1>
+                        <p class="hero-sub">Hôn lễ của chúng mình sẽ tổ chức vào lúc 18h thứ 7 ngày 26/12/2026</p>
+                        <img class="hero-sakura-inline" src="../img/sakura_img3.png" alt="Hoa sakura trang trí" />
+                        <div class="hero-countdown" aria-label="Đếm ngược tới lễ cưới">
+                            <div class="countdown-item">
+                                <strong id="countdownHours">0</strong>
+                                <span>Giờ</span>
+                            </div>
+                            <div class="countdown-item">
+                                <strong id="countdownMinutes">0</strong>
+                                <span>Phút</span>
+                            </div>
+                            <div class="countdown-item">
+                                <strong id="countdownSeconds">0</strong>
+                                <span>Giây</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="love-story section fx-story" id="story">
+            <div class="container two-col">
+                <div class="story-image reveal slide-left">
+                    <img src="https://tuart.net/wp-content/uploads/2023/07/359342731_6515041151887793_3957708418309876819_n.jpg" alt="Khoảnh khắc kỷ niệm của cô dâu chú rể" />
+                </div>
+                <div class="story-content reveal slide-right">
+                    <p class="section-kicker">Our Love Story</p>
+                    <h2>Câu chuyện tình yêu</h2>
+                    <div class="sakura-line"></div>
+                    <p>
+                        Từ những lần gặp gỡ tình cờ, chúng mình đã cùng đi qua những mùa xuân đầu tiên,
+                        cùng lắng nghe tiếng gió và những cánh hoa sakura rơi. Tình yêu ấy lớn dần bằng sự
+                        thấu hiểu, chân thành và mong muốn nắm tay nhau thật lâu.
+                    </p>
+                    <p>
+                        Ngày hôm nay, chúng mình chọn bắt đầu một hành trình mới, bình yên và tinh tế như chính
+                        vẻ đẹp của hoa anh đào.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="after-story-bg">
+        <section class="event section fx-event" id="event">
+            <div class="container">
+                <div class="event-card reveal fade-up">
+                    <p class="section-kicker">Wedding Ceremony</p>
+                    <h2>Thông tin lễ cưới</h2>
+                    <div class="event-grid">
+                        <div class="event-item">
+                            <span class="icon" aria-hidden="true">◷</span>
+                            <h3>Ngày</h3>
+                            <p>Chủ Nhật, 26/12/2026</p>
+                        </div>
+                        <div class="event-item">
+                            <span class="icon" aria-hidden="true">◴</span>
+                            <h3>Giờ</h3>
+                            <p>17:30 - 21:00</p>
+                        </div>
+                        <div class="event-item">
+                            <span class="icon" aria-hidden="true">⌂</span>
+                            <h3>Địa điểm</h3>
+                            <p>Nhà hàng Sakura Garden, Hà Nội</p>
+                        </div>
+                    </div>
+                    <a class="btn btn-outline" href="https://maps.google.com" target="_blank" rel="noopener">Xem bản đồ</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline section fx-timeline" id="timeline">
+            <div class="container">
+                <div class="timeline-head reveal fade-up">
+                    <p class="section-kicker">Wedding Schedule</p>
+                    <h2>Lịch Trình Buổi Lễ</h2>
+                </div>
+
+                <div class="timeline-track" aria-label="Lịch trình buổi lễ">
+                    <article class="timeline-card reveal fade-up">
+                        <span class="timeline-icon" aria-hidden="true"></span>
+                        <p class="timeline-time">17:30</p>
+                        <h3>Đón khách</h3>
+                        <p>Đón tiếp người thân, bạn bè và check-in tại sảnh tiệc.</p>
+                    </article>
+
+                    <article class="timeline-card reveal fade-up">
+                        <span class="timeline-icon" aria-hidden="true"></span>
+                        <p class="timeline-time">18:00</p>
+                        <h3>Làm lễ</h3>
+                        <p>Tiến hành nghi thức thành hôn và trao lời chúc phúc.</p>
+                    </article>
+
+                    <article class="timeline-card reveal fade-up">
+                        <span class="timeline-icon" aria-hidden="true"></span>
+                        <p class="timeline-time">19:00</p>
+                        <h3>Dùng tiệc</h3>
+                        <p>Cùng nâng ly, thưởng thức tiệc cưới trong không khí ấm cúng.</p>
+                    </article>
+
+                    <article class="timeline-card reveal fade-up">
+                        <span class="timeline-icon" aria-hidden="true"></span>
+                        <p class="timeline-time">20:30</p>
+                        <h3>Giao lưu</h3>
+                        <p>Chụp ảnh lưu niệm và giao lưu cùng cô dâu chú rể.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="album section fx-album" id="album">
+            <div class="container">
+                <div class="album-head reveal fade-up">
+                    <p class="section-kicker">Memories</p>
+                    <h2>Ký ức nở hoa</h2>
+                </div>
+                <div class="album-canvas" id="albumCanvas">
+                    <div class="album-petal-layer back" id="albumPetalsBack" aria-hidden="true"></div>
+                    <img class="album-tree reveal fade-up" src="../img/hoanhdao1.png" alt="Cây hoa anh đào" />
+                    
+
+                    <article class="memory-hanger fx-hanger-wind hanger-1 depth-back reveal">
+                        <span class="hanger-wire" aria-hidden="true"></span>
+                        <span class="wood-clip" aria-hidden="true"></span>
+                        <button class="album-item memory-card" data-src="https://tuart.net/wp-content/uploads/2020/12/DUC00578_resize.jpg" aria-label="Mở ảnh kỷ niệm 1">
+                            <img src="https://tuart.net/wp-content/uploads/2020/12/DUC00578_resize.jpg" alt="Cùng nhau ngày đầu hẹn hò" />
+                            <span class="overlay"></span>
+                        </button>
+                        <span class="memory-caption">Ngày đầu hẹn hò</span>
+                    </article>
+
+                    <article class="memory-hanger fx-hanger-wind hanger-2 depth-mid reveal">
+                        <span class="hanger-wire" aria-hidden="true"></span>
+                        <span class="wood-clip" aria-hidden="true"></span>
+                        <button class="album-item memory-card" data-src="https://tuart.net/wp-content/uploads/2020/12/DUC00538_2_resize.jpg" aria-label="Mở ảnh kỷ niệm 2">
+                            <img src="https://tuart.net/wp-content/uploads/2020/12/DUC00538_2_resize.jpg" alt="Nụ cười dưới nắng xuân" />
+                            <span class="overlay"></span>
+                        </button>
+                        <span class="memory-caption">Nụ cười mùa xuân</span>
+                    </article>
+
+                    <article class="memory-hanger fx-hanger-wind hanger-3 depth-front reveal">
+                        <span class="hanger-wire" aria-hidden="true"></span>
+                        <span class="wood-clip" aria-hidden="true"></span>
+                        <button class="album-item memory-card" data-src="https://tuart.net/wp-content/uploads/2020/12/DUC00453_resize.jpg" aria-label="Mở ảnh kỷ niệm 3">
+                            <img src="https://tuart.net/wp-content/uploads/2020/12/DUC00453_resize.jpg" alt="Khoảnh khắc cầu hôn" />
+                            <span class="overlay"></span>
+                        </button>
+                        <span class="memory-caption">Khoảnh khắc cầu hôn</span>
+                    </article>
+
+                    <article class="memory-hanger fx-hanger-wind hanger-4 depth-back reveal">
+                        <span class="hanger-wire" aria-hidden="true"></span>
+                        <span class="wood-clip" aria-hidden="true"></span>
+                        <button class="album-item memory-card" data-src="https://tuart.net/wp-content/uploads/2020/12/DUC00598_resize.jpg" aria-label="Mở ảnh kỷ niệm 4">
+                            <img src="https://tuart.net/wp-content/uploads/2020/12/DUC00598_resize.jpg" alt="Buổi chiều bình yên" />
+                            <span class="overlay"></span>
+                        </button>
+                        <span class="memory-caption">Chiều bình yên</span>
+                    </article>
+
+                    <article class="memory-hanger fx-hanger-wind hanger-5 depth-front reveal">
+                        <span class="hanger-wire" aria-hidden="true"></span>
+                        <span class="wood-clip" aria-hidden="true"></span>
+                        <button class="album-item memory-card" data-src="https://tuart.net/wp-content/uploads/2020/12/DUC00650_resize.jpg" aria-label="Mở ảnh kỷ niệm 5">
+                            <img src="https://tuart.net/wp-content/uploads/2020/12/DUC00650_resize.jpg" alt="Du ngoạn cùng nhau" />
+                            <span class="overlay"></span>
+                        </button>
+                        <span class="memory-caption">Chuyến đi đầu tiên</span>
+                    </article>
+
+                    <article class="memory-hanger fx-hanger-wind hanger-6 depth-mid reveal">
+                        <span class="hanger-wire" aria-hidden="true"></span>
+                        <span class="wood-clip" aria-hidden="true"></span>
+                        <button class="album-item memory-card" data-src="https://tuart.net/wp-content/uploads/2020/12/DUC00492_resize.jpg" aria-label="Mở ảnh kỷ niệm 6">
+                            <img src="https://tuart.net/wp-content/uploads/2020/12/DUC00492_resize.jpg" alt="Khoảnh khắc chuẩn bị ngày cưới" />
+                            <span class="overlay"></span>
+                        </button>
+                        <span class="memory-caption">Chờ ngày chung đôi</span>
+                    </article>
+                    
+                    <article class="memory-hanger fx-hanger-wind hanger-7 depth-mid reveal">
+                        <span class="hanger-wire" aria-hidden="true"></span>
+                        <span class="wood-clip" aria-hidden="true"></span>
+                        <button class="album-item memory-card" data-src="https://tuart.net/wp-content/uploads/2020/12/DUC00492_resize.jpg" aria-label="Mở ảnh kỷ niệm 6">
+                            <img src="https://tuart.net/wp-content/uploads/2020/12/DUC00492_resize.jpg" alt="Khoảnh khắc chuẩn bị ngày cưới" />
+                            <span class="overlay"></span>
+                        </button>
+                        <span class="memory-caption">Chờ ngày chung đôi</span>
+                    </article>
+
+                    <article class="memory-hanger fx-hanger-wind hanger-8 depth-mid reveal">
+                        <span class="hanger-wire" aria-hidden="true"></span>
+                        <span class="wood-clip" aria-hidden="true"></span>
+                        <button class="album-item memory-card" data-src="https://tuart.net/wp-content/uploads/2020/12/DUC00492_resize.jpg" aria-label="Mở ảnh kỷ niệm 6">
+                            <img src="https://tuart.net/wp-content/uploads/2020/12/DUC00492_resize.jpg" alt="Khoảnh khắc chuẩn bị ngày cưới" />
+                            <span class="overlay"></span>
+                        </button>
+                        <span class="memory-caption">Chờ ngày chung đôi</span>
+                    </article>
+
+                    <article class="memory-hanger fx-hanger-wind hanger-9 depth-mid reveal">
+                        <span class="hanger-wire" aria-hidden="true"></span>
+                        <span class="wood-clip" aria-hidden="true"></span>
+                        <button class="album-item memory-card" data-src="https://tuart.net/wp-content/uploads/2020/12/DUC00492_resize.jpg" aria-label="Mở ảnh kỷ niệm 6">
+                            <img src="https://tuart.net/wp-content/uploads/2020/12/DUC00492_resize.jpg" alt="Khoảnh khắc chuẩn bị ngày cưới" />
+                            <span class="overlay"></span>
+                        </button>
+                        <span class="memory-caption">Chờ ngày chung đôi</span>
+                    </article>
+
+                    <article class="memory-hanger fx-hanger-wind hanger-10 depth-mid reveal">
+                        <span class="hanger-wire" aria-hidden="true"></span>
+                        <span class="wood-clip" aria-hidden="true"></span>
+                        <button class="album-item memory-card" data-src="https://tuart.net/wp-content/uploads/2020/12/DUC00492_resize.jpg" aria-label="Mở ảnh kỷ niệm 6">
+                            <img src="https://tuart.net/wp-content/uploads/2020/12/DUC00492_resize.jpg" alt="Khoảnh khắc chuẩn bị ngày cưới" />
+                            <span class="overlay"></span>
+                        </button>
+                        <span class="memory-caption">Chờ ngày chung đôi</span>
+                    </article>
+
+                    <div class="album-petal-layer front" id="albumPetalsFront" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rsvp section fx-rsvp" id="rsvp">
+            <div class="container">
+                <div class="rsvp-card reveal fade-up" id="rsvpCard">
+                    <p class="section-kicker">RSVP</p>
+                    <h2>Xác Nhận Tham Dự</h2>
+                    <p class="rsvp-intro">Sự hiện diện của bạn là món quà quý giá nhất dành cho chúng mình.</p>
+                    <form id="rsvpForm" class="wish-form">
+                        <label>
+                            <span>Họ và tên</span>
+                            <input type="text" name="guestName" placeholder="Nhập họ và tên" required />
+                        </label>
+                        <label>
+                            <span>Xác nhận tham dự</span>
+                            <select name="attendance" required>
+                                <option value="" selected disabled>Chọn xác nhận</option>
+                                <option value="yes">Mình sẽ tham dự</option>
+                                <option value="no">Mình xin phép vắng mặt</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>Số điện thoại</span>
+                            <input type="tel" name="phone" placeholder="Nhập số điện thoại" required />
+                        </label>
+                        <label>
+                            <span>Lời nhắn</span>
+                            <textarea name="wish" rows="4" placeholder="Gửi lời chúc tới cô dâu chú rể"></textarea>
+                        </label>
+                        <button type="submit" class="btn btn-gradient">Gửi xác nhận</button>
+                        <p id="rsvpMessage" class="form-message" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="gift section fx-gift" id="gift">
+            <div class="container">
+                <div class="gift-card reveal fade-up">
+                    <img class="gift-corner-flower" src="../img/canhanhdao.png" alt="Hoa sakura trang tri" />
+                    <div class="gift-inner">
+                        <p class="section-kicker">Wedding Gift</p>
+                        <h2>Mừng Cưới</h2>
+                        <p class="gift-note">Nếu muốn gửi tặng chúng mình một lời chúc dưới hình thức mừng cưới, bạn có thể sử dụng thông tin bên dưới.</p>
+                        <div class="gift-grid">
+                            <article class="gift-info">
+                                <h3>Ngân hàng MB Bank</h3>
+                                <p><strong>Chủ tài khoản:</strong> Nguyễn Chí Linh</p>
+                                <p><strong>Số tài khoản:</strong> 0326 2620 26</p>
+                                <p><strong>Nội dung:</strong> Mừng cưới Chí Linh &amp; Ngọc Anh</p>
+                                <div class="gift-qr">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=MB%20Bank%20-%200326262026%20-%20Nguyen%20Hoang%20Anh%20-%20Mung%20cuoi%20Hoang%20Anh%20va%20Ngoc%20Anh" alt="Ma QR mung cuoi MB Bank" loading="lazy" />
+                                    <span>Quét mã QR để chuyển khoản</span>
+                                </div>
+                            </article>
+                            <article class="gift-info">
+                                <h3>Ngân hàng Vietcombank</h3>
+                                <p><strong>Chủ tài khoản:</strong> Nguyễn Ngọc Anh</p>
+                                <p><strong>Số tài khoản:</strong> 2626 1800 26</p>
+                                <p><strong>Nội dung:</strong> Mừng cưới Chí Linh &amp; Ngọc Anh</p>
+                                <div class="gift-qr">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=Vietcombank%20-%202626180026%20-%20Nguyen%20Ngoc%20Anh%20-%20Mung%20cuoi%20Hoang%20Anh%20va%20Ngoc%20Anh" alt="Ma QR mung cuoi Vietcombank" loading="lazy" />
+                                    <span>Quét mã QR để chuyển khoản</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="thankyou section fx-thankyou" id="thanks">
+            <div class="container">
+                <div class="thankyou-card reveal fade-up">
+                    <p class="section-kicker">Thank You</p>
+                    <h2>Lời Cảm Ơn &amp; Kết Thúc</h2>
+                    <p>
+                        Chúng mình chân thành cảm ơn gia đình, bạn bè và những người thân yêu đã luôn đồng hành,
+                        yêu thương và gửi lời chúc phúc cho ngày trọng đại này.
+                    </p>
+                    <p>
+                        Hy vọng sẽ được cùng bạn chia sẻ khoảnh khắc hạnh phúc trong ngày cưới.
+                        Trân trọng hẹn gặp bạn.
+                    </p>
+                    <p class="thankyou-sign">Chí Linh &amp; Ngọc Anh</p>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="closeLightbox" aria-label="Đóng">×</button>
+        <button class="lightbox-nav prev" id="prevImage" aria-label="Ảnh trước">‹</button>
+        <figure class="lightbox-figure">
+            <img id="lightboxImage" src="" alt="Ảnh album phóng to" />
+        </figure>
+        <button class="lightbox-nav next" id="nextImage" aria-label="Ảnh sau">›</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
